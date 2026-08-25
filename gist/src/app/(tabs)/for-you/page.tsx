@@ -7,7 +7,7 @@ import { ScreenPadding } from "@/components/AppShell";
 import { StreakFlame } from "@/components/StreakFlame";
 import { HorizontalRail } from "@/components/HorizontalRail";
 import { BookCard, BookCover } from "@/components/BookCard";
-import { BOOK_METAS, booksForGoal } from "@/data/books/index";
+import { BOOK_METAS, booksForGoal } from "@/data/bookData";
 import { GOALS, goalById, categoryById } from "@/data/catalog";
 import { useStore } from "@/lib/store";
 

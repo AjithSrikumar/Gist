@@ -16,7 +16,7 @@ import {
 import { motion } from "framer-motion";
 import { FullModal, Sheet } from "@/components/ui/Sheet";
 import { BookCover } from "@/components/BookCard";
-import { loadBook, bookMetaById, unitCount, unitTitle, unitBody, unitSecondsMap } from "@/data/books/index";
+import { loadBook, bookMetaById, unitCount, unitTitle, unitBody, unitSecondsMap } from "@/data/bookData";
 import { useStore } from "@/lib/store";
 import type { Book } from "@/lib/types";
 import { Slider, SliderTrack, SliderRange, SliderThumb } from "@radix-ui/react-slider";

@@ -7,7 +7,7 @@ import { ScreenPadding } from "@/components/AppShell";
 import { HorizontalRail } from "@/components/HorizontalRail";
 import { BookCard, BookCover } from "@/components/BookCard";
 import { CATEGORIES, COLLECTIONS, CHALLENGES } from "@/data/catalog";
-import { BOOK_METAS } from "@/data/books/index";
+import { BOOK_METAS } from "@/data/bookData";
 import { useStore } from "@/lib/store";
 
 export default function ExplorePage() {
