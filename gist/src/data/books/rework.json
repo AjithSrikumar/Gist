@@ -1,0 +1,36 @@
+{
+  "id": "rework",
+  "aboutAuthor": "Jason Fried and David Heinemeier Hansson founded Basecamp (37signals), a profitable software company run entirely remotely. Rework challenges nearly every conventional rule of starting and running a business.",
+  "points": [
+    {
+      "heading": "Planning is guessing",
+      "body": "Long business plans are fiction dressed up in spreadsheets. Markets change too fast for five-year forecasts to mean anything. Decide in the moment, act on the best information you have now, and call it what it is — guessing."
+    },
+    {
+      "heading": "Start a business, not a startup",
+      "body": "You don't need venture capital, an exit strategy, or a garage myth. A real business pays its own bills from day one. Building a company you want to run forever beats building one designed to be sold."
+    },
+    {
+      "heading": "Make a dent in your niche",
+      "body": "You don't need to be world-changing to matter. Outdo an incumbent by doing what they do, minus what they get wrong. Having direct competitors is fine — just carve out the part of the market that cares about what you uniquely offer."
+    },
+    {
+      "heading": "Underdo the competition",
+      "body": "Feature wars are a losing game. Solve the simple problems and leave the hard ones to others. Basecamp beat bloated project-management suites by doing less — customers paid for simplicity, not checklists of features."
+    },
+    {
+      "heading": "Meetings are toxic",
+      "body": "A one-hour meeting with eight people costs eight hours of productivity. Meetings interrupt work, breed more meetings, and rarely produce decisions that a well-written document couldn't. Communicate asynchronously and reserve gatherings for genuine decisions."
+    },
+    {
+      "heading": "Inspiration is perishable",
+      "body": "Ideas lose freshness fast — strike while they're hot. Launch now, iterate publicly, and let real usage teach you what planning never could. Done is better than perfect because perfection is just procrastination in disguise."
+    }
+  ],
+  "insights": [
+    "Basecamp has been profitable every year since launch without raising venture capital.",
+    "The book itself was produced the way it prescribes: written in short bursts, shipped before it felt 'finished.'",
+    "'Hiring' is the chapter most founders say changed how they staffed their companies."
+  ],
+  "conclusion": "Rework replaces startup theater with quiet, durable business craft: stay small, charge money, write instead of meeting, and ship before inspiration expires. Ignore the noise, do the work, and let a profitable little company fund the life you actually want."
+}

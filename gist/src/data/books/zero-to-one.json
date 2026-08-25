@@ -1,0 +1,36 @@
+{
+  "id": "zero-to-one",
+  "aboutAuthor": "Peter Thiel co-founded PayPal and Palantir and was the first outside investor in Facebook. In Zero to One, distilled from his Stanford course with Blake Masters, he shares his contrarian philosophy of startups and innovation.",
+  "points": [
+    {
+      "heading": "Go from zero to one, not one to n",
+      "body": "Copying what already works takes the world from one to n, adding more of the same. True innovation goes from zero to one by creating something genuinely new. Vertical progress is harder than copying, but it is where extraordinary value lives."
+    },
+    {
+      "heading": "Competition is for losers",
+      "body": "Perfect competition drives profits to zero, so entrepreneurs should aim for monopoly — a company so differentiated it faces no direct rival. Google dominates search and earns margins competitors can only dream of. Build something 10x better rather than marginally cheaper."
+    },
+    {
+      "heading": "Start small and monopolize",
+      "body": "Every great monopoly began by owning a tiny market. Facebook started with Harvard students; Amazon started with books. Dominate a niche first, then scale outward to adjacent markets — never launch into a vast, crowded market on day one."
+    },
+    {
+      "heading": "The power law governs everything",
+      "body": "In venture capital, a single outlier investment returns more than the whole rest of the portfolio combined. The same asymmetry applies to your life: a few decisions and relationships will dominate all outcomes. Choose them deliberately."
+    },
+    {
+      "heading": "A bad plan beats no plan",
+      "body": "Lean-methodology improvisation works for incremental products, not transformative ones. Thiel argues you need a definite vision of the future you intend to create. Bold, specific plans are what let small teams achieve outsized things."
+    },
+    {
+      "heading": "Sales hides in plain sight",
+      "body": "Engineers underrate distribution because good salespeople make selling feel invisible. No product sells itself; even nuclear reactors need salespeople. Design distribution into your product from day one — customer acquisition cost must fit your price point."
+    }
+  ],
+  "insights": [
+    "Thiel's favorite interview question: 'What important truth do very few people agree with you on?'",
+    "PayPal's early growth came from paying users $10 to join — a controversial hack that seeded a network effect.",
+    "Last mover advantage matters more than first mover advantage: the last company to enter a market can capture it for decades."
+  ],
+  "conclusion": "Zero to One is a manifesto for definite optimism: see a hidden truth, build a monopoly in a small market, and compound toward a future you have actually imagined. The next Mark Zuckerberg won't build a social network — the next great founder will create something the world has never seen."
+}

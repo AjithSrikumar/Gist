@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { X, Share, Download, Bookmark, Clock3, ListOrdered, Lightbulb, Check } from "lucide-react";
 import { Sheet } from "@/components/ui/Sheet";
 import { BookCover } from "@/components/BookCard";
-import { loadBook, unitCount, unitTitle, bookDurationMin } from "@/data/bookData";
+import { loadBook, unitCount, unitTitle, bookDurationMin } from "@/data/books";
 import { categoryById } from "@/data/catalog";
 import { useStore } from "@/lib/store";
 import type { Book } from "@/lib/types";

@@ -1,0 +1,36 @@
+{
+  "id": "intelligent-investor",
+  "aboutAuthor": "Benjamin Graham (1894–1976) is the father of value investing and Warren Buffett's professor and mentor. The Intelligent Investor, first published in 1949, remains the most influential book on sound investment philosophy ever written.",
+  "points": [
+    {
+      "heading": "Investing vs. speculation",
+      "body": "An investment operates on thorough analysis and promises safety of principal plus an adequate return; anything else is speculation. There's nothing wrong with speculating — as long as you know you're doing it and never confuse it with investing."
+    },
+    {
+      "heading": "Mr. Market is your servant, not your master",
+      "body": "Imagine a business partner who offers to buy or sell his shares daily at prices swung by his moods. You are free to ignore him or exploit him — never follow him. The market exists to serve you, not to guide you."
+    },
+    {
+      "heading": "Margin of safety is the cornerstone",
+      "body": "Buy at a price significantly below calculated intrinsic value so that errors, bad luck, and market violence cannot destroy you. A bridge built to hold 30,000 pounds carries 10,000-pound trucks. Margin of safety turns analysis from precision guessing into durable protection."
+    },
+    {
+      "heading": "The defensive investor's simple recipe",
+      "body": "Most investors should hold a balanced portfolio — roughly half stocks, half bonds, rebalanced as drift occurs — diversified across industries and companies. Dollar-cost averaging into index funds beats most professionals over a lifetime."
+    },
+    {
+      "heading": "Fluctuations are the investor's friend",
+      "body": "Price volatility terrifies speculators but rewards investors: it creates the very mispricings that provide bargains. Your worst enemy in investing is not the market but yourself — panic selling converts temporary declines into permanent losses."
+    },
+    {
+      "heading": "Earnings matter more than stories",
+      "body": "Graham insisted on objective standards: adequate earnings history, conservative leverage, current ratios, and reasonable price-to-earnings. Growth stories feel compelling precisely when they're most dangerous — enthusiasm is priced in at exactly the wrong moment."
+    }
+  ],
+  "insights": [
+    "Warren Buffett calls chapters 8 and 20 the two most important pages ever written about investing.",
+    "Graham lost most of his money in the 1929 crash — the book's caution was forged in personal catastrophe.",
+    "'Mr. Market' has become standard vocabulary on Wall Street since the book's publication."
+  ],
+  "conclusion": "The Intelligent Investor teaches temperament before technique: know what kind of investor you are, demand a margin of safety, and treat market swings as opportunities rather than verdicts. The best investment you can make is in your own discipline."
+}

@@ -7,7 +7,7 @@ import { ScreenPadding } from "@/components/AppShell";
 import { Sheet } from "@/components/ui/Sheet";
 import { BookCover } from "@/components/BookCard";
 import { EmptyState } from "@/components/ui/Controls";
-import { BOOK_METAS, bookMetaById } from "@/data/bookData";
+import { BOOK_METAS, bookMetaById } from "@/data/books";
 import { useStore } from "@/lib/store";
 
 export default function LibraryPage() {

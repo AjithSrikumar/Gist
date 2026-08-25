@@ -1,0 +1,36 @@
+{
+  "id": "mckinsey-mind",
+  "aboutAuthor": "Ethan M. Rasiel spent a decade at McKinsey & Company; Paul N. Friga is a former consultant turned professor of strategy. Together they codified the problem-solving toolkit that makes McKinsey alumni so sought after.",
+  "points": [
+    {
+      "heading": "Be MECE — mutually exclusive, collectively exhaustive",
+      "body": "McKinsey's first commandment: structure every problem into non-overlapping parts that cover the whole space. MECE thinking prevents double counting causes and missing others entirely, turning fuzzy anxiety into an attackable checklist."
+    },
+    {
+      "heading": "Don't boil the ocean",
+      "body": "There's always more analysis you could do; consultants ruthlessly prioritize the analyses that will move the answer most. Work smarter, not harder — find the key drivers and ignore the rest until they matter."
+    },
+    {
+      "heading": "The elevator test",
+      "body": "If you can't explain your solution in thirty seconds, you don't understand it yet. McKinsey teams draft the final slide on day one — 'the answer first' — then spend weeks testing whether it survives evidence. Clarity forces honesty."
+    },
+    {
+      "heading": "80/20 your way to insight",
+      "body": "Eighty percent of an effect comes from twenty percent of causes. Consultants hunt relentlessly for that vital few: the two customers driving half of revenue, the three products causing all the complaints. Focus effort where leverage lives."
+    },
+    {
+      "heading": "Pluck the chicken — kill the sacred cows",
+      "body": "Client assumptions often hide the real problem ('we've always done it this way'). Good consultants question every constraint, including their own hypotheses. If facts contradict your initial answer, change the answer, not the facts."
+    },
+    {
+      "heading": "Present solutions with structure and story",
+      "body": "Findings land when organized as a pyramid: governing thought first, supporting arguments beneath, each summarized in one line. The audience should grasp your conclusion from headlines alone — details are there for those who dig."
+    }
+  ],
+  "insights": [
+    "'The McKinsey Way' (Rasiel's first book) became required reading at business schools worldwide.",
+    "Friga later co-authored 'Pirates, Sharks and Turtles' on strategic learning.",
+    "MECE originated from Barbara Minto's work on the Pyramid Principle inside McKinsey."
+  ],
+  "conclusion": "The McKinsey Mind packages elite consulting's mental operating system: structure problems MECE-ly, prioritize ruthlessly, state answers early, and communicate in pyramids. These habits transfer to any decision that matters more than the time available to make it."
+}

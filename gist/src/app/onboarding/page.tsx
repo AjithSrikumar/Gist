@@ -16,7 +16,7 @@ import {
   Star,
 } from "lucide-react";
 import { GOALS } from "@/data/catalog";
-import { BOOK_METAS, booksForGoal } from "@/data/bookData";
+import { BOOK_METAS, booksForGoal } from "@/data/books";
 import { BookCover } from "@/components/BookCard";
 import { PaywallContent } from "@/components/overlays/Paywall";
 import { LogoMark } from "@/components/LogoMark";

@@ -1,0 +1,36 @@
+{
+  "id": "tiny-habits",
+  "aboutAuthor": "BJ Fogg is a behavior scientist who founded Stanford's Behavior Design Lab and coined the term 'captology' (persuasive technology). Tiny Habits distills three decades of research into his Fogg Behavior Model.",
+  "points": [
+    {
+      "heading": "Behavior happens when motivation, ability, and prompt converge",
+      "body": "The Fogg Behavior Model says B=MAP: a behavior occurs when Motivation, Ability, and a Prompt arrive at the same moment. If something isn't happening, one of those three is missing. Diagnose which one instead of blaming your character."
+    },
+    {
+      "heading": "Start tiny — ridiculously tiny",
+      "body": "Motivation is unreliable, so design behaviors so easy they survive low motivation: two push-ups after flushing the toilet, flossing one tooth. Tiny behaviors slip past resistance and become automatic without willpower."
+    },
+    {
+      "heading": "Anchor new habits to existing routines",
+      "body": "Don't rely on reminders or time-based triggers. Use an Anchor — an action you already do reliably — followed by the tiny habit: 'After I pour my morning coffee, I will open my journal.' The anchor's reliability transfers to the new behavior."
+    },
+    {
+      "heading": "Celebrate immediately to wire in the habit",
+      "body": "Emotion creates habit, not repetition alone. The instant you complete the tiny behavior, celebrate — say 'Shazam!', do a fist pump, feel success. That rush of positive feeling tells your brain the routine is worth keeping."
+    },
+    {
+      "heading": "Don't raise the bar — let growth happen",
+      "body": "People fail when they force intensity too early. Instead let tiny habits grow naturally: two push-ups become five, then twenty, because competence breeds desire. Follow the growth rather than pushing it."
+    },
+    {
+      "heading": "Change the environment, not yourself",
+      "body": "When a behavior is hard, make it easier by redesigning surroundings: put the guitar on the couch stand, hide the cookies in the garage. Skillful environment design beats self-blame every single time."
+    }
+  ],
+  "insights": [
+    "Fogg's lab found celebration outperforms tracking apps for early habit formation.",
+    "'Maui' — saying 'I'm awesome' while imagining a Hawaiian sunset — is his signature celebration technique.",
+    "Tiny Habits grew from a free five-day program that has trained over 100,000 participants."
+  ],
+  "conclusion": "Tiny Habits replaces willpower mythology with system design: shrink the behavior, anchor it to something reliable, celebrate instantly, and let success compound. You change best by feeling successful — not by feeling ashamed."
+}

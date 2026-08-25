@@ -1,0 +1,36 @@
+{
+  "id": "strategy-beyond-hockey-stick",
+  "aboutAuthor": "Chris Bradley, Martin Hirt, and Sven Smit are senior McKinsey partners who led the firm's strategy practice. Drawing on a database of 2,393 companies over 15 years, they explain why most strategies fail and what the outliers do differently.",
+  "points": [
+    {
+      "heading": "The hockey stick illusion",
+      "body": "Most strategic plans show flat performance now and a miraculous upward bend later — the hockey stick. The data shows those bends almost never materialize. Planning processes produce optimism because careers are built on promises, not outcomes."
+    },
+    {
+      "heading": "Economic profit follows the power curve",
+      "body": "Companies cluster at the extremes: 63% of economic profit goes to the top decile while the middle earns nearly nothing. Strategy means escaping the deadly middle, and that requires understanding your true position on the curve, not last year's growth rate."
+    },
+    {
+      "heading": "Endowment matters — but less than you think",
+      "body": "Starting size, debt, and past investment explain about half of your position. The rest is choice. Even companies with weak endowments leap up the curve through decisive reallocation — though they must move faster than incumbents."
+    },
+    {
+      "heading": "Three hidden power laws: trend, industry, moves",
+      "body": "Riding your market's growth tailwind matters more than out-executing rivals, and being in the right industry segment explains much of performance. Beyond that, a handful of bold 'moves' — programmatic M&A, resource reallocation, capital projects — separate the winners."
+    },
+    {
+      "heading": "Reallocation is the strongest lever",
+      "body": "Top-quintile companies shift 56% of capital across units over 15 years versus 30% for the bottom. Most firms spread resources like peanut butter across last year's structure. Courageous pruning of yesterday's winners funds tomorrow's bets."
+    },
+    {
+      "heading": "Strategy needs social engineering",
+      "body": "Plans fail because of politics, not analysis. The authors prescribe eight shifts, from treating strategy as a journey of big moves rather than an annual budget ritual to making the plan falsifiable. The hard part isn't knowing what to do — it's making the organization actually do it."
+    }
+  ],
+  "insights": [
+    "The underlying research became McKinsey's 'Grand Strategy' diagnostic used with clients worldwide.",
+    "Only 1 in 12 companies moved from middle to top quintile over the study period.",
+    "The book's 'Eight Shifts' checklist is widely used as a board-level strategy audit."
+  ],
+  "conclusion": "Strategy Beyond the Hockey Stick replaces planning theater with evidence: know your position on the power curve, ride the right trends, make a few bold moves, and reallocate resources ruthlessly. Big beats incremental — but only if the politics don't kill it first."
+}

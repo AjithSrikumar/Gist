@@ -1,0 +1,36 @@
+{
+  "id": "the-big-short",
+  "aboutAuthor": "Michael Lewis is a former bond salesman turned chronicler of Wall Street excess, author of Liar's Poker and The Undoing Project. The Big Short follows the outsiders who saw the 2008 housing collapse coming — and bet on it.",
+  "points": [
+    {
+      "heading": "A few outsiders read the fine print",
+      "body": "Hedge fund manager Michael Burry, Scion Capital's one-eyed analyst with Asperger's, actually read the mortgage bonds he was buying. What he found inside — subprime loans stacked into AAA securities — led him to bet $1 billion against the entire market."
+    },
+    {
+      "heading": "Securitization hid the rot",
+      "body": "Mortgages were bundled, sliced into tranches, and resold until no one knew what they owned. Rating agencies stamped toxic pools AAA because the issuers paid their fees. Complexity wasn't a side effect — it was the product."
+    },
+    {
+      "heading": "The incentives were rotten end to end",
+      "body": "Loan officers earned fees per mortgage regardless of repayment; banks earned fees per securitization; agencies earned fees per rating. Everyone got paid before anyone got hurt, so nobody had any reason to stop."
+    },
+    {
+      "heading": "Credit default swaps made doubt profitable",
+      "body": "A credit default swap let you buy insurance on bonds you didn't own — pure short exposure to subprime. Steve Eisman, Greg Lippmann, and Cornwall Capital used these instruments to turn conviction about fraud into enormous payoffs."
+    },
+    {
+      "heading": "Being right felt terrible",
+      "body": "As delinquencies rose, the bonds inexplicably held value and investors demanded their money back. Burry suspended withdrawals and endured lawsuits; the shorts watched reality diverge from price for two agonizing years. Markets can stay wrong longer than you can stay solvent."
+    },
+    {
+      "heading": "The crash transferred pain downward",
+      "body": "When it finally broke, the bankers were bailed out and eight million Americans lost homes, jobs, or both. Lewis ends not in triumph but in disgust: the same machinery, lightly regulated, survived intact."
+    }
+  ],
+  "insights": [
+    "Burry's letters to investors during the trade are quoted verbatim — including threats of lawsuits.",
+    "Cornwall Capital turned $110,000 into $80 million largely via mispriced CDO swaps.",
+    "Lewis wrote the book asking: how did no one go to jail?"
+  ],
+  "conclusion": "The Big Short is a story about information asymmetry and the courage to act on inconvenient truth. A handful of people read documents everyone else ignored, bet against consensus, and won — while the system they exposed paid them for the privilege."
+}

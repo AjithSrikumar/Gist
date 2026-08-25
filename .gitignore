@@ -1,6 +1,6 @@
 # Local-only reference material (never push)
-Books/
-Reference/
+/Books/
+/Reference/
 
 # Logs & temp
 *.log

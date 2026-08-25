@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FullModal } from "@/components/ui/Sheet";
 import { BookCard } from "@/components/BookCard";
 import { EmptyState } from "@/components/ui/Controls";
-import { BOOK_METAS } from "@/data/bookData";
+import { BOOK_METAS } from "@/data/books";
 import { CATEGORIES } from "@/data/catalog";
 import { useStore } from "@/lib/store";
 
