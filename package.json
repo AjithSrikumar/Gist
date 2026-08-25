@@ -1,0 +1,10 @@
+{
+  "name": "gist-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "cd gist && npm run dev",
+    "build": "cd gist && npm run build",
+    "start": "cd gist && npm run start",
+    "lint": "cd gist && npm run lint"
+  }
+}
