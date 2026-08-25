@@ -1,0 +1,345 @@
+
+
+-- 1 of 259 --
+
+
+
+-- 2 of 259 --
+
+SAURABH MUKHERJEA, RAKSHIT RANJAN,
+SALIL DESAI
+DIAMONDS IN THE DUST
+Consistent Compounding for Extraordinary Wealth Creation
+
+-- 3 of 259 --
+
+PENGUIN BOOKS
+
+-- 4 of 259 --
+
+Contents
+Foreword by Sir John Kay
+Introduction: Test Cricket and Investing: A Classic Analogy
+1. The Four Most Damaging Myths in Indian Investing
+2. What to Buy—Part 1: Accounting Quality
+3. Accounting Quality: Spotting the Naughty Lenders
+4. What to Buy—Part 2: Great Franchises
+5. What to Buy—Part 3: Masters of Capital Allocation
+6. When to Buy?
+7. Preparing an Investment Plan
+Conclusion: Lessons from Rahul Dravid: Combining Technical Abilities with Behavioural Skills
+Appendix 1: The Marcellus Checklist
+Appendix 2: Sir John Kay’s Ibas Framework
+Appendix 3: Robert Kirby’s Coffee Can Investing Method
+Glossary
+Notes
+Acknowledgements
+Follow Penguin
+Copyright
+
+-- 5 of 259 --
+
+Advance Praise for the Book
+‘Diamonds in the Dust is a wonderful book for people who want to grow and
+maintain their wealth. With a number of solid research findings, the book
+explains why investing in companies’ equity is the path to investment success.
+The process of analysing companies is explained in a systematic and clear way.
+The authors also reveal the most damaging myths of investing. They explain
+how to evaluate firms’ competitive advantages and capital allocation. I
+particularly liked the various checklists giving all the important items needed
+when studying companies. Finally, the use of specific investor case studies bring
+to life all the principles given in the book. This book will certainly help you find
+those investment diamonds in the dust!’—Mark Mobius, founder, Mobius
+Capital Partners
+‘The translation of deep competitive advantages into wealth creation for
+shareholders is one of the most appealing aspects of equity investing. This book
+from the team at Marcellus lays out with great clarity how this process unfolds.
+If you care about wealth creation in modern India, you should read this book.’—
+Harsh Mariwala, chairman, Marico Ltd
+‘Diamonds in the Dust is an eye-opener, on a subject of great relevance.
+Through the pages of this lucidly written book, the team at Marcellus explains
+why investing in clean, well-managed companies selling essential products to
+1.4 billion Indians is a simple and sound path to wealth creation. The authors
+present their well-researched arguments with great conviction, in a manner that
+is so easy to understand. A compelling read, indeed.’—Harish Bhat, author of
+Tata Log and #Tata Stories
+‘If you are a direct stock picker or would like to be, here is a book that gives you
+a to-do and a not-to-do checklist along with a method to the process.’—Monika
+Halan, author of Let’s Talk Money: You’ve Worked Hard for It, Now Make It
+Work for You
+
+-- 6 of 259 --
+
+‘Wealth creation via the construction of powerful franchises is one of the most
+exciting facets of a fast-growing economy. The team at Marcellus has simplified
+and amplified this narrative better than anyone else in India. The result is an
+engrossing book which lays out the fundamental principles of successful equity
+investing in India.’—Sanjeev Bikhchandani, co-founder and vice chairman,
+Info Edge (India) Ltd
+
+-- 7 of 259 --
+
+To all the remarkable people, who together help Marcellus Investment
+Managers look after the assets of many thousands of hardworking Indian
+families
+
+-- 8 of 259 --
+
+Disclaimer
+The following stocks mentioned in the book are part of one or more portfolios
+managed or advised by Marcellus:
+Asian Paints 	Maruti Suzuki
+HDFC Bank 	Page Industries
+Abbott India 	Garware Technical Fibres
+Divi’s Labs 	HDFC Asset Management Company
+TCS 	GMM Pfaudler
+Pidilite Industries 	Dr Lal Pathlabs
+Kotak Bank 	Info Edge (India)
+Nestlé India 	Titan Company
+
+-- 9 of 259 --
+
+Foreword
+I have known Saurabh Mukherjea for more than twenty-five years, since—newly
+graduated—he joined my economic consulting business. I have watched his
+subsequent career with pleasure and pride, as he became interested in equity
+research, and we were involved together in a London venture, Clear Capital.
+And then followed his return to India and rise to become one of the leading
+figures in India’s asset management community and a regular commentator on
+investment matters.
+Saurabh and I share the firm belief that successful investment requires a
+knowledge of business. This sounds obvious, and yet it does not seem to be
+obvious to most people who manage their own money or other people’s. They
+are interested in securities markets, not product markets; in stocks, not
+companies. They are fixated on the idea that businesses should make the
+numbers, but wiser investors are fixated on the idea that businesses should make
+goods and services that people will want to buy and want to go on buying for
+years to come. The dichotomy was well expressed for me in an exchange with a
+well-regarded London fund manager, as we tried to persuade him to take an
+interest in business strategy. ‘I don’t care about competitive advantage,’ he said.
+‘I just want to know which stocks are going to go up.’ I knew that I would not
+want to trust any money to his management or want any of my friends, or
+encourage any funds I advise to do so.
+Marcellus is founded on the principle that, to understand the stock, you must
+first understand the company. Not only does competitive advantage matter, in
+the long run, it is the only thing that matters. In this book, you will learn that
+successful investors look to fundamental value. Real businesses with real
+capabilities. As I write this, I am bombarded with invitations to buy meme
+stocks, baseball cards, cryptocurrencies and non-fungible tokens. But the
+tendency for price to revert to fundamental value is a basic law of investment.
+And it is a core tenet of ‘coffee can investing’. As Warren Buffett puts it, if you
+aren’t willing to hold it for ten years, do not hold it even for ten minutes. Long
+run stock returns are asymmetric—a small number of stocks account for a high
+
+-- 10 of 259 --
+
+run stock returns are asymmetric—a small number of stocks account for a high
+proportion of overall market returns. Appreciation of the underlying economics
+of the business gives you the best, indeed the only, chance of holding these
+outstanding stocks.
+No one said successful investment was easy. But this book will lead you
+carefully through the underlying principles. You will learn how to see through
+deceptive accounting. You will not learn how to time the market, but you will
+learn that even if you were able to do it, by some prescience no one else has yet
+achieved, the returns from market timing are far less than the returns from
+effective stock picking. You will learn the nature of competitive advantage, and
+how to identify sources of competitive advantage that are appropriable and
+sustainable. To invest well, you must understand these things—or entrust your
+funds to someone who does, like Marcellus. I hope this book will encourage
+many people to take control of their own wealth management. And if for you
+that is a leap too far, as it is for many people, this book will certainly enable you
+to ask the right questions of your financial adviser.
+London 	Sir John Kay
+4 June 2021
+
+-- 11 of 259 --
+
+Introduction
+Test Cricket and Investing: A Classic Analogy
+‘Amidst the cacophonous tumult of India, there is a tendency to look for greatness and
+leadership amongst those who have flair, flamboyance and a certain sense of extroversion. But
+perhaps because the country is so prone to major upheavals . . . those who achieve long-lasting
+success in India are often those who are unflashy, introverted, determined and intelligently
+tenacious . . . in cricket, no one exemplifies this more than Rahul Dravid . . . the Coffee Can
+companies are the Rahul Dravids of the business world—rare, determined and constantly
+seeking to improve the edge or the advantage they enjoy vis-à-vis their competitors.’
+—Saurabh Mukherjea, in Chapter 9 of The Unusual Billionaires (2016)
+Peak performance in Test cricket requires not just technical proficiency but also
+intelligence and immense powers of concentration. In that regard, Test cricket
+and investing in Indian equities have interesting parallels, an appreciation of
+which can help newcomers understand the process of investing and the toolkits
+required to build a durably successful investment portfolio.
+WHY EQUITY INVESTING IN INDIA PARALLELS TEST CRICKET
+As a group of cricket lovers, we at Marcellus are not just crazy followers of the
+sport, but from time to time also find inspiration from it and its heroes in our
+personal and professional lives. And, given that ours is an entire nation of cricket
+lovers, we have also found cricketing analogies to be the most effective in
+communicating our investing approach.
+Many people perceive investing as something involving constant action,
+including watching share prices all the time and reacting quickly to news flow
+and market movements. The general belief is that such ‘active’ investing yields
+result in the immediate future. However, it seldom works like that. Investing is
+not like a T20 match where you attempt to hit every ball out of the park. It is
+more like Test cricket, where you do not even attempt to play every ball, let
+alone try to hit it to the boundary. In Test cricket, you choose your shots
+carefully, leave the deliveries outside the off stump alone, score your ones and
+twos regularly, and dispatch the occasional loose ball to the boundary. The key
+to successful investing, therefore, is to first leave the risky stocks alone, then to
+identify the ones that can grow earnings and cash flows steadily, and once you
+
+-- 12 of 259 --
+
+find such stocks, to bet big on them. Also, as in Test cricket, investing requires
+the player to not just possess the relevant skills and training but also the mental
+conditioning and discipline to apply those skills and training consistently. More
+crucially, investing requires the patience to play a long innings, which, as in Test
+cricket, is the assured way to victory. The difference between successful and
+unsuccessful investing is, in many ways, the difference between Test cricket and
+T20.
+The skill-building process for an investor starts ten years later compared to
+that of a budding batter. Most investors are in their early twenties when they first
+learn the analysis of financial statements and valuation techniques. While these
+are the foundational concepts of investing, the young investor tends to
+understand only the superficial aspects of these concepts. In other words, in her
+formative years, she learns the language of investing but doesn’t, as yet, fully
+understand or appreciate its deeper significance.
+Then, as she grows older and becomes a more experienced investor, she learns
+how to go deeper into these concepts and appreciates what they really mean. For
+example, she understands how companies deliberately cook their books so that
+investors end up overvaluing them and paying more for their shares than they
+really should. She also comprehends better why a small minority of companies is
+able to create competitive advantages so powerful that no rivals are able to
+effectively compete with it for years, even decades, on end.
+While the time taken by an individual cricketer or investor to mature and then
+peak varies from person to person, a very small minority of players/investors is
+able to excel over long periods of time. To go deep and truly excel for ten and
+twenty years requires talent in cricket and intelligence in investing. At the same
+time, both call for deep thinking, alongside a growth mindset (which pushes you
+to address your deficiencies), focused hard work and a multi-disciplinary skill-
+set (rather than a one-dimensional, inflexible mindset).
+And, if investing is akin to Test cricket, who better to emulate than Rahul
+Dravid, the greatest Test batter to play for India and one of the greats of the
+game across all eras and all countries. His skill-set, which on the face of it looks
+simple, is actually very hard to acquire.
+IF INVESTING IS LIKE TEST CRICKET, INVESTORS SHOULD AIM TO
+BE LIKE RAHUL DRAVID
+
+-- 13 of 259 --
+
+BE LIKE RAHUL DRAVID
+‘By any meaningful reckoning . . . he was India’s greatest match-winning batsman, with 24
+away wins (Sachin Tendulkar has 20) where he averaged nearly 70. When imponderables are
+introduced into the equation, with such things as the ability to absorb pressure and match
+impact, he is the greatest series-defining batsman in the history of Test cricket, his count of
+eight series-defining performances greater than anybody else’s.’
+—Suresh Menon1
+‘Rahul’s batting was poetic, with flowing follow-throughs that capitalised on exceptional
+footwork and a rock-solid base. His head was like the statue of David, allowing for perfect
+balance.’
+—Steve Waugh2
+ADELAIDE, 2003
+When the Indian cricket team toured Australia in 2003-04, memories of the
+repeated hammerings that India had received in that country through the 1990s
+were still fresh in everyone’s mind. In fact, as India was going into the series,
+cynics in the country were talking in terms of celebrating if the Indian side even
+managed to take a single Test match into the fourth day. Since this was to be
+Aussie legend Steve Waugh’s final Test series, the consensus view was that the
+Aussies would go the extra mile to defeat India and seal Waugh’s already
+legendary status as the most successful captain in Test history.
+Rahul Dravid, the Indian team’s vice-captain in the 2003-04 series, had had a
+traumatic tour to Australia in India’s previous outing there in 1999-2000, with
+scores of 35, 6, 9, 14, 19 and 0 in the four tests played there. He had a poor run
+of form, and India were whitewashed 3-0 in that Test series. As Dravid later
+admitted,
+The whole phase was quite tough for me. Three tests against Australia and then hardly a break
+before we played two tests against South Africa at home. I had more doubts about my game in
+that period than I’ve ever done . . . I was out of form . . . I was not batting well. I was not getting
+into good positions. I got out to balls that I had lost track of. I didn’t feel confident . . . Let’s just
+say that I wasn’t good enough and they were too good for me . . . 3
+After Dravid began unimpressively in the first Test of the 2003-04 series—
+which India managed to draw thanks to a century from their captain, Saurav
+Ganguly—Indian cricket lovers started fearing a repeat of the 1999-2000 horror
+show. Then came the second Test in Adelaide, which shook the world and took
+Dravid’s game and his reputation to a different level.
+The second Test at the Adelaide Oval began on 12 December 2003 with the
+
+-- 14 of 259 --
+
+The second Test at the Adelaide Oval began on 12 December 2003 with the
+Australian batsmen taking the Indian bowling to the cleaners. At the end of the
+first day, Australia had put 400 on the board with only 5 wickets down. They
+added a few more runs on day two to finish their first innings at 556. In next to
+no time, India collapsed to 85 for 4, with both Tendulkar and Ganguly back in
+the pavilion. It was at that point that Rahul Dravid stepped forward to play a
+seminal innings, which not only swung that Test match towards India but also
+ended an era of Australian domination over visiting Indian sides.
+Dravid’s 233 runs in the first innings of the 2003 Test in Adelaide took
+exactly ten hours. As a result of Dravid’s epic effort, India trailed Australia by
+only 33 after both sides had finished their first innings. Australia then collapsed
+for 196 in the second innings, with Ajit Agarkar taking 6 wickets. Set 230 to win
+the match, a nervous Indian batting line-up stuttered to 170 for 4 (once again
+with Tendulkar and Ganguly back in the hut). Dravid again came to the fore,
+with 72 not out, and once he had smashed a Stuart MacGill final long-hop past
+cover—Dravid ‘roared and kissed the India crest on his cap.’4 India thus attained
+their first Test victory in Australia since 1981. If you watch the video of this
+memorable Test match, you can see the wild celebration among the Indian
+supporters, commentators and cricketers and understand how much this victory
+meant to the nation.5
+As Aakash Chopra, who opened the batting for India in that series, said many
+years later, ‘The Australians have the habit of forcing batsmen into making a
+mistake. But Rahul did not make a single mistake during that innings. They were
+trying to force him, but he was in no mood to oblige.’6
+The Australians have similar recollections of the Adelaide Test match. Nine
+years later, Jason Gillespie, who led the Australian attack in the Adelaide Test
+match, said:
+. . . in Adelaide there was good bounce and carry, and we thought that if we stuck to our plans,
+we could get anyone out. But the way Dravid played, essentially, he was more patient than us
+bowlers. We became impatient, especially when he scored that double-century, because we
+could not get him out, and that made us go away from our game plan. That in turn worked for
+him because his plan was to wait for the bowler to lose patience.7
+A few weeks after the Adelaide epic, Rahul Dravid told writer and journalist
+Rohit Brijnath in an interview that in the second innings, as he steered India to a
+historic win, ‘I didn’t feel in much control. I had to fight through periods,
+
+-- 15 of 259 --
+
+refocus, reminding myself of what I wanted to achieve. My goal was to not get
+out, to make it as difficult as I could.’8
+Dravid then talked about his frame of mind on the final morning of the
+Adelaide Test match:
+We had a quiet confidence. We knew we had a great chance to win and we knew we could do it.
+Of course, we were a bit nervous, and it was natural. We had lost a lot of matches we should
+have won in the past. I was quite determined to not let that happen again . . . We had worked so
+hard . . . so we had to win . . . I told myself that I needed to do whatever it took, that whatever
+happened I would try to be there at the end. I had to give it all I had.9
+The final word on Dravid’s superhuman effort in Adelaide in 2003 belongs to
+his then captain, Saurav Ganguly, who said, ‘Rahul batted like God.’10
+THE GREATEST NUMBER 3 IN TEST CRICKET
+Besides his Herculean feats in famous Test matches—like those of Adelaide in
+2003, Eden Gardens in 2001, Headingley in 2002, Rawalpindi in 2004 and
+Jamaica in 2006—the distinctions of being the fourth-highest run getter in Test
+cricket, with 13, 288 runs (the second-highest Indian run scorer after Sachin
+Tendulkar), and of having faced more Test deliveries than any other (31, 258 to
+be precise i.e. 5, 210 overs) batter, are also his.
+Batting at number three, Rahul Dravid scored more Test runs—10,524—in
+that position than any other batter in the history of the game. His sixteen-year
+international career has an often overlooked but significant statistic—in that
+period, Dravid scored more runs than Sachin Tendulkar. Dravid made an
+incredible 23 per cent of the runs scored by India in the twenty-one Test
+victories under Ganguly’s captaincy, at a ‘Bradmanesque’ average of 103.11
+Those victories put India on the road to becoming the number one Test team in
+the world in the late 2000s.
+During his Test career, whilst Dravid was at the crease, the Indian cricket
+team scored over 32,000 runs, which amounts to 35.6 per cent of the total runs
+that India made in the Tests which Dravid played. No other Indian player has a
+score of over 30 per cent for this metric. Dravid is also the only batter in Test
+cricket history to have batted in more than 700 partnerships; in fact, no other
+batter has recorded even 650 partnerships so far.12
+
+-- 16 of 259 --
+
+Outside India, Rahul Dravid averaged 53.03 runs per innings. That is the
+second best ‘away-from-home’ average achieved by any Indian Test batter
+(Tendulkar leads with an away average of 54.7).13 In all, eight of Dravid’s eleven
+man-of-the-match awards were won in overseas Tests, and five in overseas wins.
+In 

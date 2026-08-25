@@ -1,0 +1,428 @@
+
+
+-- 1 of 247 --
+
+Strategy
+b e y o n d t h e
+hockey 	Stick
+
+-- 2 of 247 --
+
+
+
+-- 3 of 247 --
+
+Strategy
+b e y o n d t h e
+hockey 	Stick
+P e o P l e , 	P r o b a b i l i t i e s , 	a n d
+b i g M o v e s 	t o 	b e at t h e 	o d d s
+C h r i s B r a d l e y | M a r t i n h i r t | sv e n s M i t
+M c K i n s e y & c O M P A n y
+
+-- 4 of 247 --
+
+Cover image: Jeremy Banks (Banx)
+Cover design: Wiley
+Cartoons: Mike Shapiro created signed cartoons and Jeremy Banks (Banx) created all others
+Copyright © 2018 by McKinsey & Company. All rights reserved.
+Published by John Wiley & Sons, Inc., Hoboken, New Jersey.
+Published simultaneously in Canada.
+No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any
+form or by any means, electronic, mechanical, photocopying, recording, scanning, or otherwise,
+except as permitted under Section 107 or 108 of the 1976 United States Copyright Act, without
+either the prior written permission of the Publisher, or authorization through payment of the
+appropriate per-copy fee to the Copyright Clearance Center, Inc., 222 Rosewood Drive, Danvers,
+MA 01923, (978) 750-8400, fax (978) 646-8600, or on the Web at www.copyright.com. Requests
+to the Publisher for permission should be addressed to the Permissions Department, John Wiley &
+Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201) 748-6011, fax (201) 748-6008, or online
+at www.wiley.com/go/permissions.
+Limit of Liability/Disclaimer of Warranty: While the publisher and author have used their best
+efforts in preparing this book, they make no representations or warranties with respect to the
+accuracy or completeness of the contents of this book and specifically disclaim any implied
+warranties of merchantability or fitness for a particular purpose. No warranty may be created or
+extended by sales representatives or written sales materials. The advice and strategies contained
+herein may not be suitable for your situation. You should consult with a professional where
+appropriate. Neither the publisher nor author shall be liable for any loss of profit or any other
+commercial damages, including but not limited to special, incidental, consequential, or other
+damages.
+For general information on our other products and services or for technical support, please contact
+our Customer Care Department within the United States at (800) 762-2974, outside the United
+States at (317) 572-3993, or fax (317) 572-4002.
+Wiley publishes in a variety of print and electronic formats and by print-on-demand. Some material
+included with standard print versions of this book may not be included in e-books or in print-on-
+demand. If this book refers to media such as a CD or DVD that is not included in the version you
+purchased, you may download this material at http://booksupport.wiley.com. For more information
+about Wiley products, visit www.wiley.com.
+ISBN 978-1-119-48762-3 (Hardcover)
+ISBN 978-1-119-48763-0 (ePDF)
+ISBN 978-1-119-48760-9 (ePub)
+Printed in the United States of America.
+10 9 8 7 6 5 4 3 2 1
+
+-- 5 of 247 --
+
+To
+Bini, Walter, and Hildegund Hirt
+Bibi, Jan-Ferdel, and Ute Smit
+Mel, Olivia, Alice, and Harriet Bradley
+And to our
+Partners and Colleagues at McKinsey & Company
+for giving us the opportunity to beat the odds.
+
+-- 6 of 247 --
+
+
+
+-- 7 of 247 --
+
+vii
+Contents
+Introduction: Welcome to the strategy room 	1
+You are not alone 	2
+The villain is the social side of strategy 	4
+Where is the outside view? 	6
+Making big moves happen 	8
+The journey ahead of us 	9
+1. Games in the strategy room—and why people play them 	13
+The social side of strategy, in action 	15
+The dreaded hockey stick 	17
+Can we handle the truth? 	20
+Playing the inside game 	21
+Send in the guru 	22
+The wrong problem for human brains 	23
+The biased mind 	25
+Now . . . add social dynamics to the mix 	27
+When the inside view remains unchecked 	31
+2. Opening the windows of your strategy room 	37
+The right yardstick 	40
+Your business lives on a Power Curve 	42
+What we see on the map 	44
+Why you are where you are 	49
+A fresh perspective with the outside view 	53
+3. Hockey stick dreams, hairy back realities 	57
+The rise of the hairy back 	58
+Getting to yes 	60
+A haircut from finance 	60
+Bold forecasts 	62
+Timid plans 	68
+Corporate peanut butter 	70
+Shooting for the known 	70
+Real hockey sticks 	72
+
+-- 8 of 247 --
+
+viii 	C o N T e N T S
+4. What are the odds? 	75
+The knowable probability of success 	77
+Flight paths of the upwardly mobile 	80
+A tale of three companies 	83
+Where are the odds in the strategy room? 	85
+The push for certainty 	87
+You are your numbers 	89
+5. How to find the real hockey stick 	93
+What’s different this time? 	94
+Check the facts 	95
+The odds that matter: Yours 	96
+The 10 variables that make the difference 	99
+endowment 	100
+Trends 	101
+Moves 	102
+It all matters 	103
+The mobility dashboard 	105
+Know the odds 	109
+Is that all? 	110
+6. The writing is on the wall 	115
+A very different conversation about strategy 	118
+Tennis or badminton? 	119
+Industries are escalators 	120
+Change your industry or change industries 	123
+Consider changing locations, too 	124
+Go micro 	125
+The need for privileged insights 	127
+Acting on the writing on the wall 	128
+The four stages of a disruptive trend 	130
+Stage one: Signals amid the noise 	132
+Stage two: Change takes hold 	134
+Stage three: The inevitable transformation 	136
+The hardest stage 	136
+Stage four: Adapting to the new normal 	139
+
+-- 9 of 247 --
+
+C o N T e N T S 	ix
+7. Making the right (big) moves 	143
+Big moves are essential 	146
+Corning’s story 	150
+Programmatic M&A and divestitures 	150
+Active resource re-allocation 	152
+To re-allocate, you have to de-allocate 	156
+Strong capital programs 	156
+Caution on capex 	158
+Distinctive productivity improvement 	158
+Running fast and getting nowhere 	159
+Differentiation improvement 	162
+Are you playing to your advantage? 	165
+Big moves make for good strategy 	166
+8. Eight shifts to unlock strategy 	173
+From annual planning . . . to strategy as a journey 	175
+From getting to “yes” . . . to debating real alternatives 	177
+From peanut butter . . . to picking your 1-in-10s 	181
+From approving budgets . . . to making big moves 	184
+From budget inertia . . . to liquid resources 	188
+From sandbagging . . . to open risk portfolios 	190
+From “you are your numbers” . . . to a holistic performance view 	193
+From long-range planning . . . to forcing the first step 	196
+The package deal 	198
+Epilogue: New life in the strategy room 	201
+Acknowledgments 	205
+Appendix 	207
+About our sample and method 	207
+A note on economic profit and total returns to shareholders 	209
+How the odds look different from the top or bottom 	209
+Life at the top 	211
+Life at the bottom 	211
+Notes 	215
+Index 	227
+
+-- 10 of 247 --
+
+
+
+-- 11 of 247 --
+
+1
+Introduction
+Welcome to the
+strategy room
+In the strategy room, human bias and social dynamics can
+prevent the necessary big moves from getting on the table, let
+alone getting executed. In this book we arm ourselves with
+hard data from thousands of companies to take the “social side
+of strategy” head on.
+I
+sn’t there another way?”
+We hear that all the time, and you must have asked yourself
+that question, too—probably more than once. Perhaps after an
+exhausting marathon of strategy sessions that are supposed to be discus-
+sions but really are just presentations. Perhaps after feeling compelled
+to say “yes” to another investment proposal with uncertain prospects.
+Perhaps after one of the usual discussions to re-allocate resources to
+growth opportunities that go nowhere.
+
+-- 12 of 247 --
+
+2 	S t r at e g y b e y o n d t h e h o c k e y S t I c k
+over decades of working with hundreds of the most senior business
+leaders around the world, we agreed:
+“there has to be another way . . .”
+books about improving the strategy process fill our shelves,
+packed with frameworks and anecdotes that claim to crack the code
+of successful strategy. 1 as interesting as these books are to read, as
+inspiring as their case examples are, it seems we are still short a
+breakthrough. today’s strategic challenges are, in fact, very similar
+to what they’ve been over the ages, despite the serious efforts of a lot
+of smart people.
+this book belongs on a different shelf. rather than relying on the
+traditional approach of best practices and inspiring anecdotes, we use
+broad and deep empirical research. We have identified a small num-
+ber of performance levers that, according to the factual evidence we
+compiled—and our experience in implementing them—can be used to
+greatly increase your odds of success. We believe we’ve also found the
+one—often overlooked—factor responsible for many of the conun-
+drums facing us in the strategy room, the one factor that has perplexed
+generations of business leaders, the factor that causes so many strate-
+gies to not work out as planned. that factor is what we call the social
+side of strategy.
+In this book, we use empirical insights to finally help you and other
+business leaders chart a course to address the social side of strategy and,
+as a result, develop better, bigger, bolder strategies.
+there is another way!
+You are not alone
+as we begin our journey together through the empirics and the social
+side of strategy, let’s peer into the strategy room and look at some of
+the scenes playing out there. these scenes probably feel familiar to
+you because they are surprisingly common despite all those books and
+articles about how to get to better strategy, better decisions, and better
+business performance.
+as the strategy process starts, the team agrees that this year you
+will avoid huge documents with 150 slides and endless appendices.
+you commit to having real conversations about the future of the
+
+-- 13 of 247 --
+
+W e l c o m e t o t h e S t r at e g y r o o m 	3
+business and the tough choices you’ll have to make. then, two days
+before the first meeting, three of those 150-page documents land in
+the ceo’s in-box with a thud. So much for real conversations. you
+are back wading through details in carefully scripted presentations
+that numb the senses before anybody has a chance to fully grasp
+the content.
+or, you decide that you need to have a deep strategic rethink after
+a stretch of indifferent results. the top team agrees on a change in
+direction. the board approves. then the cFo takes over and turns
+that vision into a first-year budget. the boldness oozes away as those
+who stand to lose resources mount rear-guard actions and as other
+immune responses to real changes kick in. Somehow, that bold rethink
+produces a new budget that looks a lot like last year’s budget. It’s back
+to business as usual.
+how about a third scenario? the strategy is agreed on. It all looks
+good on paper, and there is loads of compelling backup. but, some-
+how, deep down, everybody senses that the strategy is nothing more
+than hopeful thinking. It is a little too kind to the egos of the people
+who made it and a little too unwilling to embrace the harsh reality of
+competition. People two or three levels down in the organization—the
+ones who engage with actual customers, the ones who often weren’t
+really part of the strategy process—conclude that management is
+stuck in a bubble, roll their eyes, and just get on with what they were
+doing. all that “new” strategy ends up being good for is justifying some
+uneconomic projects—the ones labeled “strategic” because they lose
+
+-- 14 of 247 --
+
+4 	S t r at e g y b e y o n d t h e h o c k e y S t I c k
+money; everybody knows that no real change in trajectory will happen
+because of them.
+even if you are the ceo, it can feel at times as if the inertia caused
+by individual behaviors and social dynamics is rather hard to deal
+with—and getting in the way of doing the right thing for your busi-
+ness. one of our client ceos in australia recently reflected: “I am well
+aware of the fact that we should be moving faster in that direction, but
+I have to bring the team along.”
+you might be in the enviable position of leading an agile start-up
+or an amazing, amazon-scale institution that still operates like it did
+on day 1. If so, congratulations. you may find some of the empirics in
+this book interesting because of what they show about what works and
+what doesn’t in strategies, but you should really just keep doing what
+you’re doing. If you are like the managers we more commonly come
+across, however, you will easily recognize the symptoms we are talking
+about and be keen to confront the social side of strategy. and even if
+you are amazon-like, you might use some of the insights shared here
+to see a slip coming ahead of time.
+The villain is the social side of strategy
+We all know that we go into the strategy process loaded with indi-
+vidual and institutional biases and that group dynamics in the strat-
+egy room often distort results. but that’s where the thinking about
+social dynamics usually ends. how often are we making an explicit
+effort to understand these factors and to properly deal with them?
+don’t we tend to shrug our shoulders and soldier on? too often, we
+seem to pretend that the strategy process is just about solving an
+analytical problem, knowing deep down that the analysis is really
+the easy part.
+Frameworks and tools, the likes of which you find in your typ-
+ical business book or consulting deck, can be useful in structuring
+your thinking and can help generate ideas. Unfortunately, they usu-
+ally don’t help us break through the real barriers to good strategy.
+the simple reason: the social side of strategy can overwhelm the
+intellectual side.
+
+-- 15 of 247 --
+
+W e l c o m e t o t h e S t r at e g y r o o m 	5
+Peter drucker famously said that “culture eats strategy for break-
+fast.”2 nowhere is that more evident than in the strategy room. how
+can that be? after all, that room is full of smart and experienced peo-
+ple who welcome an intellectual challenge. but strategy isn’t the only
+thing that’s at stake here. Jobs—even careers—are on the line, too. you
+can lose your job or status if you overpromise or under-deliver on your
+performance goals. So, not surprisingly, caution reigns—and a strategy
+process that is about job protection rarely produces the best outcomes
+for the company. the budget process intrudes, too. you may be discuss-
+ing a 5-year strategy, but everyone knows that what really matters is
+the first-year budget. Inevitably, other sorts of games are played. most
+managers, for instance, will try to secure resources for the coming year
+while deferring accountability for the returns on these investments as
+far as possible into the future—maybe even long enough that people
+will have forgotten about the original commitments, or that they
+themselves will have moved on to the next position. even the most
+successful business leaders are human, after all.
+the strategy room is full of so many competing agendas and social
+games that you might have sometimes wondered why people spent so
+much time and effort on the analysis and presentation preparations in
+the first place.
+the outcome of all these dynamics is the hockey stick, confidently
+showing future success after the all-too-familiar dip on next year’s
+
+-- 16 of 247 --
+
+6 	S t r at e g y b e y o n d t h e h o c k e y S t I c k
+budget. truly, if ever there was one, the hockey stick is the icon of
+the strategy process. If we just mention the phrase, we get a knowing
+glance and a wry smile from the executives we’ve shared our research
+with.
+With this book, we want to break the hockey stick. We want to
+address the social side of strategy, so the big moves that drive economic
+profit and shareholder value can actually happen.
+Where is the outside view?
+For more than 5 years now, the three of us have invested in understand-
+ing why things get bogged down so easily in the strategy process and on
+developing a new angle on how to deal with the issues. having spent
+decades consulting with hundreds of companies across the globe, and
+having seen countless strategic plans, we began this journey by draw-
+ing on our personal observations. but we also decided to take our own
+medicine: We have tried to push past the usual anecdotes and juxtaposed
+experience with the reality of hard facts on corporate performance. We
+supplemented our observations with detailed research and analysis of
+several thousand of the world’s largest companies. these are big-sample
+empirics—not the traditional collection of a few dozen, interview-based
+case studies.
+We found that in most strategy rooms there simply aren’t enough
+data, and certainly not all the right data. that may seem to be an odd
+statement, given our complaints about all those 150-page documents
+and their endless appendices. but those documents tend to take too
+narrow a view of the world. they are based on an “inside view”—the
+data from your own industry, the perspective of your own company, and
+the experience of your own team and of the executives in the strategy
+room.3 the materials in strategy rooms today provide detail, but no
+reference data with predictive power. Interestingly, the more detailed
+the information you have, the more you lead yourself to believe that
+you know; and the more your confidence grows, the higher the risk of
+arriving at the wrong conclusions.4
+When changing times demand a really big shift in strategy, this
+inside view turns out to be even more of a problem. It’s an inside view
+of the wrong world, and you are caught blindsided.
+
+-- 17 of 247 --
+
+W e l c o m e t o t h e S t r at e g y r o o m 	7
+rather than an ever-more-precise inside view, strategy needs an
+“outside view,” where data about the thousands of other experiences by
+other executives and their companies in other strategy rooms are brought
+into your own strategy room to shape the discussion. Why benchmark
+just your operational kPIs when you could have an equally compel-
+ling, objective reference point for your strategy? Why not calibrate how
+good your strategy really is against a broad set of comparative data?
+the problem, you might say, is that every situation is unique, right?
+“no other company has our brand, our resources, our set of competitors,
+our customers, our challenges, our opportunities.” and companies aren’t
+exactly sharing all their data with the world to make it easy for you to com-
+pare yourself against them, anyway. Well, yes. that’s why there never has
+been a comprehensive database of strategic success and failure—until now.
+We looked at publicly available information on dozens of vari-
+ables for thousands of companies and found a manageable number
+of levers—10, in fact—that explain over 80 percent of up-drift and
+down-drift in corporate performance.5
+We’ll share those data with you in this book, to give you that “out-
+side view.” We will show you a way to see how your strategy stacks
+up—before you ever leave the strategy room, and before you start to
+execute your strategy. If you don’t think you’ve given yourself strong
+enough odds of success, you can fall back, regroup, and reformulate
+your strategy to improve your chances. all that, before you start down
+a costly road that might just find another dead end. We will give you
+a new way of gaining confidence in bold strategies that change the
+direction of your business, because you will be able to now know
+
+-- 18 of 247 --
+
+8 	S t r at e g y b e y o n d t h e h o c k e y S t I c k
+the chances of your strategy succeeding, calibrated against a verifiable
+yardstick of corporate performance.
+In the sports world, golf announcers can tell the odds that a pro
+will make a putt of a certain length, because the data on all the putts
+by all the pros have been compiled. Football stats buffs can tell you the
+odds that a team will win based on the score, the quarter, the number
+of first downs, and the name of the quarterback, because all that data
+have been aggregated across league games over many years. the same
+sort of data is now available about corporate strategy.
+Making big moves happen
+to get ahead of ourselves a little bit: the data show, i

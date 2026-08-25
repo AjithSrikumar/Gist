@@ -1,0 +1,419 @@
+TEAMFLY
+Team-Fly ®
+
+-- 1 of 240 --
+
+T H E
+M I N D
+M C KINSEY
+
+-- 2 of 240 --
+
+This page intentionally left blank.
+
+-- 3 of 240 --
+
+New York Chicago San Francisco Lisbon London Madrid Mexico City
+Milan New Delhi San Juan Seoul Singapore Sydney Toronto
+T H E
+E T H A N 	M . 	R A S I E L
+A U T H O R O F T H E M C K I N S E Y W A Y
+A N D 	PA U L N . F R I G A
+Understanding and Implementing the Problem-
+Solving Tools and Management Techniques
+of the World’s Top Strategic Consulting Firm
+M I N D
+M C KINSEY
+
+-- 4 of 240 --
+
+Copyright © 2002 by The McGraw-Hill Companies, Inc. All rights reserved. Manufactured in the United States of America. Except
+as permitted under the United States Copyright Act of 1976, no part of this publication may be reproduced or distributed in any
+form or by any means, or stored in a database or retrieval system, without the prior written permission of the publisher.
+0-07-140554-2
+The material in this eBook also appears in the print version of this title: 0-07-137429-9.
+All trademarks are trademarks of their respective owners. Rather than put a trademark symbol after every occurrence of a trade-
+marked name, we use names in an editorial fashion only, and to the benefit of the trademark owner, with no intention of
+infringement of the trademark. Where such designations appear in this book, they have been printed with initial caps.
+McGraw-Hill eBooks are available at special quantity discounts to use as premiums and sales promotions, or for use in corpo-
+rate training programs. For more information, please contact George Hoare, Special Sales, at george_hoare@mcgraw-hill.com
+or (212) 904-4069.
+TERMS OF USE
+This is a copyrighted work and The McGraw-Hill Companies, Inc. (“McGraw-Hill”) and its licensors reserve all rights in and
+to the work. Use of this work is subject to these terms. Except as permitted under the Copyright Act of 1976 and the right to
+store and retrieve one copy of the work, you may not decompile, disassemble, reverse engineer, reproduce, modify, create deriv-
+ative works based upon, transmit, distribute, disseminate, sell, publish or sublicense the work or any part of it without McGraw-
+Hill’s prior consent. You may use the work for your own noncommercial and personal use; any other use of the work is strictly
+prohibited. Your right to use the work may be terminated if you fail to comply with these terms.
+THE WORK IS PROVIDED “AS IS”. McGRAW-HILL AND ITS LICENSORS MAKE NO GUARANTEES OR WAR-
+RANTIES AS TO THE ACCURACY, ADEQUACY OR COMPLETENESS OF OR RESULTS TO BE OBTAINED FROM
+USING THE WORK, INCLUDING ANY INFORMATION THAT CAN BE ACCESSED THROUGH THE WORK VIA
+HYPERLINK OR OTHERWISE, AND EXPRESSLY DISCLAIM ANY WARRANTY, EXPRESS OR IMPLIED, INCLUD-
+ING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+PURPOSE. McGraw-Hill and its licensors do not warrant or guarantee that the functions contained in the work will meet your
+requirements or that its operation will be uninterrupted or error free. Neither McGraw-Hill nor its licensors shall be liable to you
+or anyone else for any inaccuracy, error or omission, regardless of cause, in the work or for any damages resulting therefrom.
+McGraw-Hill has no responsibility for the content of any information accessed through the work. Under no circumstances shall
+McGraw-Hill and/or its licensors be liable for any indirect, incidental, special, punitive, consequential or similar damages that
+result from the use of or inability to use the work, even if any of them has been advised of the possibility of such damages. This
+limitation of liability shall apply to any claim or cause whatsoever whether such claim or cause arises in contract, tort or other-
+wise.
+DOI: 10.1036/0071405542
+
+-- 5 of 240 --
+
+For Emma, Jessica, and Talia—EMR
+For Meredith (motivation), Mom (direction), Dad (curiosity),
+and Lido (energy)—PNF
+
+-- 6 of 240 --
+
+This page intentionally left blank.
+
+-- 7 of 240 --
+
+CONTENTS
+Acknowledgments 	ix
+Introduction 	xi
+1. Framing the Problem 	1
+2. Designing the Analysis 	31
+3. Gathering the Data 	49
+4. Interpreting the Results 	83
+5. Presenting Your Ideas 	103
+6. Managing Your Team 	127
+7. Managing Your Client 	159
+8. Managing Yourself 	173
+Appendix A: Data-Gathering Resources 	187
+Appendix B: Lessons from The McKinsey Way 	205
+Appendix C: Implementation Lessons 	209
+Index 	213
+vii
+Copyright 2002 The McGraw-Hill Companies, Inc. 	Click Here for Terms of Use.
+
+-- 8 of 240 --
+
+This page intentionally left blank.
+
+-- 9 of 240 --
+
+ACKNOWLEDGMENTS
+First and foremost, I would like to thank my coauthor, Paul
+Friga. This book discusses the virtues of teamwork at length,
+and I can think of no better example of successful teamwork than
+our collaboration. This book is much stronger for it. He has
+pushed my thinking in new and productive directions; I trust he
+can say the same of me. —Ethan M. Rasiel
+ 	 	
+Without question, the first acknowledgment goes to my coau-
+thor, Ethan Rasiel. First, he graciously brought me into the process
+after already achieving great success with his solo effort on his first
+book, The McKinsey Way. Second, he offered incredible insight,
+enthusiasm, and direction. And third, he taught me lessons in per-
+sistence, storytelling, and unselfishness. —Paul N. Friga
+ 	 	
+The authors owe thanks to many without whom this book
+would not be in your hands. First, their agent, Daniel Greenberg at
+James Levine Communications, Inc.; their editor, Mary Glenn;
+Katherine Hinkebein; and the entire team at McGraw-Hill who
+made this book a reality. Joe Burton, Simon Carne, Jerry Friga, Ed
+ix
+Copyright 2002 The McGraw-Hill Companies, Inc. 	Click Here for Terms of Use.
+
+-- 10 of 240 --
+
+Pringle, and Paul Sansone made insightful suggestions in the early
+stages of this manuscript. Our research assistants, Lindsay Cage,
+Rebecca Jones, and especially Karen Jansen, rendered invaluable
+support administering questionnaires, researching ideas, and orga-
+nizing material. David Ernsthausen at the Kenan-Flagler School
+of Business at the University of North Carolina provided expert
+assistance with the knowledge management section of this book,
+and Peggy Pickard, also of UNC, ensured that we had the facili-
+ties we needed for our frequent conferences and brainstorming
+sessions.
+Most of all, we are grateful to all those McKinsey alumni who
+gave us interviews or answered our questionnaires: Jim Bennett,
+Omowale Crenshaw, Dean Dorman, Naras Eechambadi, Bob
+Garda, Evan Grossman, Eric Hartz, Paul Kenny, Stevie McNeal,
+Sylvia Mathews, Bill Ross, Larry Rouvelas, Jeff Sakaguchi, Dan
+Veto, Steve Anderson, Alan Barasky, Martha Blue, Roger Boisvert,
+Francesca Brockett, Bob Buchsbaum, Ciara Burnham, S. Neil
+Crocker, Dominik Falkowski, Brad Farnsworth, Shyam Girid-
+haradas, Barbara Goose, Francesco Grillo, Reggie Groves, Fred
+Kindle, Deborah Knuckey, Heiner Kopperman, Kurt Lieberman,
+Lee Newman, Leah Niederstadt, Ron O’Hanley, Rainer Siggelkow,
+Chacko Sonny, and Jim Whelan, as well as many others, who, for
+reasons of their own, wish to remain anonymous. We could not
+have written this book without them.
+x 	Acknowledgments
+TEAMFLY
+Team-Fly ®
+
+-- 11 of 240 --
+
+INTRODUCTION
+ABOUT THIS BOOK
+February 1999 saw the publication of The McKinsey Way by
+Ethan M. Rasiel, a former associate of management-consulting
+powerhouse McKinsey & Company. That book combined the—
+occasionally humorous—anecdotes of McKinsey alumni with the
+personal recollections of the author to describe the techniques that
+McKinsey consultants use to help their clients become more effi-
+cient and effective. The McKinsey Way also painted a vivid pic-
+ture of life behind the walls of the publicity-shy organization that
+its employees refer to as “the Firm.”
+The McKinsey Mind picks up where The McKinsey Way left
+off. Most of that book was taken up with a description of consult-
+ing McKinsey-style in the context of a typical project—“engage-
+ment” in Firm jargon. It started with the sale of the engagement
+and moved step by step through the implementation of McKinsey’s
+solution. It also briefly discussed the thought process that McKin-
+sey consultants use to tackle tough business problems.
+xi
+Copyright 2002 The McGraw-Hill Companies, Inc. 	Click Here for Terms of Use.
+
+-- 12 of 240 --
+
+By necessity, The McKinsey Way was more descriptive than
+prescriptive. With The McKinsey Mind, we take the opposite tack.
+Whereas The McKinsey Way dealt with what McKinsey does, The
+McKinsey Mind shows you how to apply McKinsey techniques in
+your career and organization. To accomplish this, we build on the
+knowledge base of The McKinsey Way but offer a different per-
+spective, as we shall explain later in this Introduction. At this
+point, however, we want to assure you that if you haven’t read The
+McKinsey Way, you need not read it in order to understand or
+profit from The McKinsey Mind.* In fact, we even provide sum-
+maries of the relevant lessons from The McKinsey Way at the start
+of each section of this book, as well as a list of where to find them
+in Appendix B.
+Anyone can use the problem-solving and management tech-
+niques described in The McKinsey Way (and The McKinsey Mind);
+you don’t have to be in (or even from) the Firm. We also recog-
+nize that McKinsey is a unique organization. Its consultants can
+call on resources not usually available to executives in other com-
+panies. Its flat hierarchy allows junior consultants to make deci-
+sions and express their ideas in ways that would be impossible in
+more-stratified workplaces. And when working with clients, the
+Firm’s consultants generally have a freedom of access and action
+unavailable to most executives. With these thoughts in mind, we
+realized that to take The McKinsey Way to the next level, we had
+to adapt it to organizations that don’t enjoy McKinsey’s peculiar
+advantages.
+Fortunately, we did not have to look far for inspiration in this
+regard. In researching this book, we relied on interviews with and
+questionnaires from more than 75 McKinsey alumni who have
+xii 	Introduction
+*One of your authors, specifically Ethan Rasiel, would be very happy if, having read this
+book, you decided to buy the The McKinsey Way as well.
+
+-- 13 of 240 --
+
+successfully implemented the Firm’s techniques and strategies in
+their post-McKinsey organizations. Since leaving the Firm, they
+have become CEOs, entrepreneurs, and senior decision makers in
+businesses and governments around the world. If anyone could
+show us what works outside McKinsey and what doesn’t, they
+could—and did.
+In this book, therefore, you will discover a problem-solving
+and decision-making process based on McKinsey’s own, highly
+successful methods but adapted to the “real world” based on—
+and, we believe, strengthened by—the experiences of McKinsey
+alumni in their post-McKinsey careers. You will also learn the
+management techniques you will need to implement that process in
+your own career and the presentation strategies that will allow you
+to communicate your ideas throughout your organization.
+ABOUT McKINSEY
+In case you are unfamiliar with McKinsey & Company, let us offer
+a few words about the organization that its members past and
+present refer to as “the Firm.” Since its founding in 1923, McKin-
+sey & Company has become the world’s most successful strategic
+consulting firm. It currently has 84 offices (and counting) around
+the world and employs some 7,000 professionals who hail from 89
+countries. It may not be the largest strategy firm in the world—
+some of the big accounting firms have larger practices—but it is
+certainly the most prestigious. McKinsey consults to more than a
+thousand clients, including 100 of the world’s 150 largest compa-
+nies, as well as many state and federal agencies of the United States
+and foreign governments. McKinsey is a brand name in interna-
+tional business circles.
+Introduction 	xiii
+
+-- 14 of 240 --
+
+Several senior McKinsey partners have risen to international
+prominence in their own right. Lowell Bryan advised the Senate
+Banking Committee during the savings and loan crisis. Jon Katzen-
+bach’s books on the management of high-performance teams
+appear on the bookshelves of CEOs around the world. Even more
+visible are some of McKinsey’s alumni who have gone on to senior
+positions around the world: Tom Peters, management guru and
+coauthor of In Search of Excellence; Lou Gerstner, CEO of IBM;
+and Jeff Skilling, CEO of Enron, to name but three.
+To maintain its preeminent position (and to earn its high fees),
+the Firm seeks out the cream of each year’s crop of business school
+graduates. It lures them with high salaries, the prospect of a rapid
+rise through McKinsey’s meritocratic hierarchy, and the chance to
+mingle with the elite of the business world. In return, the Firm
+demands total devotion to client service, submission to a grueling
+schedule that can include weeks or months away from home and
+family, and only the highest-quality work. For those who meet
+McKinsey’s standards, promotion can be rapid. Those who fall
+short soon find themselves at the latter end of the Firm’s strict pol-
+icy of “up or out.”
+Like any strong organization, the Firm has a powerful corpo-
+rate culture based on shared values and common experiences.
+Every “McKinsey-ite” goes through the same rigorous training
+programs and suffers through the same long nights in the office. To
+outsiders, this can make the Firm seem monolithic and forbidding.
+One recent book on management consulting likened McKinsey to
+the Jesuits.
+The Firm has its own jargon, too. It is full of acronyms: EM,
+ED, DCS, ITP, ELT, BPR, etc. McKinsey-ites call their assignments
+or projects “engagements.” On an engagement, a McKinsey team
+will search for the “key drivers” in their quest to “add value.” Like
+most jargon, much of this is simply verbal shorthand; some of it,
+xiv 	Introduction
+
+-- 15 of 240 --
+
+however, once understood, can be as useful to businesspeople out-
+side the Firm as it is to McKinsey-ites themselves.
+ABOUT THE PROBLEM-SOLVING PROCESS
+Our benchmark is the problem-solving process as practiced by
+McKinsey. At the most abstract level, McKinsey develops solutions
+to clients’ strategic problems and, possibly, aids in the implemen-
+tation of those solutions. Figure I-1 depicts our theoretical model
+of problem solving, which breaks the process into six discrete ele-
+ments. In The McKinsey Mind, we will focus on the central trian-
+gle of this model (the items in bold).
+Introduction 	xv
+Problem
+	Solution
+Data
+Intuition
+Managing
+• Team
+• Client
+• Self
+Presenting
+• Structure
+• Buy-in
+Analyzing
+• Framing
+• Designing
+• Gathering
+• Interpreting
+Business Need
+• Competitive
+• Organizational
+• Financial
+• Operational
+Implementation
+• Dedication
+• Reaction
+• Completion
+• Iteration
+Leadership
+• Vision
+• Inspiration
+• Delegation
+Figure I-1. Strategic Problem-Solving Model
+
+-- 16 of 240 --
+
+• Business Need—You can’t have problem solving without a
+problem or, more broadly, a need on the part of the client.
+In business, those needs come in several forms: competi-
+tive, organizational, financial, and operational.
+• Analyzing—Once your organization has identified the
+problem, it can begin to seek a solution, whether on its
+own or with the help of McKinsey (or any other outside
+agent). McKinsey’s fact-based, hypothesis-driven problem-
+solving process begins with framing the problem: defining
+the boundaries of the problem and breaking it down into
+its component elements to allow the problem-solving team
+to come up with an initial hypothesis as to the solution.
+The next step is designing the analysis, determining the
+analyses that must be done to prove the hypothesis, fol-
+lowed by gathering the data needed for the analyses.
+Finally comes interpreting the results of those analyses to
+see whether they prove or disprove the hypothesis and to
+develop a course of action for the client.
+• Presenting—You may have found a solution, but it has no
+value until it has been communicated to and accepted by
+the client. For that to happen, you must structure your
+presentation so that it communicates your ideas clearly and
+concisely and generates buy-in for your solution for each
+individual audience to which you present.
+• Managing—The success of the problem-solving process
+requires good management at several levels. The problem-
+solving team must be properly assembled, motivated, and
+developed. The client must be kept informed, involved, and
+inspired by both the problem-solving process and the solu-
+tion. The individual team members (that’s you) must strike
+a balance between life and career that allows them to meet
+xvi 	Introduction
+
+-- 17 of 240 --
+
+• the expectations of the client and the team while not
+“burning out.”
+• Implementation—Your organization may have accepted
+your solution, but it must still implement it. This requires
+the dedication of sufficient resources within the organiza-
+tion, the timely reaction of the organization to any stum-
+bling blocks that may arise during implementation, the
+focus of the organization on completion of the tasks neces-
+sary for full implementation. In addition, the organization
+must institute a process of iteration that leads to continual
+improvement. That process requires reassessing implemen-
+tation and rededicating the organization to make addi-
+tional changes identified during reassessment.
+• Leadership—At the nexus of solution and implementation
+comes leadership. Those at the helm of your organization
+must conceive a strategic vision for the organization. They
+must also provide inspiration for those in the organization
+who will do the hands-on work of implementation. Finally,
+they must make the right judgments regarding delegation
+of authority in overseeing implementation throughout the
+organization.
+There is one other piece of the model: the tension between intu-
+ition and data. Problem solving doesn’t take place in a vacuum.
+Even McKinsey has only so many resources to throw at a prob-
+lem and a limited time in which to solve it. While we are advo-
+cates for McKinsey-style fact-based problem solving, we recognize
+that it’s practically impossible to have all the relevant facts before
+reaching a decision. Therefore, most executives make business
+decisions based partly on facts and partly on intuition—gut instinct
+tempered by experience. We will discuss the pros and cons of each
+Introduction 	xvii
+
+-- 18 of 240 --
+
+element later in the book. For now, we will simply say that we
+think a sound decision requires a balance of both.
+As we mentioned, The McKinsey Mind will focus on the cen-
+tral triangle of the consulting process—problem solving, present-
+ing, and managing—that constitutes the day-to-day work of a
+McKinsey consulting team. In Chapters 1 through 4, we discuss
+McKinsey’s fact-based, hypothesis-driven problem-solving process
+and show how you can use it to tackle the complex problems that
+arise in your own organization. In Chapter 5, we introduce strate-
+gies for presentation that will allow you to get your ideas across
+with maximum impact, whether your audience is your boss, your
+board, or your entire company. Finally, in Chapters 6 through 8,
+we cover the management techniques you need to ensure that your
+own problem-solving efforts run smoothly. Client needs, leader-
+ship, and implementation are beyond the scope of The McKinsey
+Mind; they are topics for another day and, perhaps, another book.
+The chapters of The McKinsey Mind follow the same general
+structure. Each chapter (except Chapter 2) is divided into two or
+more sections. Each section begins with a brief discussion of the
+topic at hand, followed by a summary of the relevant lessons from
+The McKinsey Way. Next comes a discussion of the new lessons
+we learned from our alumni along with illustrations of successful
+implementation, followed by suggestions for implementing these
+lessons in your own organization. Each section ends with exercises
+to help you understand and practice the lessons of the section.
+Since the book follows the problem-solvin

@@ -1,0 +1,17 @@
+{
+  "name": "Gist — Book Summaries",
+  "short_name": "Gist",
+  "description": "Key ideas from the world's best nonfiction in minutes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F3EA",
+  "theme_color": "#F7F3EA",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

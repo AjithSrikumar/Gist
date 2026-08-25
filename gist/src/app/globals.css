@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-cream: #f7f3ea;
+  --color-bg-white: #ffffff;
+  --color-ink-900: #16181d;
+  --color-ink-600: #5b6068;
+  --color-brand-blue: #2f5ff6;
+  --color-brand-blue-dk: #1e3fcb;
+  --color-accent-pink: #ff4fa0;
+  --color-accent-orange: #ff8a3d;
+  --color-accent-green: #35c48b;
+  --color-accent-purple: #8b5cf6;
+  --color-accent-teal: #2db6a3;
+  --color-surface-peach: #fcefe3;
+  --color-divider: #ece7dd;
+
+  --radius-card: 16px;
+  --radius-button: 14px;
+
+  --shadow-card: 0 2px 8px rgba(22, 24, 29, 0.06);
+  --shadow-sheet: 0 -8px 40px rgba(22, 24, 29, 0.25);
+}
+
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.snap-x-mandatory {
+  scroll-snap-type: x mandatory;
+}
+.snap-start-always {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.08) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.08) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+}

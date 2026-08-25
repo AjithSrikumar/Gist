@@ -1,0 +1,251 @@
+
+
+-- 1 of 232 --
+
+Business Adventures
+Twelve Classic Tales from the World of Wall Street
+John Brooks
+
+-- 2 of 232 --
+
+Contents
+1 The Fluctuation
+THE LITTLE CRASH IN ’62
+2 The Fate of the Edsel
+A CAUTIONARY TALE
+3 The Federal Income Tax
+ITS HISTORY AND PECULIARITIES
+4 A Reasonable Amount of Time
+INSIDERS AT TEXAS GULF SULPHUR
+5 Xerox Xerox Xerox Xerox
+6 Making the Customers Whole
+THE DEATH OF A PRESIDENT
+7 The Impacted Philosophers
+NON-COMMUNICATION AT GE
+8 The Last Great Corner
+A COMPANY CALLED PIGGLY WIGGLY
+9 A Second Sort of Life
+DAVID E. LILIENTHAL, BUSINESSMAN
+10 Stockholder Season
+ANNUAL MEETINGS AND CORPORATE POWER
+11 One Free Bite
+A MAN, HIS KNOWLEDGE, AND HIS JOB
+12 In Defense of Sterling
+THE BANKERS, THE POUND, AND THE DOLLAR
+Index
+
+-- 3 of 232 --
+
+1
+The Fluctuation
+THE STOCK MARKET—the daytime adventure serial of the well-to-do—would not be the stock market if
+it did not have its ups and downs. Any board-room sitter with a taste for Wall Street lore has heard of
+the retort that J. P. Morgan the Elder is supposed to have made to a naïve acquaintance who had
+ventured to ask the great man what the market was going to do. “It will fluctuate,” replied Morgan
+dryly. And it has many other distinctive characteristics. Apart from the economic advantages and
+disadvantages of stock exchanges—the advantage that they provide a free flow of capital to finance
+industrial expansion, for instance, and the disadvantage that they provide an all too convenient way
+for the unlucky, the imprudent, and the gullible to lose their money—their development has created a
+whole pattern of social behavior, complete with customs, language, and predictable responses to
+given events. What is truly extraordinary is the speed with which this pattern emerged full blown
+following the establishment, in 1611, of the world’s first important stock exchange—a roofless
+courtyard in Amsterdam—and the degree to which it persists (with variations, it is true) on the New
+York Stock Exchange in the nineteen-sixties. Present-day stock trading in the United States—a
+bewilderingly vast enterprise, involving millions of miles of private telegraph wires, computers that
+can read and copy the Manhattan Telephone Directory in three minutes, and over twenty million
+stockholder participants—would seem to be a far cry from a handful of seventeenth-century Dutchmen
+haggling in the rain. But the field marks are much the same. The first stock exchange was,
+inadvertently, a laboratory in which new human reactions were revealed. By the same token, the New
+York Stock Exchange is also a sociological test tube, forever contributing to the human species’ self-
+understanding.
+The behavior of the pioneering Dutch stock traders is ably documented in a book entitled
+“Confusion of Confusions,” written by a plunger on the Amsterdam market named Joseph de la Vega;
+originally published in 1688, it was reprinted in English translation a few years ago by the Harvard
+Business School. As for the behavior of present-day American investors and brokers—whose traits,
+like those of all stock traders, are exaggerated in times of crisis—it may be clearly revealed through a
+consideration of their activities during the last week of May, 1962, a time when the stock market
+fluctuated in a startling way. On Monday, May 28th, the Dow-Jones average of thirty leading
+industrial stocks, which has been computed every trading day since 1897, dropped 34.95 points, or
+more than it had dropped on any other day except October 28, 1929, when the loss was 38.33 points.
+The volume of trading on May 28th was 9,350,000 shares—the seventh-largest one-day turnover in
+Stock Exchange history. On Tuesday, May 29th, after an alarming morning when most stocks sank far
+below their Monday-afternoon closing prices, the market suddenly changed direction, charged
+upward with astonishing vigor, and finished the day with a large, though not record-breaking, Dow-
+Jones gain of 27.03 points. Tuesday’s record, or near record, was in trading volume; the 14,750,000
+
+-- 4 of 232 --
+
+shares that changed hands added up to the greatest one-day total ever except for October 29, 1929,
+when trading ran just over sixteen million shares. (Later in the sixties, ten, twelve, and even fourteen-
+million share days became commonplace; the 1929 volume record was finally broken on April 1st,
+1968, and fresh records were set again and again in the next few months.) Then, on Thursday, May
+31st, after a Wednesday holiday in observance of Memorial Day, the cycle was completed; on a
+volume of 10,710,000 shares, the fifth-greatest in history, the Dow-Jones average gained 9.40 points,
+leaving it slightly above the level where it had been before all the excitement began.
+The crisis ran its course in three days, but, needless to say, the post-mortems took longer. One of
+de la Vega’s observations about the Amsterdam traders was that they were “very clever in inventing
+reasons” for a sudden rise or fall in stock prices, and the Wall Street pundits certainly needed all the
+cleverness they could muster to explain why, in the middle of an excellent business year, the market
+had suddenly taken its second-worst nose dive ever up to that moment. Beyond these explanations—
+among which President Kennedy’s April crackdown on the steel industry’s planned price increase
+ranked high—it was inevitable that the postmortems should often compare May, 1962, with October,
+1929. The figures for price movement and trading volume alone would have forced the parallel, even
+if the worst panic days of the two months—the twenty-eighth and the twenty-ninth—had not
+mysteriously and, to some people, ominously coincided. But it was generally conceded that the
+contrasts were more persuasive than the similarities. Between 1929 and 1962, regulation of trading
+practices and limitations on the amount of credit extended to customers for the purchase of stock had
+made it difficult, if not actually impossible, for a man to lose all his money on the Exchange. In short,
+de la Vega’s epithet for the Amsterdam stock exchange in the sixteen-eighties—he called it “this
+gambling hell,” although he obviously loved it—had become considerably less applicable to the New
+York exchange in the thirty-three years between the two crashes.
+THE 1962 crash did not come without warning, even though few observers read the warnings
+correctly. Shortly after the beginning of the year, stocks had begun falling at a pretty consistent rate,
+and the pace had accelerated to the point where the previous business week—that of May 21st
+through May 25th—had been the worst on the Stock Exchange since June, 1950. On the morning of
+Monday, May 28th, then, brokers and dealers had reason to be in a thoughtful mood. Had the bottom
+been reached, or was it still ahead? Opinion appears, in retrospect, to have been divided. The Dow-
+Jones news service, which sends its subscribers spot financial news by teleprinter, reflected a certain
+apprehensiveness between the time it started its transmissions, at nine o’clock, and the opening of the
+Stock Exchange, at ten. During this hour, the broad tape (as the Dow-Jones service, which is printed
+on vertically running paper six and a quarter inches wide, is often called, to distinguish it from the
+Stock Exchange price tape, which is printed horizontally and is only three-quarters of an inch high)
+commented that many securities dealers had been busy over the weekend sending out demands for
+additional collateral to credit customers whose stock assets were shrinking in value; remarked that
+the type of precipitate liquidation seen during the previous week “has been a stranger to Wall Street
+for years;” and went on to give several items of encouraging business news, such as the fact that
+Westinghouse had just received a new Navy contract. In the stock market, however, as de la Vega
+points out, “the news [as such] is often of little value;” in the short run, the mood of the investors is
+what counts.
+This mood became manifest within a matter of minutes after the Stock Exchange opened. At 10:11,
+the broad tape reported that “stocks at the opening were mixed and only moderately active.” This was
+reassuring information, because “mixed” meant that some were up and some were down, and also
+
+-- 5 of 232 --
+
+because a falling market is universally regarded as far less threatening when the amount of activity in
+it is moderate rather than great. But the comfort was short-lived, for by 10:30 the Stock Exchange
+tape, which records the price and the share volume of every transaction made on the floor, not only
+was consistently recording lower prices but, running at its maximum speed of five hundred characters
+per minute, was six minutes late. The lateness of the tape meant that the machine was simply unable to
+keep abreast of what was going on, so fast were trades being made. Normally, when a transaction is
+completed on the floor of the Exchange, at 11 Wall Street, an Exchange employee writes the details
+on a slip of paper and sends it by pneumatic tube to a room on the fifth floor of the building, where
+one of a staff of girls types it into the ticker machine for transmission. A lapse of two or three minutes
+between a floor transaction and its appearance on the tape is normal, therefore, and is not considered
+by the Stock Exchange to be “lateness;” that word, in the language of the Exchange, is used only to
+describe any additional lapse between the time a sales slip arrives on the fifth floor and the time the
+hard-pressed ticker is able to accommodate it. (“The terms used on the Exchange are not carefully
+chosen,” complained de la Vega.) Tape delays of a few minutes occur fairly often on busy trading
+days, but since 1930, when the type of ticker in use in 1962 was installed, big delays had been
+extremely rare. On October 24, 1929, when the tape fell two hundred and forty-six minutes behind, it
+was being printed at the rate of two hundred and eighty-five characters a minute; before May, 1962,
+the greatest delay that had ever occurred on the new machine was thirty-four minutes.
+Unmistakably, prices were going down and activity was going up, but the situation was still not
+desperate. All that had been established by eleven o’clock was that the previous week’s decline was
+continuing at a moderately accelerated rate. But as the pace of trading increased, so did the tape
+delay. At 10:55, it was thirteen minutes late; at 11:14, twenty minutes; at 11:35, twenty-eight minutes;
+at 11:58, thirty-eight minutes; and at 12:14, forty-three minutes. (To inject at least a seasoning of up-
+to-date information into the tape when it is five minutes or more in arrears, the Exchange periodically
+interrupted its normal progress to insert “flashes,” or current prices of a few leading stocks. The time
+required to do this, of course, added to the lateness.) The noon computation of the Dow-Jones
+industrial average showed a loss for the day so far of 9.86 points.
+Signs of public hysteria began to appear during the lunch hour. One sign was the fact that between
+twelve and two, when the market is traditionally in the doldrums, not only did prices continue to
+decline but volume continued to rise, with a corresponding effect on the tape; just before two o’clock,
+the tape delay stood at fifty-two minutes. Evidence that people are selling stocks at a time when they
+ought to be eating lunch is always regarded as a serious matter. Perhaps just as convincing a portent
+of approaching agitation was to be found in the Times Square office (at 1451 Broadway) of Merrill
+Lynch, Pierce, Fenner & Smith, the undisputed Gargantua of the brokerage trade. This office was
+plagued by a peculiar problem: because of its excessively central location, it was visited every day at
+lunchtime by an unusual number of what are known in brokerage circles as “walk-ins”—people who
+are securities customers only in a minuscule way, if at all, but who find the atmosphere of a brokerage
+office and the changing prices on its quotation board entertaining, especially in times of stock-market
+crisis. (“Those playing the game merely for the sake of entertainment and not because of greediness
+are easily to be distinguished.”—de la Vega.) From long experience, the office manager, a calm
+Georgian named Samuel Mothner, had learned to recognize a close correlation between the current
+degree of public concern about the market and the number of walk-ins in his office, and at midday on
+May 28th the mob of them was so dense as to have, for his trained sensibilities, positively albatross-
+like connotations of disaster ahead.
+Mothner’s troubles, like those of brokers from San Diego to Bangor, were by no means confined to
+
+-- 6 of 232 --
+
+disturbing signs and portents. An unrestrained liquidation of stocks was already well under way; in
+Mothner’s office, orders from customers were running five or six times above average, and nearly all
+of them were orders to sell. By and large, brokers were urging their customers to keep cool and hold
+on to their stocks, at least for the present, but many of the customers could not be persuaded. In
+another midtown Merrill Lynch office, at 61 West Forty-eighth Street, a cable was received from a
+substantial client living in Rio de Janeiro that said simply, “Please sell out everything in my account.”
+Lacking the time to conduct a long-distance argument in favor of forbearance, Merrill Lynch had no
+choice but to carry out the order. Radio and television stations, which by early afternoon had caught
+the scent of news, were now interrupting their regular programs with spot broadcasts on the situation;
+as a Stock Exchange publication has since commented, with some asperity, “The degree of attention
+devoted to the stock market in these news broadcasts may have contributed to the uneasiness among
+some investors.” And the problem that brokers faced in executing the flood of selling orders was by
+this time vastly complicated by technical factors. The tape delay, which by 2:26 amounted to fifty-
+five minutes, meant that for the most part the ticker was reporting the prices of an hour before, which
+in many cases were anywhere from one to ten dollars a share higher than the current prices. It was
+almost impossible for a broker accepting a selling order to tell his customer what price he might
+expect to get. Some brokerage firms were trying to circumvent the tape delay by using makeshift
+reporting systems of their own; among these was Merrill Lynch, whose floor brokers, after
+completing a trade, would—if they remembered and had the time—simply shout the result into a
+floorside telephone connected to a “squawk box” in the firm’s head office, at 70 Pine Street.
+Obviously, haphazard methods like this were subject to error.
+On the Stock Exchange floor itself, there was no question of any sort of rally; it was simply a case
+of all stocks’ declining rapidly and steadily, on enormous volume. As de la Vega might have
+described the scene—as, in fact, he did rather flamboyantly describe a similar scene—“The bears
+[that is, the sellers] are completely ruled by fear, trepidation, and nervousness. Rabbits become
+elephants, brawls in a tavern become rebellions, faint shadows appear to them as signs of chaos.”
+Not the least worrisome aspect of the situation was the fact that the leading bluechip stocks,
+representing shares in the country’s largest companies, were right in the middle of the decline;
+indeed, American Telephone & Telegraph, the largest company of them all, and the one with the
+largest number of stockholders, was leading the entire market downward. On a share volume greater
+than that of any of the more than fifteen hundred other stocks traded on the Exchange (most of them at a
+tiny fraction of Telephone’s price), Telephone had been battered by wave after wave of urgent selling
+all day, until at two o’clock it stood at 104¾—down 6⅞ for the day—and was still in full retreat.
+Always something of a bellwether, Telephone was now being watched more closely than ever, and
+each loss of a fraction of a point in its price was the signal for further declines all across the board.
+Before three o’clock, I.B.M. was down 17½ points; Standard Oil of New Jersey, often exceptionally
+resistant to general declines, was off 3¼; and Telephone itself had tumbled again, to 101⅛. Nor did
+the bottom appear to be in sight.
+Yet the atmosphere on the floor, as it has since been described by men who were there, was not
+hysterical—or, at least, any hysteria was well controlled. While many brokers were straining to the
+utmost the Exchange’s rule against running on the floor, and some faces wore expressions that have
+been characterized by a conservative Exchange official as “studious,” there was the usual amount of
+joshing, horseplay, and exchanging of mild insults. (“Jokes … form a main attraction to the
+business.”—de la Vega.) But things were not entirely the same. “What I particularly remember is
+feeling physically exhausted,” one floor broker has said. “On a crisis day, you’re likely to walk ten or
+
+-- 7 of 232 --
+
+eleven miles on the floor—that’s been measured with pedometers—but it isn’t just the distance that
+wears you down. It’s the physical contact. You have to push and get pushed. People climb all over
+you. Then, there were the sounds—the tense hum of voices that you always get in times of decline. As
+the rate of decline increases, so does the pitch of the hum. In a rising market, there’s an entirely
+different sound. After you get used to the difference, you can tell just about what the market is doing
+with your eyes shut. Of course, the usual heavy joking went on, and maybe the jokes got a little more
+forced than usual. Everybody has commented on the fact that when the closing bell rang, at three-
+thirty, a cheer went up from the floor. Well, we weren’t cheering because the market was down. We
+were cheering because it was over.”
+BUT was it over? This question occupied Wall Street and the national investing community all the
+afternoon and evening. During the afternoon, the laggard Exchange ticker slogged along, solemnly
+recording prices that had long since become obsolete. (It was an hour and nine minutes late at closing
+time, and did not finish printing the day’s transactions until 5:58.) Many brokers stayed on the
+Exchange floor until after five o’clock, straightening out the details of trades, and then went to their
+offices to work on their accounts. What the price tape had to tell, when it finally got around to telling
+it, was a uniformly sad tale. American Telephone had closed at 100⅝, down 11 for the day. Philip
+Morris had closed at 71½, down 8¼ Campbell Soup had closed at 81, down 10¾. I.B.M. had closed
+at 361, down 37½. And so it went. In brokerage offices, employees were kept busy—many of them
+for most of the night—at various special chores, of which by far the most urgent was sending out
+margin calls. A margin call is a demand for additional collateral from a customer who has borrowed
+money from his broker to buy stocks and whose stocks are now worth barely enough to cover the
+loan. If a customer is unwilling or unable to meet a margin call with more collateral, his broker will
+sell the margined stock as soon as possible; such sales may depress other stocks further, leading to
+more margin calls, leading to more stock sales, and so on down into the pit. This pit had proved
+bottomless in 1929, when there were no federal restrictions on stock-market credit. Since then, a
+floor had been put in it, but the fact remains that credit requirements in May of 1962 were such that a
+customer could expect a call when stocks he had bought on margin had dropped to between fifty and
+sixty per cent of their value at the time he bought them. And at the close of trading on May 28th nearly
+one stock in four had dropped as far as that from its 1961 high. The Exchange has since estimated that
+91,700 margin calls were sent out, mainly by telegram, between May 25th and May 31st; it seems a
+safe assumption that the

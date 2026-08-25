@@ -1,0 +1,371 @@
+
+
+-- 1 of 353 --
+
+
+
+-- 2 of 353 --
+
+
+
+-- 3 of 353 --
+
+Contents
+Title Page
+Contents
+Copyright
+Dedication
+Introduction
+The Elements of Behavior
+Motivation—Focus on Matching
+Ability—Easy Does It
+Prompts—The Power of After
+Emotions Create Habits
+Growing Your Habits from Tiny to Transformative
+Untangling Bad Habits: A Systematic Solution
+How We Change Together
+The Small Changes That Change Everything
+Acknowledgments
+Appendixes
+Three Hundred Recipes for Tiny Habits—Fifteen Life Situations
+and Challenges
+About the Author
+Connect with HMH
+
+-- 4 of 353 --
+
+Copyright © 2020 by BJ Fogg
+Tiny Habits® is a registered trademark
+All rights reserved
+For information about permission to reproduce selections from this book, write to
+trade.permissions@hmhco.com or to Permissions, Houghton Mifflin Harcourt Publishing Company, 3
+Park Avenue, New York, New York 10016.
+hmhbooks.com
+Library of Congress Cataloging-in-Publication Data
+Names: Fogg, B. J., author.
+Title: Tiny habits : the small changes that change everything / BJ Fogg, PhD.
+Description: Boston : Houghton Mifflin Harcourt, 2019.
+Identifiers: LCCN 2019023920 (print) | LCCN 2019023921 (ebook) | ISBN 9780358003328 (hardcover)
+| ISBN 9780358003991 (ebook)
+Subjects: LCSH: Habit. | Change (Psychology)
+Classification: LCC BF335 .F56 2019 (print) | LCC BF335 (ebook) | DDC 158—dc23
+LC record available at https://lccn.loc.gov/2019023920
+LC ebook record available at https://lccn.loc.gov/2019023921
+eISBN 978-0-358-00399-1
+v1.1219
+While all of the stories in this book are true, some names and identifying details have been changed to
+protect confidentiality.
+For references and resources related to this book, go to TinyHabits.com/resources.
+
+-- 5 of 353 --
+
+To the wonderful people who inspired me to explore.
+
+-- 6 of 353 --
+
+INTRODUCTION
+Change Can Be Easy (and Fun)
+Tiny is mighty.
+At least when it comes to change.
+Over the last twenty years, I’ve found that most everyone wants to make
+some kind of change: eat healthier, lose weight, exercise more, reduce stress,
+get better sleep. We want to be better parents and partners. We want to be
+more productive and creative. But the alarming levels of obesity,
+sleeplessness, and stress reported by the media—and seen in my Stanford
+lab’s research—tell me there is a painful gap between what people want and
+what they actually do. The disconnect between want and do has been blamed
+on a lot of things—but people blame it on themselves for the most part. They
+internalize the cultural message of “It’s your fault! You should exercise more,
+but you aren’t doing it. Shame on you!”
+I am here to say: It isn’t your fault.
+And creating positive change isn’t as hard as you think.
+For too many years, myths, misconceptions, and well-meaning but
+unscientific advice have set you up to fail. If you’ve attempted change in the
+past and haven’t seen results, you may have concluded that change is hard or
+that you can’t succeed because you lack motivation. Neither is accurate. The
+problem is with the approach itself, not with you. Think of it this way: If you
+tried putting together a chest of drawers with faulty instructions and parts
+
+-- 7 of 353 --
+
+missing, you would feel frustrated. But you probably wouldn’t blame
+yourself for this, would you? You would blame the manufacturer instead.
+When it comes to failed attempts at change, we almost never blame the
+“manufacturer.” We blame ourselves.
+When our results fall short of our expectations, the inner critic finds an
+opening and steps on stage. Many of us believe that if we fail to be more
+productive, lose weight, or exercise regularly then something must be wrong
+with us. If only we were better people, we wouldn’t have failed. If only we
+had followed that program to the letter or kept those promises to ourselves,
+we would have succeeded. We just need to get our act together and pull
+ourselves up by our bootstraps and do better. Right?
+Nope. Sorry. Not right.
+We are not the problem.
+Our approach to change is. It’s a design flaw—not a personal flaw.
+Building habits and creating positive change can be easy—if you have the
+right approach. A system based on how human psychology really works. A
+process that makes change easier. Tools that don’t rely on guesswork or
+faulty principles.
+Popular thinking about habit formation and change feeds into our impulse
+to set unrealistic expectations. We know habits matter; we just need more
+good habits and fewer bad ones. But here we are, still struggling to change.
+Still thinking it’s our fault. All my research and hands-on experience tell me
+that this is exactly the wrong mindset. In order to design successful habits and
+change your behaviors, you should do three things.
+Stop judging yourself.
+Take your aspirations and break them down into tiny behaviors.
+Embrace mistakes as discoveries and use them to move forward.
+This may not feel intuitive. I know it doesn’t come naturally to everyone.
+Self-criticism is its own kind of habit. For some people, blaming yourself is
+just where your brain goes—it’s like a sled in the snow, slipping into a well-
+worn path down the hill.
+If you follow the Tiny Habits process, you’ll start taking a different route.
+Snow will quickly start covering those self-doubting grooves. The new path
+will soon be the default path. This happens quickly, because with Tiny Habits
+
+-- 8 of 353 --
+
+you change best by feeling good—not by feeling bad. The process doesn’t
+require you to rely on willpower, or set up accountability measures, or
+promise yourself rewards. There is no magic number of days you have to do
+something. Those approaches aren’t based on the way habits really work,
+and as a result, they aren’t reliable methods for change. And they often make
+us feel bad.
+This book says good-bye to all that change angst and—even more
+important—shows you how to easily and joyfully bridge the gap (no matter
+the size) between who you are now and who you want to be. Tiny Habits
+will be your guide to disrupting the old approach and replacing it with an
+entirely new framework for change.
+The system I’ll share with you is not guesswork. I’ve road tested the
+process with more than 40,000 people during years of research and
+refinement. By coaching all these people personally and gathering data week
+by week, I know that the Tiny Habits method works. It replaces
+misunderstandings with proven principles, and it trades prescriptions for
+process. You’ll take what the cofounder of Instagram, my former student,
+learned about human behavior to design a breakthrough app, and you’ll use
+the same methods to create breakthrough changes in your own life—and the
+lives of others. And best of all, you get to have fun. Once you remove any
+hint of judgment, your behavior becomes a science experiment. A sense of
+exploration and discovery is a prerequisite to success, not just an added
+bonus.
+Behavior Design
+Welcome to Behavior Design! This is my comprehensive system for thinking
+clearly about human behavior and for designing simple ways to transform
+your life. My early work in Behavior Design helped innovators create
+products that millions of people use every day to get fit, save money, drive
+efficiently, and more. After seeing the power of these methods to successfully
+design business solutions, I shifted my focus to the personal: How do we
+change our own behavior? I got focused on changes that people want to make
+for themselves. And when I looked in the mirror, I saw plenty that could be
+improved on. I decided to do what every gung-ho scientist does at one time
+or another—I experimented on myself.
+
+-- 9 of 353 --
+
+I tinkered with the behaviors I wanted to incorporate into my life. I did
+silly things that turned out to be wildly successful, like doing two push-ups
+after every time I pee. I did seemingly rational things that totally failed, like
+trying to eat an orange every day at lunch. Whenever something didn’t work, I
+went back to my models and analyzed what happened. I started seeing
+patterns. I followed hunches. I pivoted. I iterated endlessly.
+Even though I was a behavior scientist, I had to learn how to create habits
+in my own life. It wasn’t obvious or natural for me; it was a deliberate
+process. But with practice I turned a weakness into a strength, and six months
+later, I had significantly changed my life. I lost twenty pounds and felt
+healthier and stronger. I was working more productively and more effectively
+than ever before. I started eating eggs and spinach for breakfast and
+cauliflower with mustard as an afternoon snack, and I weeded out foods that
+weren’t helping me. I started each day with an uplifting series of habits, and I
+designed (and redesigned) my life and my environment to get better sleep. As
+I figured this out, with twists and turns along the way, I realized that my
+ability to change was increasing and my momentum was building. As I
+accumulated dozens of new habits—mostly tiny ones—they combined to
+create a transformation. Sustaining all this did not feel hard. Pursuing change
+in this way felt natural and oddly fun.
+The results delighted me, and I started teaching my methods to others in
+2011. My research showed this approach worked for other people, too, and it
+changed their lives. To my surprise and excitement, what started as a
+whimsical self-exploration in the Behavior Design universe became a proven
+method called Tiny Habits—the quickest, easiest vehicle for personal
+transformation.
+Before I go on, let me set the record straight: information alone does not
+reliably change behavior. This is a common mistake people make, even well-
+meaning professionals. The assumption is this: If we give people the right
+information, it will change their attitudes, which in turn will change their
+behaviors. I call this the “Information-Action Fallacy.” Many products and
+programs—and well-meaning professionals—set out to educate people as a
+way to change them. At professional conferences they say stuff like, “If
+people just knew the facts, they would change!”
+As you look at your own experiences, you’ll see that information alone did
+not transform your life. And that’s certainly not your fault.
+
+-- 10 of 353 --
+
+In my research on habit formation, dating back to 2009, I’ve found that
+there are only three things we can do that will create lasting change: Have an
+epiphany, change our environment, or change our habits in tiny ways.
+Creating a true epiphany for ourselves (or others) is difficult and probably
+impossible. We should rule out that option unless we have magical powers (I
+don’t). But here’s the good news: The other two options can lead to lasting
+change if we follow the right program, and Tiny Habits gives us a new way
+to tap the power of environment and baby steps.
+Creating positive habits is the place to start, and creating tiny positive
+habits is the path to developing much bigger ones. Once you know how Tiny
+Habits works—and why it works—you can make big one-time changes. You
+can disrupt unwanted habits. You can work up to bucket-list behaviors like
+running a marathon.
+I’ll help guide you through each of the different behavior-change scenarios
+that you might encounter.
+The essence of Tiny Habits is this: Take a behavior you want, make it tiny,
+find where it fits naturally in your life, and nurture its growth. If you want to
+create long-term change, it’s best to start small. Here’s why.
+TINY IS FAST
+Time. There’s never enough of it, and we always want more of it. We eat
+drippy hamburgers in our cars and take conference calls while we’re at the
+beach with our kids because we feel so pressed for time. This pressure leads
+to a scarcity mindset—we believe that there will never be enough time, so
+we say no to changes because we feel like we don’t have the hours to
+cultivate new positive habits. Thirty minutes of exercise a day? Cooking a
+healthy dinner every night? Writing daily in a gratitude journal? Forget it.
+Who. Has. The. Time.
+You could scold yourself down the path of change. Or you could make
+your life a lot easier.
+You could start tiny.
+With the Tiny Habits method, you focus on small actions that you can do in
+less than thirty seconds. You will quickly wire in new habits, and then they
+will grow naturally. Starting tiny means you can begin creating a big change
+without worrying about the time involved. With Tiny Habits, I advise people
+to start with three very small behaviors or even just one. The more stressed
+you are and the less time you have, the more appropriate this method is for
+
+-- 11 of 353 --
+
+you. No matter how much you want to cultivate a healthy habit, you won’t be
+able to do it reliably if you start big. When you go big, the new habit
+probably won’t stick. In many people’s lives, tiny isn’t just the best option, it
+might be the only option.
+TINY CAN START NOW
+Tiny allows you to get real with yourself and your life. Tiny allows you to
+start right now. It meets you where you are—whether your life is in a
+desperate spiral or you are stressed out but otherwise fortunate. We all have
+our own life circumstances to contend with, ways of thinking that aren’t
+ideal, and quirks of psychology that hold us back. We could feel bummed and
+ashamed about it, or we could use the Tiny Habits method to hack the system.
+I won’t prescribe exact habits in this book. I’m sharing a method for
+wiring in any habit you want. You pick the habits. But right here, right now,
+I’m making an exception. I invite you to start practicing a new habit first thing
+each and every morning. It’s simple. And it takes about three seconds. I call
+it the Maui Habit.
+After you put your feet on the floor in the morning, immediately say this
+phrase, “It’s going to be a great day.” As you say these seven words, try to
+feel optimistic and positive.
+The recipe in Tiny Habits format looks like this.
+My Recipe for the Maui Habit
+After I . . . 	I will . . . 	To wire the habit into my brain, I will
+immediately:
+wake up and put
+my feet on the
+floor,
+say, “It ’s going
+to be a great
+day.”
+A simple recipe for starting each day in the best way using the Tiny Habits
+method.
+
+-- 12 of 353 --
+
+Over the years, I’ve helped thousands of people bring the Maui Habit into
+their lives, and the results have been excellent. It’s certainly been effective in
+my own life. With the Maui Habit, you can start immediately—and almost
+effortlessly—toward a better future.
+Here are a few variations on this habit to consider.
+Some people say a slightly different phrase each morning such as “Today
+is going to be awesome.” If that phrase or some variation works better for
+you, adjust as needed.
+A few people have changed the timing. Some say this phrase when they
+look in the mirror in the morning. I’m quite sure that wouldn’t work for me. (I
+avoid looking in the mirror first thing. Yikes!) But if this spot in your routine
+works best for you, then go for it.
+I suggest you start with the classic version as written on the recipe card,
+then modify it if needed.
+When I do the Maui Habit each morning, I pause for two or three seconds
+after I say the phrase. I’m still waking up at that point, and I want the idea to
+sink in.
+If you do the Maui Habit and feel that it won’t be a great day, I advise you
+to still say this phrase. I say it even on mornings when I feel exhausted or
+overwhelmed or anxious about the day ahead. In that moment, sitting on the
+edge of my bed, I try to feel optimistic. But if this feels phony, then I adjust
+the phrase and my intonation as I say, “It’s going to be a great day—
+somehow.”
+I find this oddly helpful even on my worst days. When I’m worried about
+the day ahead, this statement—even when I say it with a question in my voice
+—seems to open the door just a crack to actually having a good day. And
+that’s exactly what happens most days.
+Think of the Maui Habit as a simple practice you do each morning in about
+three seconds. This will show you how easy it is to get started, and it will
+help you learn the single most important skill in behavior change—feeling
+successful.
+TINY IS SAFE
+A friend of mine has an eighteen-month-old baby named Willa who is new to
+the whole walking thing. The other day Willa was running around our
+driveway chasing my dog, Millie, and I watched Willa trip and fall about a
+
+-- 13 of 353 --
+
+half-dozen times. Scaling curbs and negotiating sewer grates is tricky
+business for a toddler, but she kept popping right back up. Willa would
+squawk a little bit here and there, but she wasn’t actually getting hurt, so why
+not keep going? If I were the one learning to walk and crashing down on hard
+pavement, I’d be pretty banged up. At my height—I’m more than six feet tall
+—falling would hurt more.
+The same concept applies to starting a new behavior or habit. If you have
+never done yoga before, there are multiple places to start—but they all have
+different levels of risk. You could decide to do one sun salutation or buy a
+month of unlimited classes at your local studio or hop on a plane for a week-
+long retreat in India. The investment of time and money and expectation is
+wildly different with each option. Very few people would take off to India
+without having stepped foot on a yoga mat. Why? Something in our lizard
+brains inherently understands how high these stakes would be, which is why
+it can feel hard to start something new if it is too big. If I can barely surf the
+gentle waves at Cove Park in Maui, I wouldn’t dare surf the massive swells
+at Jaws on the other side of Maui. I would likely get hurt, and I might lose all
+my confidence in surfing, even on small waves. Why would I do that to
+myself? It doesn’t sound fun. Better stick to Cove Park.
+With Tiny Habits, risk doesn’t have to factor into the equation. Tiny can
+also be undercover. You can start to change without making a big scene. No
+one will sabotage you. This reduces the pressure on you.
+Because these behaviors are so small and the program so flexible,
+emotional risk is eliminated. There is no real failure in Tiny Habits. There
+are little stumbles, but if you get up again, that’s not failure—that’s a habit in
+the making.
+TINY CAN GROW BIG
+Over the last twenty years, I’ve found that the only consistent, sustainable
+way to grow big is to start small. Amy, a former student of mine, was a stay-
+at-home mom who was trying to get an educational-media company off the
+ground. The idea of being her own boss and doing something she loved was
+thrilling. But there was so much to think about: hiring new employees,
+shopping around for office space, deciphering tax codes. She would
+procrastinate the important stuff, like legal agreements, and chose to work on
+tasks she loved, like designing her logo. But she was running out of time to
+build her business plan, and the thought of the venture falling apart in her
+
+-- 14 of 353 --
+
+hands paralyzed her. Amy wanted to get her business off the ground, and she
+kept making promises to herself that she’d tackle the big stuff soon—but
+months after the talking, she still hadn’t done any walking.
+A change myth was holding Amy back—the pervasive idea that you’ve got
+to go big or go home. We live in an aspiration-driven culture that is rooted in
+instant gratification. We find it difficult to enact or even accept incremental
+progress. Which is exactly what you need to cultivate meaningful long-term
+change. People get frustrated and demoralized when things don’t happen
+quickly. It’s natural. It’s normal. But it’s another way we’re set up to fail.
+When Amy found the Tiny Habits method, she discovered that the best way
+to eat a monstrous whale—as little Melinda Mae did in Shel Silverstein’s
+poem—was to take one bite at a time. Amy ditched go big or go home and
+decided to go tiny. Every morning after dropping her daughter off at
+kindergarten, she pulled over on the side of the road and wrote one to-do on
+a sticky note. Just one. Each one was something she could accomplish right
+away: send out one sales e-mail, schedule a project meeting, draft a quick
+introduction to a patient guide. The simple act of focusing her energy on
+writing down one task le

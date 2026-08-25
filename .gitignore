@@ -1,0 +1,28 @@
+# Local-only reference material (never push)
+Books/
+Reference/
+
+# Logs & temp
+*.log
+desktop.ini
+
+# Dependencies
+gist/node_modules/
+
+# Next.js build output
+gist/.next/
+gist/out/
+
+# Env & secrets
+.env
+.env.*
+*.pem
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vs/
+.idea/
+
+# TypeScript
+*.tsbuildinfo

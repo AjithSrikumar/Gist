@@ -1,0 +1,345 @@
+
+
+-- 1 of 96 --
+
+
+
+-- 2 of 96 --
+
+CAPITAL ALLOCATORS
+How the world’s elite money managers lead and
+invest
+TED SEIDES
+
+-- 3 of 96 --
+
+Contents
+Praise for Capital Allocators
+About the Author
+Acknowledgments
+About Capital Allocators
+How to Use This Book
+Introduction
+Active versus Passive
+The case for passive management
+The case for active management
+Part 1: Toolkit
+Chapter 1: Interviewing
+Defining the purpose
+Preparing
+Setting the stage
+Active listening
+Receiving feedback
+Additional tips
+Summary
+To learn more
+Chapter 2: Decision-Making
+Why this is so hard
+Making better decisions
+Summary
+To learn more
+Chapter 3: Negotiations
+Preparation
+Updating views
+Additional tips
+Summary
+To learn more
+Chapter 4: Leadership
+Define a vision
+Set standards of conduct
+Communicate consistently and frequently
+Behave authentically
+Inspire and motivate
+Adapt and evolve
+Summary
+To learn more
+Chapter 5: Management
+Hiring
+Organizational design
+Project management
+Talent development
+Time management
+Summary
+
+-- 4 of 96 --
+
+To learn more
+Part 2: Investment Frameworks
+Chapter 6: Governance
+Roles and responsibilities
+Investment committee
+Incentives
+Summary
+To learn more
+Chapter 7: Investment Strategy
+Purpose
+Time horizon
+Natural habitat
+Policy portfolio
+Team structure
+Summary
+To learn more
+Chapter 8: Investment Process
+Sourcing managers
+Target characteristics
+Due diligence
+Portfolio construction
+Monitoring
+Icing on the cake
+Summary
+To learn more
+Chapter 9: Technological Innovation
+Asset allocation
+Risk measurement
+Risk management
+Performance assessment
+Leading edge of data analytics
+Summary
+To learn more
+Chapter 10: Case Study of Uncertainty
+Part 3: Nuggets of Wisdom
+Chapter 11: Investment Lessons
+Nature of markets
+Inconvenient truths
+Managing volatility
+Investment selection
+Gaining an edge
+Asset class perspectives
+Chapter 12: Life Lessons
+Managing emotions
+Continuous improvement
+Relationships
+Work ethic
+Facing reality
+What matters most
+Chapter 13: The Top 10
+
+-- 5 of 96 --
+
+Appendices
+Appendix A: Initial Manager Meeting Outline
+Background
+Investment approach
+Initial meeting question list
+Appendix B: To Learn More
+Interviewing
+Decision-making
+Negotiations
+Leadership
+Management
+Governance
+Investment strategy
+Investment process
+Data analysis
+Appendix C: Directory of Guests on Capital Allocators
+Publishing details
+
+-- 6 of 96 --
+
+For the virtuous circle of guests and listeners on the Capital Allocators podcast
+And especially for my wife Vanessa, whose enthusiastic support from the front row seat lights up the
+stage
+
+-- 7 of 96 --
+
+Praise for Capital Allocators
+Through his podcast, Ted has talked with the best investment minds in the world. Capital Allocators assembles this
+collective wisdom into an incredible guidebook for anyone who wants to be truly thoughtful about long-term
+investing.
+– Raphael Arndt, CEO, Australia Future Fund
+Capital Allocators is jam-packed with actionable advice from the world’s leading investment experts on topics
+ranging from interviewing managers to decision-making. Ted distills the wisdom of his impressive array of podcast
+guests into a compendium that deserves highlighting on every page. Take it from me, choosing to read Capital
+Allocators is a good decision.
+– Annie Duke, former professional poker player, best-selling author, and decision strategist
+Ted Seides has achieved a remarkable book that draws on the expertise and experience of a broad cross-section of
+industry leaders. He expertly distills interviews that he conducted directly into a book that seamlessly covers
+executive, leadership and investment skills and lessons. Capital Allocators is a well-crafted and informative read
+for existing and prospective investment professionals as well as for those who work with the investment industry in
+any capacity.
+– Gregory J. Fleming, President & CEO, Rockefeller Capital Management
+A fantastically broad, deep guide to the asset allocator’s world. I wish it had been written 25 years ago. The
+quotations in it are alone worth the price. You can quote me on that.
+– Andrew Golden, CIO, Princeton University Investment Management Company (PRINCO)
+Ted understands the nuance of investment management better than anyone I know, because he’s talked to more
+investors than anyone I know. It’s been said that books don’t change minds; sentences do. There are so many good
+lines in this book it’s hard to put down.
+– Morgan Housel, Partner at Collaborative Fund and best-selling author
+Unlike many ‘invest like the best’ books, Capital Allocators does not pretend there is some magical trick that will
+turn anyone into an investing genius. Instead, Ted Seides details how great investors do the hard work that leads
+to better outcomes. You won’t get rich quick reading this book, but if you take the time to really understand the
+lessons it teaches, you will be a better, more thoughtful investor.
+– Ben Inker, Head of Asset Allocation, GMO
+Capital Allocators is an excellent collection of toolkits and frameworks for investing that reflect both the
+institutions and the different styles of their CIOs. Capital Allocators is a starting manual for all the things aspiring
+CIOs need to consider as they develop their style and strategic vision. Importantly, Ted acknowledges that there
+are many ways to be a successful CIO and that CIOs can learn from each other in that diversity of viewpoints.
+– Ana Marshall, CIO, William and Flora Hewlett Foundation
+The world of institutional investing needed Ted’s voice – it just didn’t know it yet. With this book, and with his
+unparalleled podcast, Ted has brought a whole hidden world to a broader audience, and anyone interested in how
+the world’s most prominent investors move money is better for it.
+– Kip McDaniel, Editor-in-Chief, Institutional Investor
+Ted has made the world of capital allocation approachable for everyone across hundreds of conversations. Now
+he’s further distilled the lessons into a package that will make any investor better at what they do. Required
+reading.
+– Patrick O’Shaughnessy, CEO, O’Shaughnessy Asset Management
+This book boils down the most interesting insights and important lessons from the biggest and most powerful
+investors on earth – the ones that literally put the capital in capitalism. It offers a glimpse into the thinking of
+capital allocators in a coherent and digestible format. It should be required reading for anybody interested in
+investing and certainly will be for my students!
+– Ashby H. B. Monk, PhD, Executive Director, Global Projects Center, Stanford University
+Page by page, Ted Seides’ Capital Allocators brings us tools, frameworks and a rich collection of wisdom captured
+from his professional network. Ted’s book allows us to discover how successful CIOs incorporate various aspects of
+the investment process and lessons learned in navigating financial markets. This book should be mandatory for any
+investment teams aspiring to evolve and win.
+– Mario Therrien, Head of Investment Funds and External Management, Caisse de dépôt et placement du Québec
+I have learned something from every podcast, and this book pulls them all together. There is no one right way to be
+a CIO, we are all unique, but there are still lessons that we can learn from one another and value that comes from
+
+-- 8 of 96 --
+
+understanding the nuances among us. Thank you, Ted, for providing a forum for CIOs to share ideas and for
+writing this great collection of highlights.
+– James Williams, CIO, J. Paul Getty Trust
+
+-- 9 of 96 --
+
+About the Author
+Ted Seides, CFA has spent 25 years as an institutional investor, allocating money to managers. He started in 1992
+at the Yale University Investments Office, seven years after David Swensen arrived at Yale. Ted spent five years
+learning under David’s tutelage and departed to attend Harvard Business School shortly before David wrote the
+bible in the industry, Pioneering Portfolio Management.
+Ted spent a summer job and two years after business school investing directly at three of Yale’s managers, hedge
+fund Brahman Capital, and private equity firms Stonebridge Partners and J.H. Whitney & Company. He learned
+that life inside the sausage factory is rarely as clean as the final product appears.
+He returned to investing through managers in 2002, co-founding and serving as President and Co-Chief Investment
+Officer of Protégé Partners. Protégé was a leading multibillion-dollar alternative investment firm that invested in
+and seeded small hedge funds. In 2010, Larry Kochard and Cathleen Rittereiser profiled Ted in the book Top
+Hedge Fund Investors, and in 2016 Ted authored So You Want to Start a Hedge Fund: Lessons for Managers and
+Allocators to share lessons from his experience.
+On a slow day in 2007, Ted had the bright idea to challenge a statement made by Warren Buffett about the
+superiority of index funds over hedge funds. With aspirations to demonstrate the value of hedge funds to
+institutional portfolios, he initiated a charitable wager with Warren that pitted the 10-year performance of the S&P
+500 against a selection of five hedge fund of funds from 2008–2017. Protégé Partners lost the bet, and Ted still
+wonders about the probability distribution of outcomes and the quality of his decision process.
+In 2017, Ted launched the Capital Allocators podcast, a series of interviews with leading Chief Investment Officers.
+The show reached four million downloads in August 2020. Barron’s, Business Insider, ValueWalk, and Forbes each
+named it among the top investing podcasts. He also advises asset managers and allocators across business
+strategy, audio content, and investing.
+Ted writes opinion pieces for Institutional Investor, wrote a blog for the CFA Institute’s Enterprising Investor and
+guest publications for the late Peter L. Bernstein’s Economics and Portfolio Strategy.
+You can hear Ted’s story in his own words on Capital Allocators episodes 45 (It’s Not About the Money), 34 (Deep
+Dive on Hedge Funds), and 5 (The Bet with Buffett).
+
+-- 10 of 96 --
+
+Acknowledgments
+My father lost his parents at a young age. His father passed away at age 52, and my dad never thought he would
+live a day past that. Still smiling at 87, every day of the last 35 years has offered unexpected upside.
+The Capital Allocators podcast has been the same for me. I started it without an objective or goal. Thanks to
+incredible guests, engaged listeners, the magic of compounding and optionality, the experience has offered a
+cornucopia of upside surprises.
+The guests who share their stories are the stars of the show and receive my deepest gratitude. Almost all the
+guests who appeared during the first year are friends from my time in the business. Thank you for sharing our
+conversations publicly without any expectation of benefit. These talented professionals backed this endeavor with
+their time and wisdom and laid the groundwork for what happened since.
+Guests repeatedly shared stories of tangible and intangible benefits that accrued to them after coming on the
+show. Most hear from old friends and colleagues, and many find it productive for their investing and business. It’s
+been gratifying to deliver that goodwill and offer all future guests a hint that positive surprises will come out of
+their appearance. As a bonus, for every handful of guests who I didn’t know before the podcast conversation, one
+has evolved into a meaningful relationship. I’m so glad we met in this way.
+This show has created a virtual community. The audience is just as important as the guests to its strength. An
+engaged audience attracts great guests, which in turn helps keep the quality of content high and the audience
+growing. Our community of listeners ranges from leading allocators and money managers around the world to
+interested students of investing from all walks of life. Thank you for choosing to spend your precious time listening
+to the show.
+Over the last three years, I’ve received countless notes of thanks. Each one reminds me that this effort is a lot
+bigger than me and energizes me to carry on. Thank you for those kind words.
+Although I didn’t set out to pursue this adventure as a livelihood, a series of serendipitous circumstances led to
+that outcome. I am deeply appreciative to all the advertisers, corporate sponsors, premium content members, and
+advisory clients who support the business around the show.
+Patrick O’Shaughnessy has been my brother-in-arms on this journey. He has been my sounding board and thought
+partner on style, best practices, and the business of podcasting. He is a force of nature, an inspiration, and a
+wonderful friend.
+Christopher Seifel is the catalyst who made this book happen. A year ago I reached out to my mailing list
+(www.capitalallocators.com) to ask for assistance in gleaning the best quotes from each show. Christopher went
+above and beyond, outlining each episode with a page and a half of quotes. I had thought about this project for a
+while but couldn’t imagine finding the time to go back and review thousands of pages of transcripts. Part 3 of the
+book draws heavily on Christopher’s outstanding curation of the episodes.
+Connor Aller joined me as an intern two years ago to manage the behind the scenes production of the website and
+special projects. He has enthusiastically cranked through everything I asked of him, while performing at the
+highest level in his day job. Thanks Connor, I could not have had the bandwidth to take on this project without your
+help.
+Craig Pearce at Harriman House approached me two years ago offering to publish any book I might consider
+writing in the future. He offered an economic partnership and delivered as a true partner in this project every step
+of the way. Thank you for your outstanding comments and suggestions that significantly improved the quality of
+this book.
+Brian Portnoy and Erez Kalir are great friends and accomplished thinkers who graciously commented on a draft of
+this book and made it better than it could have been without their keen eyes. I am grateful for your assistance and
+friendship.
+My wife Vanessa Schenck-Seides has been the wind beneath my wings since the day we met. Neither of us
+imagined that life would bring us together as it has, and I am incredibly grateful that it did. Thank you, my love, for
+encouraging me and laughing with me every step along the way.
+I come from a family of teachers. My mother retired from running a preschool some time ago, and my sister works
+with special education students. My father taught graduate school alongside his medical practice for years, and my
+brother almost left his career in wireless telecom to teach business school. I always assumed I would find myself in
+a classroom. Apparently, I already have. Thank you for attending class each week and for picking up this textbook.
+
+-- 11 of 96 --
+
+About Capital Allocators
+Who are these capital allocators and why have conversations with them on the Capital Allocators podcast been
+listened to four million times?
+Capital allocation is the process of deciding where to invest limited resources. It occurs when corporate executives
+decide how to fund operations and initiatives. It occurs when portfolio managers at investment firms select and
+size positions. And it occurs when Chief Investment Officers (CIOs) for end owners of capital commit to investment
+products. The concept of capital allocation pervades finance and its real-world consequences are far reaching.
+I created the Capital Allocators podcast in 2017 to focus on this last group, the people who sit at the top of the
+global food chain of capital. When I refer to “allocators” in this book, it is the CIOs and their teams that I have in
+mind.
+At the bottom of the food chain, businesses are conceived by entrepreneurs. They raise capital to pursue their
+ideas by selling a piece of their business or borrowing money with the intent to pay it back. They make business
+decisions about which products or services to create, markets to enter, and forms of financing to fund new projects
+or return capital. These decisions are important ones in the success of their business. They are also different from
+the decisions faced by CIOs.
+The middle of the food chain is populated by money managers. When overseeing their business, they make choices
+like those of business executives. When producing their product, they make capital allocation decisions like CIOs,
+picking investments and constructing portfolios.
+CIOs sit at the top of the food chain. Endowments and foundations, high net worth individuals, family offices,
+corporate and public pension funds, and sovereign wealth funds are end owners of capital. CIOs lead their
+investment operations.
+End owners of capital frequently staff their investment team with a small number of professionals. The team
+occasionally invests directly in securities or deals, and more frequently allocates capital to the products run by
+money managers.
+Money managers often specialize in one style of investing. For example, Andreessen Horowitz, or a16z (Scott
+Kupor – Capital Allocators, First Meeting episode 7), is a leading venture capital firm and Wellington Management
+(Jean Hynes – episode 82) is best known for public equity and fixed income management. Others are
+intermediaries, like Outsourced Chief Investment Officer (OCIO) Hirtle Callaghan (Jon Hirtle – episode 98), who
+raise capital from end owners and invest it in money management products.
+There are so many specialized, well-resourced money managers in different strategies around the world that one
+sensible investment approach for CIOs is to identify the best of them across each area of expertise. CIOs partner
+with specialists, rather than hire a team to compete with them.
+CIOs are students of the entire investment universe. They have a unique vantage point to look across assets,
+strategies, and geographies and build a portfolio of investments that best meets their objectives. They assess both
+the merits of the money management organization and the attractiveness of the underlying assets held by the
+manager. They have access and exposure to talented minds across the investment universe. Their seat is the
+broadest and most fascinating in all of investing, and their decisions significantly influence how capital flows
+throughout the world.
+I started my career working for the most famous CIO in the world, David Swensen, who for 35 years has overseen
+the Yale University Investments Office. He is a brilliant investor and gifted teacher. A dozen of David’s protégés
+manage some of the largest endowments and foundations.1
+In the 20 years after my apprenticeship at Yale, I continued to study money managers across public and private
+markets. Three and a half years ago, I created a podcast called Capital Allocators to share conversations with a
+range of CIOs around the world. I hoped to learn about different frameworks and best practices for how these
+holders of the keys to the kingdom allocate their time and money.
+I never expected to write another book. Most first-time authors lose the naïve boon of seeing their name on a book
+jacket once they meet the reality that writing a book sucks up time and money, two of the most precious resources
+we have. Yet, here I am, sitting in front of my computer, following the serendipity that called me to put pen to
+paper once more.
+After so many interviews with allocators, managers, and thought leaders – where each had wisdom to share about
+how to enhance the investment process – I no longer could retain all the information in my head. David Swensen’s
+book remains the seminal tome in explaining the structure of capital allocation of institutional portfolios. This book
+is different. It endeavors to explain how these investors implement their craft.
+My intent in writing is to help investors make better decisions. Investment success is increasingly challenging with
+every passing year, and the breadth of skills required to succeed expands commensurately. The lessons imparted
+by guests on the podcast speak to the needed skills and prereq

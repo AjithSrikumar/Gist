@@ -1,0 +1,554 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import {
+  X,
+  Share,
+  Download,
+  Bookmark,
+  AlignLeft,
+  Play,
+  Pause,
+  Lightbulb,
+  ThumbsUp,
+  ThumbsDown,
+} from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { FullModal, Sheet } from "@/components/ui/Sheet";
+import { BookCover } from "@/components/BookCard";
+import { RatingStars } from "@/components/ui/Controls";
+import { loadBook, BOOK_METAS, unitCount, unitTitle, unitBody, unitTakeaway } from "@/data/books";
+import { categoryById } from "@/data/catalog";
+import { useStore } from "@/lib/store";
+import type { Book } from "@/lib/types";
+import { Slider, SliderTrack, SliderRange, SliderThumb } from "@radix-ui/react-slider";
+
+const THEMES = {
+  cream: { bg: "#F7F3EA", text: "#16181D", sub: "#5B6068" },
+  white: { bg: "#FFFFFF", text: "#16181D", sub: "#5B6068" },
+  dark: { bg: "#16181D", text: "#F7F3EA", sub: "#9AA0A8" },
+};
+
+export function ReaderModal() {
+  const id = useStore((s) => s.readerBookId);
+  const [data, setData] = useState<{ loadedFor: string | null; book: Book | null }>({
+    loadedFor: null,
+    book: null,
+  });
+  const [page, setPage] = useState(0); // 0 intro, 1..n points, n+1 wrap-up
+
+  if (data.loadedFor !== id) {
+    setData({ loadedFor: id, book: null });
+    setPage(0);
+  }
+  useEffect(() => {
+    if (id) loadBook(id).then((b) => setData({ loadedFor: id, book: b }));
+  }, [id]);
+
+  const book = data.book;
+  const store = useStore();
+
+  const closeReader = () => {
+    if (book && page > 1 && !store.library.finished.includes(book.id)) {
+      const pct = Math.round((Math.min(page - 1, unitCount(book)) / unitCount(book)) * 100);
+      store.upsertProgress(book.id, pct, Math.max(0, page - 2));
+    }
+    store.openReader(null);
+  };
+
+  return (
+    <FullModal open={!!id} onClose={closeReader}>
+      {!book ? (
+        <div className="flex h-full items-center justify-center text-ink-600">Loading…</div>
+      ) : (
+        <ReaderBody book={book} page={page} setPage={setPage} onClose={closeReader} />
+      )}
+    </FullModal>
+  );
+}
+
+function ReaderBody({
+  book,
+  page,
+  setPage,
+  onClose,
+}: {
+  book: Book;
+  page: number;
+  setPage: (n: number) => void;
+  onClose: () => void;
+}) {
+  const store = useStore();
+  const theme = THEMES[store.readerTheme];
+  const scale = store.readerTextScale / 100;
+  const total = unitCount(book);
+  const isIntro = page === 0;
+  const isWrapUp = page === total + 1;
+  const saved = store.library.savedForLater.includes(book.id);
+
+  useEffect(() => {
+    if (page >= 1 && !isWrapUp) {
+      store.upsertProgress(book.id, Math.round((page / total) * 100), page - 1);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page]);
+
+  const point =
+    !isIntro && !isWrapUp
+      ? {
+          heading: unitTitle(book, page - 1),
+          body: unitBody(book, page - 1),
+        }
+      : null;
+
+  const nextPage = () => {
+    if (isWrapUp) return;
+    setPage(Math.min(total + 1, page + 1));
+  };
+  const prevPage = () => setPage(Math.max(0, page - 1));
+
+  const progress = isWrapUp ? 100 : (page / (total + 1)) * 100;
+
+  return (
+    <div className="relative flex h-full flex-col" style={{ backgroundColor: theme.bg }}>
+      {/* top bar */}
+      <div className="flex items-center justify-between px-2 pt-3 pb-1">
+        <button aria-label="Close reader" onClick={onClose} className="flex h-11 w-11 items-center justify-center rounded-full">
+          <X size={22} style={{ color: theme.text }} />
+        </button>
+        <div className="flex items-center">
+          <button aria-label="Share" className="flex h-11 w-11 items-center justify-center rounded-full">
+            <Share size={19} className="text-ink-600" />
+          </button>
+          <button aria-label="Download" className="flex h-11 w-11 items-center justify-center rounded-full">
+            <Download size={19} className="text-ink-600" />
+          </button>
+          <button
+            aria-label="Bookmark"
+            onClick={() => (saved ? undefined : store.saveToLibrary(book.id))}
+            className="flex h-11 w-11 items-center justify-center rounded-full"
+          >
+            <Bookmark size={19} className={saved ? "fill-brand-blue text-brand-blue" : "text-ink-600"} />
+          </button>
+        </div>
+      </div>
+
+      {/* content */}
+      <div
+        className="min-h-0 flex-1 overflow-y-auto px-6"
+        onClick={(e) => {
+          const x = e.clientX - window.innerWidth / 2;
+          if (!isIntro && Math.abs(e.clientY - window.innerHeight) < Infinity) {
+            // tap zones only when not selecting text
+            const sel = window.getSelection();
+            if (sel && sel.toString().length > 0) return;
+          }
+          void x;
+        }}
+      >
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={page}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -30 }}
+            transition={{ duration: 0.18 }}
+            drag="x"
+            dragDirectionLock
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.15}
+            onDragEnd={(_, info) => {
+              if (info.offset.x < -70 && !(isIntro && false)) nextPage();
+              else if (info.offset.x > 70) prevPage();
+            }}
+          >
+            {isIntro && <IntroPage book={book} onStart={nextPage} theme={theme} />}
+            {point && (
+              <div className="pt-4 pb-28">
+                <p className="text-[12px] font-bold tracking-widest text-ink-600" style={{ color: theme.sub }}>
+                  CHAPTER {page} OF {total}
+                </p>
+                <h1 className="mt-2 text-[24px] leading-tight font-bold" style={{ color: theme.text }}>
+                  {point.heading}
+                </h1>
+                {unitBody(book, page - 1)
+                  .split(/\n\n+/)
+                  .map((para, i) => (
+                    <p
+                      key={i}
+                      className="mt-5 leading-[1.75]"
+                      style={{ color: theme.text, fontSize: `${15 * scale}px` }}
+                    >
+                      {para}
+                    </p>
+                  ))}
+                {(unitTakeaway(book, page - 1) || point.heading) && (
+                  <div
+                    className="mt-6 rounded-card border-l-4 border-accent-green bg-white/70 p-4"
+                    style={store.readerTheme === "dark" ? { backgroundColor: "#22262c" } : undefined}
+                  >
+                    <p className="text-[11px] font-bold tracking-widest text-accent-green">KEY TAKEAWAY</p>
+                    <p
+                      className="mt-1 text-[14px] leading-snug font-medium"
+                      style={{ color: theme.text }}
+                    >
+                      {unitTakeaway(book, page - 1) ?? point.heading}
+                    </p>
+                  </div>
+                )}
+                {page === 2 && <RememberPrompt bookId={book.id} pointIndex={1} snippet={unitTakeaway(book, 1) ?? unitTitle(book, 1)} />}
+              </div>
+            )}
+            {isWrapUp && <WrapUp book={book} />}
+          </motion.div>
+        </AnimatePresence>
+
+        {!isIntro && !isWrapUp && (
+          <div className="pb-32 pt-2">
+            <button
+              onClick={nextPage}
+              className="h-12 w-full rounded-button bg-brand-blue text-[16px] font-semibold text-white active:bg-brand-blue-dk"
+            >
+              {page === total ? "Finish summary" : "Next"}
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* bottom toolbar */}
+      <div className="absolute inset-x-0 bottom-0 z-10 flex justify-center">
+        <div
+          className="mb-4 flex w-[calc(100%-48px)] max-w-[420px] items-center justify-between rounded-full border border-divider bg-white/85 px-6 py-2 shadow-card backdrop-blur"
+          style={{ borderColor: store.readerTheme === "dark" ? "#33383f" : undefined }}
+        >
+          <button
+            aria-label="Contents and insights"
+            onClick={() => store.setContentsSheet(true)}
+            className="flex h-11 w-11 items-center justify-center"
+          >
+            <AlignLeft size={20} style={{ color: theme.sub }} />
+          </button>
+          <MiniPlayToggle bookId={book.id} pointIndex={!isIntro && !isWrapUp ? page - 1 : 0} color={theme.text} />
+          <button
+            aria-label="Text settings"
+            onClick={() => store.setThemeSheet(true)}
+            className="flex h-11 w-11 items-center justify-center"
+          >
+            <span className="text-[17px] font-bold" style={{ color: theme.sub }}>
+              aA
+            </span>
+          </button>
+        </div>
+      </div>
+
+      {/* thin progress bar pinned to very bottom */}
+      <div className="h-[3px] w-full bg-divider/60">
+        <motion.div className="h-full bg-brand-blue" animate={{ width: `${progress}%` }} transition={{ ease: "easeOut" }} />
+      </div>
+
+      <ContentsInsightsSheet book={book} onJump={(i) => setPage(i + 1)} />
+      <ReaderThemeSheet />
+      {isWrapUp && <EndFlow book={book} />}
+    </div>
+  );
+}
+
+function MiniPlayToggle({ bookId, pointIndex, color }: { bookId: string; pointIndex: number; color: string }) {
+  const pb = useStore((s) => s.playback);
+  const active = pb?.bookId === bookId;
+  const playing = active && pb!.playing;
+  return (
+    <button
+      aria-label={playing ? "Pause narration" : "Start narration"}
+      onClick={() => {
+        const s = useStore.getState();
+        if (!active || !s.playback) s.playBook(bookId, pointIndex);
+        else s.togglePlay();
+      }}
+      className="flex h-11 w-11 items-center justify-center"
+    >
+      {playing ? (
+        <Pause size={22} fill={color} color={color} />
+      ) : (
+        <Play size={22} fill={color} color={color} />
+      )}
+    </button>
+  );
+}
+
+function RememberPrompt({ bookId, pointIndex, snippet }: { bookId: string; pointIndex: number; snippet: string }) {
+  const [vote, setVote] = useState<"up" | "down" | null>(null);
+  const store = useStore();
+  return (
+    <AnimatePresence>
+      {!vote && (
+        <motion.div
+          initial={{ opacity: 0, y: 16, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          className="mt-8 rounded-card bg-white p-4 shadow-card"
+        >
+          <p className="text-[13px] leading-snug text-ink-900">
+            Remember this? <span className="font-semibold">“{snippet}”</span>
+          </p>
+          <div className="mt-3 flex gap-2">
+            <button
+              aria-label="Save highlight"
+              onClick={() => {
+                store.addHighlight(bookId, pointIndex, snippet);
+                setVote("up");
+              }}
+              className="flex h-10 items-center gap-2 rounded-full border border-divider px-4 text-[13px] font-semibold text-ink-900"
+            >
+              <ThumbsUp size={14} /> Save it
+            </button>
+            <button
+              aria-label="Dismiss"
+              onClick={() => setVote("down")}
+              className="flex h-10 items-center gap-2 rounded-full border border-divider px-4 text-[13px] text-ink-600"
+            >
+              <ThumbsDown size={14} /> Not now
+            </button>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
+
+function IntroPage({ book, onStart, theme }: { book: Book; onStart: () => void; theme: { text: string; sub: string } }) {
+  const cat = categoryById(book.categoryId);
+  return (
+    <div className="pt-4 pb-28">
+      <BookCover book={book} className="mx-auto aspect-[2/3] h-[220px]" />
+      <div className="mt-5 text-center">
+        {cat && (
+          <span className="rounded-full px-2.5 py-1 text-[10px] font-bold text-white" style={{ backgroundColor: cat.color }}>
+            {cat.name.toUpperCase()}
+          </span>
+        )}
+        <h1 className="mt-2 text-[26px] leading-tight font-bold" style={{ color: theme.text }}>
+          {book.title}
+        </h1>
+        <p className="mt-1 text-[14px]" style={{ color: theme.sub }}>
+          {book.author}
+        </p>
+        <p className="mx-auto mt-4 max-w-[300px] text-[14px] leading-relaxed" style={{ color: theme.sub }}>
+          {book.description}
+        </p>
+      </div>
+      <div className="fixed inset-x-0 bottom-16 mx-auto flex max-w-[430px] gap-3 px-6">
+        <button onClick={onStart} className="h-12 flex-1 rounded-button bg-brand-blue text-[16px] font-semibold text-white active:bg-brand-blue-dk">
+          Start reading
+        </button>
+        <button
+          onClick={() => {
+            const s = useStore.getState();
+            s.playBook(book.id, 0);
+            s.openReader(null);
+            s.setPlayerOpen(true);
+          }}
+          className="h-12 flex-1 rounded-button border-2 border-brand-blue text-[16px] font-semibold text-brand-blue"
+        >
+          Listen instead
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function WrapUp({ book }: { book: Book }) {
+  return (
+    <div className="pt-6 pb-10">
+      <p className="text-[12px] font-bold tracking-widest text-ink-600">CONCLUSION</p>
+      <h1 className="mt-2 text-[24px] leading-tight font-bold text-ink-900">The gist of it</h1>
+      <p className="mt-5 text-[15px] leading-[1.75] text-ink-900">{book.content.conclusion}</p>
+    </div>
+  );
+}
+
+/** End-of-summary flow rendered over the wrap-up page: rating → celebration → next picks */
+function EndFlow({ book }: { book: Book }) {
+  const [stage, setStage] = useState<"rate" | "feedback" | "next">("rate");
+  const store = useStore();
+  return (
+    <Sheet open maxHeight="92dvh" onClose={() => {}}>
+      <div className="px-5 pb-10">
+        {stage === "rate" && (
+          <>
+            <h2 className="mt-2 text-center text-[20px] font-bold text-ink-900">Rate this summary</h2>
+            <p className="mt-1 mb-5 text-center text-[13px] text-ink-600">Rate it to get better recommendations</p>
+            <RatingStars value={store.ratings[book.id] ?? 0} onChange={() => setStage("feedback")} />
+            <button onClick={() => setStage("next")} className="mt-8 h-12 w-full rounded-button border-2 border-divider text-[15px] font-semibold text-ink-600">
+              Skip for now
+            </button>
+          </>
+        )}
+        {stage === "feedback" && (
+          <>
+            <div className="my-8 text-center text-[17px] font-semibold text-ink-900">Thanks for your feedback!</div>
+            <p className="mb-5 text-center text-[13px] text-ink-600">Was this summary useful?</p>
+            <div className="mb-8 flex justify-center gap-4">
+              {[ThumbsUp, ThumbsDown].map((Icon, i) => (
+                <motion.button whileTap={{ scale: 0.88 }} key={i} onClick={() => setStage("next")} aria-label={i === 0 ? "Yes" : "No"} className="flex h-14 w-14 items-center justify-center rounded-full border border-divider">
+                  <Icon size={22} className="text-ink-900" />
+                </motion.button>
+              ))}
+            </div>
+          </>
+        )}
+        {stage === "next" && (
+          <NextPicks
+            onFinish={() => {
+              const gained = store.finishSummary(book.id);
+              store.showCelebration(store.streakCount);
+              void gained;
+            }}
+          />
+        )}
+      </div>
+    </Sheet>
+  );
+}
+
+function NextPicks({ onFinish }: { onFinish: () => void }) {
+  const finished = useStore((s) => s.library.finished);
+  const picks = BOOK_METAS.filter((b) => !finished.includes(b.id)).slice(0, 6);
+  return (
+    <>
+      <h2 className="text-[20px] font-bold text-ink-900">Choose your next summary</h2>
+      <p className="mt-1 text-[13px] text-ink-600">Keep the momentum going</p>
+      <div className="mt-4 grid grid-cols-3 gap-x-3 gap-y-4">
+        {picks.map((b) => (
+          <button key={b.id} onClick={() => useStore.getState().openBookDetail(b.id)} className="text-left">
+            <BookCover book={b} className="aspect-[2/3] w-full" />
+            <p className="mt-1.5 line-clamp-2 text-[11px] leading-tight font-semibold text-ink-900">{b.title}</p>
+          </button>
+        ))}
+      </div>
+      <button onClick={onFinish} className="mt-7 h-12 w-full rounded-button bg-brand-blue text-[16px] font-semibold text-white active:bg-brand-blue-dk">
+        Done
+      </button>
+    </>
+  );
+}
+
+export function ContentsInsightsSheet({ book, onJump }: { book: Book; onJump: (i: number) => void }) {
+  const open = useStore((s) => s.contentsSheetOpen);
+  const close = () => useStore.getState().setContentsSheet(false);
+  const finishedCount = useStore((s) =>
+    s.library.continuing.find((c) => c.bookId === book.id)?.lastIndex
+  );
+
+  return (
+    <Sheet open={open} onClose={close}>
+      <TabsRoot defaultValue="contents">
+        <TabsList>
+          <TabsTrigger value="contents">Contents</TabsTrigger>
+          <TabsTrigger value="insights">Insights</TabsTrigger>
+        </TabsList>
+        <TabsContent value="contents">
+          <ul className="px-5 pb-6">
+            {[...Array(unitCount(book)).keys()].map((_, i) => {
+              const done = finishedCount !== undefined && i <= finishedCount;
+              return (
+                <li key={i}>
+                  <button onClick={() => { onJump(i); close(); }} className="flex w-full items-start gap-3 py-3 text-left">
+                    <span className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold ${done ? "bg-accent-green text-white" : "bg-bg-cream text-ink-600"}`}>
+                      {i + 1}
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-[14px] font-semibold text-ink-900">{unitTitle(book, i)}</span>
+                      <span className="line-clamp-1 text-[12px] text-ink-600">{unitTakeaway(book, i) ?? unitBody(book, i)}</span>
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </TabsContent>
+        <TabsContent value="insights">
+          <ul className="space-y-3 px-5 pb-6">
+            {book.content.insights.map((ins, i) => (
+              <li key={i} className="rounded-2xl bg-bg-cream p-4 text-[14px] leading-relaxed text-ink-900">
+                <Lightbulb size={14} className="mr-1.5 inline text-accent-orange" />
+                {ins}
+              </li>
+            ))}
+          </ul>
+        </TabsContent>
+      </TabsRoot>
+    </Sheet>
+  );
+}
+
+export function ReaderThemeSheet() {
+  const open = useStore((s) => s.themeSheetOpen);
+  const close = () => useStore.getState().setThemeSheet(false);
+  const theme = useStore((s) => s.readerTheme);
+  const scale = useStore((s) => s.readerTextScale);
+  return (
+    <Sheet open={open} onClose={close}>
+      <div className="px-5 pb-10">
+        <h2 className="text-[17px] font-semibold text-ink-900">Background</h2>
+        <div className="mt-3 flex gap-3">
+          {(Object.keys(THEMES) as (keyof typeof THEMES)[]).map((t) => (
+            <button
+              key={t}
+              onClick={() => useStore.getState().setReaderTheme(t)}
+              aria-label={`${t} background`}
+              className={`h-14 w-14 rounded-xl border-2 ${theme === t ? "border-brand-blue" : "border-transparent"}`}
+              style={{
+                background: THEMES[t].bg === "#FFFFFF" ? "#fff" : THEMES[t].bg,
+                boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.08)",
+              }}
+            >
+              <span className="text-lg font-bold" style={{ color: THEMES[t].text }}>
+                Aa
+              </span>
+            </button>
+          ))}
+        </div>
+        <h2 className="mt-6 text-[17px] font-semibold text-ink-900">Text size {scale}%</h2>
+        <Slider
+          value={[scale]}
+          min={80}
+          max={140}
+          step={10}
+          onValueChange={([v]: number[]) => useStore.getState().setReaderTextScale(v)}
+          className="relative mt-4 flex h-8 touch-none select-none items-center"
+        >
+          <SliderTrack className="relative h-[5px] w-full grow overflow-hidden rounded-full bg-divider">
+            <SliderRange className="absolute h-full bg-brand-blue" />
+          </SliderTrack>
+          <SliderThumb className="block h-5 w-5 rounded-full bg-white shadow ring-2 ring-brand-blue" aria-label="Text size" />
+        </Slider>
+      </div>
+    </Sheet>
+  );
+}
+
+/* Radix Tabs re-exports with styling */
+import * as RadixTabs from "@radix-ui/react-tabs";
+const TabsRoot = ({ children, defaultValue }: { children: React.ReactNode; defaultValue: string }) => (
+  <RadixTabs.Root defaultValue={defaultValue}>{children}</RadixTabs.Root>
+);
+const TabsList = ({ children }: { children: React.ReactNode }) => (
+  <RadixTabs.List className="sticky top-0 z-10 flex bg-white">{children}</RadixTabs.List>
+);
+const TabsTrigger = ({ children, value }: { children: React.ReactNode; value: string }) => (
+  <RadixTabs.Trigger
+    value={value}
+    className="flex-1 border-b-2 border-divider py-3 text-[15px] font-semibold text-ink-600 data-[state=active]:border-brand-blue data-[state=active]:text-ink-900"
+  >
+    {children}
+  </RadixTabs.Trigger>
+);
+const TabsContent = ({ children, value }: { children: React.ReactNode; value: string }) => (
+  <RadixTabs.Content value={value} className="pt-3 focus:outline-none">
+    {children}
+  </RadixTabs.Content>
+);
+
+
+
