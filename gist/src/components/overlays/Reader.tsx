@@ -17,7 +17,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FullModal, Sheet } from "@/components/ui/Sheet";
 import { BookCover } from "@/components/BookCard";
 import { RatingStars } from "@/components/ui/Controls";
-import { loadBook, BOOK_METAS, unitCount, unitTitle, unitBody, unitTakeaway } from "@/data/books";
+import { loadBook, BOOK_METAS, unitCount, unitTitle, unitBody, unitTakeaway } from "@/data/books/index";
 import { categoryById } from "@/data/catalog";
 import { useStore } from "@/lib/store";
 import type { Book } from "@/lib/types";
