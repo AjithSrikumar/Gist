@@ -81,7 +81,7 @@ function ReaderBody({
   const store = useStore();
   const theme = THEMES[store.readerTheme];
   const scale = store.readerTextScale / 100;
-  const total = unitCount(book);
+  const total = Math.max(1, unitCount(book));
   const isIntro = page === 0;
   const isWrapUp = page === total + 1;
   const saved = store.library.savedForLater.includes(book.id);
@@ -101,9 +101,10 @@ function ReaderBody({
         }
       : null;
 
-  const nextPage = () => {
+const nextPage = () => {
     if (isWrapUp) return;
-    setPage(Math.min(total + 1, page + 1));
+    const next = Math.min(total + 1, page + 1);
+    setPage(next);
   };
   const prevPage = () => setPage(Math.max(0, page - 1));
 
