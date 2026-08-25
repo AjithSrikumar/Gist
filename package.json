@@ -1,0 +1,15 @@
+{
+  "name": "gist",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd gist && npm run dev",
+    "build": "cd gist && npm run build",
+    "start": "cd gist && npm run start",
+    "lint": "cd gist && npm run lint",
+    "preinstall": "cd gist && npm install"
+  },
+  "dependencies": {
+    "next": "16.3.3"
+  }
+}
