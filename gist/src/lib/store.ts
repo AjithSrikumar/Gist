@@ -107,6 +107,23 @@ const initialPersisted: PersistedState = {
 const todayIndex = () => new Date().getDay(); // 0 = Sunday
 const todayKey = () => new Date().toDateString();
 
+let syncTimeout: ReturnType<typeof setTimeout> | null = null;
+function debouncedSync(userId: string, state: PersistedState) {
+  if (syncTimeout) clearTimeout(syncTimeout);
+  syncTimeout = setTimeout(async () => {
+    const { saveUserData } = await import("./supabase-browser");
+    await saveUserData(userId, {
+      library: state.library,
+      highlights: state.highlights,
+      ratings: state.ratings,
+      streak_count: state.streakCount,
+      streak_week: state.streakWeek,
+      last_finish_date: state.lastFinishDate,
+      is_subscribed: state.isSubscribed,
+    });
+  }, 1000);
+}
+
 export const useStore = create<AppStore>()(
   persist(
     (set, get) => ({
@@ -253,7 +270,24 @@ export const useStore = create<AppStore>()(
       setContentsSheet: (contentsSheetOpen) => set({ contentsSheetOpen }),
       setThemeSheet: (themeSheetOpen) => set({ themeSheetOpen }),
 
-      setUser: (user) => set({ user }),
+      setUser: async (user) => {
+        set({ user });
+        if (user) {
+          const { loadUserData } = await import("./supabase-browser");
+          const data = await loadUserData(user.id);
+          if (data) {
+            set({
+              library: data.library ?? get().library,
+              highlights: data.highlights ?? get().highlights,
+              ratings: data.ratings ?? get().ratings,
+              streakCount: data.streak_count ?? get().streakCount,
+              streakWeek: data.streak_week ?? get().streakWeek,
+              lastFinishDate: data.last_finish_date ?? get().lastFinishDate,
+              isSubscribed: data.is_subscribed ?? get().isSubscribed,
+            });
+          }
+        }
+      },
 
       signInWithGoogle: async () => {
         const { getSupabase } = await import("./supabase-browser");
@@ -303,3 +337,20 @@ export const useStore = create<AppStore>()(
     }
   )
 );
+
+// Sync to Supabase when logged-in user data changes
+useStore.subscribe((state, prevState) => {
+  const user = state.user;
+  if (!user) return;
+  const changed =
+    state.library !== prevState.library ||
+    state.highlights !== prevState.highlights ||
+    state.ratings !== prevState.ratings ||
+    state.streakCount !== prevState.streakCount ||
+    state.streakWeek !== prevState.streakWeek ||
+    state.lastFinishDate !== prevState.lastFinishDate ||
+    state.isSubscribed !== prevState.isSubscribed;
+  if (changed) {
+    debouncedSync(user.id, state);
+  }
+});

@@ -48,7 +48,7 @@ const FEATURES = [
 
 const COPY: Record<PaywallVariant, { headline: string; sub?: string }> = {
   onboarding: {
-    headline: "Start your free trial to keep growing",
+    headline: "Create your free account to keep growing",
     sub: "You're one tap away from unlimited key ideas.",
   },
   streak: {
@@ -60,8 +60,8 @@ const COPY: Record<PaywallVariant, { headline: string; sub?: string }> = {
     sub: "Read and listen without limits, forever curious.",
   },
   discount: {
-    headline: "Last minute discount — 67% off",
-    sub: "This offer disappears when the timer hits zero.",
+    headline: "Unlock Full Access",
+    sub: "Sign in to sync your progress across devices.",
   },
 };
 
@@ -72,14 +72,18 @@ export function PaywallContent({
   variant: PaywallVariant;
   onStarted?: () => void;
 }) {
-  const [plan, setPlan] = useState<"yearly" | "monthly">("yearly");
   const [featurePage, setFeaturePage] = useState(0);
   const store = useStore();
+  const user = store.user;
   const copy = COPY[variant];
 
-  const startTrial = () => {
-    store.startTrial();
-    onStarted?.();
+  const handleStart = () => {
+    if (user) {
+      store.subscribe();
+      onStarted?.();
+    } else {
+      store.signInWithGoogle();
+    }
   };
 
   return (
@@ -104,7 +108,7 @@ export function PaywallContent({
 
       <div className="min-h-0 flex-1 overflow-y-auto px-6 pt-4 pb-4">
         <div className="mx-auto max-w-[300px]">
-          <GrowthTree stage={plan === "yearly" ? 3 : 1} />
+          <GrowthTree stage={2} />
         </div>
 
         <h1 className="mt-3 text-center text-[26px] leading-tight font-bold text-ink-900">{copy.headline}</h1>
@@ -133,90 +137,41 @@ export function PaywallContent({
           ))}
         </div>
 
-        {/* plans */}
-        <div className="mt-5 space-y-2.5">
-          <PlanRow
-            selected={plan === "yearly"}
-            onSelect={() => setPlan("yearly")}
-            badge="BEST VALUE"
-            title="Yearly"
-            price="$39.99 / year"
-            note="7 days free"
-          />
-          <PlanRow
-            selected={plan === "monthly"}
-            onSelect={() => setPlan("monthly")}
-            title="Monthly"
-            price="$7.99 / month"
-            note="7 days free"
-          />
-        </div>
-
-        <p className="mt-3 text-center text-[12px] text-ink-600">
-          {plan === "yearly"
-            ? "7 days free, then $39.99/year — only $0.77/week"
-            : "7 days free, then $7.99/month — cancel anytime"}
-        </p>
-        {variant === "discount" && (
-          <p className="mt-1 text-center text-[13px] font-bold text-accent-pink">
-            <span className="text-ink-600 line-through">$119.99</span> $39.99 — save 67%
-          </p>
-        )}
-
+        {/* Google sign-in button */}
         <motion.button
           whileTap={{ scale: 0.97 }}
-          onClick={startTrial}
-          className="mt-4 h-[54px] w-full rounded-button bg-brand-blue text-[17px] font-bold text-white shadow-lg active:bg-brand-blue-dk"
+          onClick={handleStart}
+          className="mt-6 flex h-[54px] w-full items-center justify-center gap-3 rounded-button bg-brand-blue text-[17px] font-bold text-white shadow-lg active:bg-brand-blue-dk"
         >
-          Start Free Trial
+          {user ? (
+            "Start for Free"
+          ) : (
+            <>
+              <svg className="h-5 w-5" viewBox="0 0 24 24">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#fff" />
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff" opacity="0.7" />
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fff" opacity="0.5" />
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff" opacity="0.6" />
+              </svg>
+              Sign in with Google
+            </>
+          )}
         </motion.button>
-        <button className="mx-auto mt-3 block h-11 text-[14px] font-semibold text-brand-blue">View other plans</button>
+
+        {!user && (
+          <p className="mt-3 text-center text-[12px] text-ink-600">
+            Free forever — no credit card required
+          </p>
+        )}
       </div>
 
       <div className="safe-bottom border-t border-divider px-6 py-3">
         <div className="flex justify-center gap-6 text-[11px] text-ink-600">
           <span>Terms of Use</span>
           <span>Privacy Policy</span>
-          <span>Restore purchase</span>
         </div>
       </div>
     </div>
-  );
-}
-
-function PlanRow({
-  selected,
-  onSelect,
-  title,
-  price,
-  note,
-  badge,
-}: {
-  selected: boolean;
-  onSelect: () => void;
-  title: string;
-  price: string;
-  note: string;
-  badge?: string;
-}) {
-  return (
-    <button
-      onClick={onSelect}
-      aria-pressed={selected}
-      className={`flex w-full items-center gap-3 rounded-card border-2 px-4 py-3 text-left transition-colors ${
-        selected ? "border-brand-blue bg-brand-blue/5" : "border-divider"
-      }`}
-    >
-      <span className={`h-5 w-5 shrink-0 rounded-full border-2 ${selected ? "border-brand-blue bg-brand-blue ring-2 ring-inset ring-white" : "border-divider"}`} />
-      <span className="flex-1">
-        <span className="block text-[15px] font-semibold text-ink-900">
-          {title}{" "}
-          {badge && <span className="ml-1 rounded-full bg-accent-green px-1.5 py-0.5 align-middle text-[9px] font-bold text-white">{badge}</span>}
-        </span>
-        <span className="text-[12px] text-ink-600">{note}</span>
-      </span>
-      <span className="text-[15px] font-bold text-ink-900">{price}</span>
-    </button>
   );
 }
 
