@@ -273,9 +273,10 @@ export const useStore = create<AppStore>()(
       setUser: async (user) => {
         set({ user });
         if (user) {
-          const { loadUserData } = await import("./supabase-browser");
+          const { loadUserData, saveUserData } = await import("./supabase-browser");
           const data = await loadUserData(user.id);
           if (data) {
+            // Existing user — load from Supabase
             set({
               library: data.library ?? get().library,
               highlights: data.highlights ?? get().highlights,
@@ -284,6 +285,18 @@ export const useStore = create<AppStore>()(
               streakWeek: data.streak_week ?? get().streakWeek,
               lastFinishDate: data.last_finish_date ?? get().lastFinishDate,
               isSubscribed: data.is_subscribed ?? get().isSubscribed,
+            });
+          } else {
+            // First sign-in — push local onboarding data to Supabase
+            const s = get();
+            await saveUserData(user.id, {
+              library: s.library,
+              highlights: s.highlights,
+              ratings: s.ratings,
+              streak_count: s.streakCount,
+              streak_week: s.streakWeek,
+              last_finish_date: s.lastFinishDate,
+              is_subscribed: s.isSubscribed,
             });
           }
         }
