@@ -338,7 +338,7 @@ function IntroPage({ book, onStart, theme }: { book: Book; onStart: () => void; 
           {book.description}
         </p>
       </div>
-      <div className="fixed inset-x-0 bottom-16 mx-auto flex max-w-[430px] gap-3 px-6">
+      <div className="fixed inset-x-0 bottom-[130px] mx-auto flex max-w-[430px] gap-3 px-6">
         <button onClick={onStart} className="h-12 flex-1 rounded-button bg-brand-blue text-[16px] font-semibold text-white active:bg-brand-blue-dk">
           Start reading
         </button>
