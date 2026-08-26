@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Search, Dices, Gift, Clock3 } from "lucide-react";
+import { Search, Dices, Gift, Clock3, Zap, Briefcase, TrendingUp, Brain, Flower2, Megaphone, Users, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { ScreenPadding } from "@/components/AppShell";
 import { HorizontalRail } from "@/components/HorizontalRail";
@@ -9,6 +9,16 @@ import { BookCard, BookCover } from "@/components/BookCard";
 import { CATEGORIES, COLLECTIONS, CHALLENGES } from "@/data/catalog";
 import { BOOK_METAS } from "@/data/books";
 import { useStore } from "@/lib/store";
+
+const ICONS: Record<string, LucideIcon> = {
+  zap: Zap,
+  briefcase: Briefcase,
+  "trending-up": TrendingUp,
+  brain: Brain,
+  flower: Flower2,
+  megaphone: Megaphone,
+  users: Users,
+};
 
 export default function ExplorePage() {
   const [filter, setFilter] = useState<string | null>(null);
