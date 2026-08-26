@@ -17,6 +17,7 @@ gist/out/
 .env
 .env.*
 *.pem
+*googleusercontent.com.json
 
 # OS / editor
 .DS_Store
