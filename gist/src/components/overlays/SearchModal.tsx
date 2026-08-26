@@ -108,7 +108,7 @@ function SearchContent({
                   >
                     <p className="px-4 pb-4 text-[13px] leading-relaxed text-ink-600">
                       A gift for you: unlock a free premium summary every day. Start your 7-day free trial to read
-                      and listen without limits.
+                      and read without limits.
                     </p>
                   </motion.div>
                 )}

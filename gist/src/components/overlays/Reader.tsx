@@ -7,8 +7,6 @@ import {
   Download,
   Bookmark,
   AlignLeft,
-  Play,
-  Pause,
   Lightbulb,
   ThumbsUp,
   ThumbsDown,
@@ -267,7 +265,6 @@ const nextPage = () => {
           >
             <AlignLeft size={20} style={{ color: theme.sub }} />
           </button>
-          <MiniPlayToggle bookId={book.id} pointIndex={!isIntro && !isWrapUp ? page - 1 : 0} color={theme.text} />
           <button
             aria-label="Text settings"
             onClick={() => store.setThemeSheet(true)}
@@ -289,29 +286,6 @@ const nextPage = () => {
       <ReaderThemeSheet />
       {isWrapUp && <EndFlow book={book} />}
     </div>
-  );
-}
-
-function MiniPlayToggle({ bookId, pointIndex, color }: { bookId: string; pointIndex: number; color: string }) {
-  const pb = useStore((s) => s.playback);
-  const active = pb?.bookId === bookId;
-  const playing = active && pb!.playing;
-  return (
-    <button
-      aria-label={playing ? "Pause narration" : "Start narration"}
-      onClick={() => {
-        const s = useStore.getState();
-        if (!active || !s.playback) s.playBook(bookId, pointIndex);
-        else s.togglePlay();
-      }}
-      className="flex h-11 w-11 items-center justify-center"
-    >
-      {playing ? (
-        <Pause size={22} fill={color} color={color} />
-      ) : (
-        <Play size={22} fill={color} color={color} />
-      )}
-    </button>
   );
 }
 
@@ -376,20 +350,9 @@ function IntroPage({ book, onStart, theme }: { book: Book; onStart: () => void; 
           {book.description}
         </p>
       </div>
-      <div className="fixed inset-x-0 bottom-[130px] mx-auto flex max-w-[430px] gap-3 px-6">
-        <button onClick={onStart} className="h-12 flex-1 rounded-button bg-brand-blue text-[16px] font-semibold text-white active:bg-brand-blue-dk">
+      <div className="fixed inset-x-0 bottom-[130px] mx-auto flex max-w-[430px] px-6">
+        <button onClick={onStart} className="h-12 w-full rounded-button bg-brand-blue text-[16px] font-semibold text-white active:bg-brand-blue-dk">
           Start reading
-        </button>
-        <button
-          onClick={() => {
-            const s = useStore.getState();
-            s.playBook(book.id, 0);
-            s.openReader(null);
-            s.setPlayerOpen(true);
-          }}
-          className="h-12 flex-1 rounded-button border-2 border-brand-blue text-[16px] font-semibold text-brand-blue"
-        >
-          Listen instead
         </button>
       </div>
     </div>

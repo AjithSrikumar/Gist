@@ -24,13 +24,13 @@ import { useStore } from "@/lib/store";
 type Step =
   | "intro"
   | "gender" | "age" | "goals" | "celebrate"
-  | "booksPerYear" | "format" | "notifications"
+  | "booksPerYear" | "notifications"
   | "reassure" | "picks" | "crafting" | "paywall";
 
 const STEP_ORDER: Step[] = [
   "intro",
   "gender", "age", "goals", "celebrate",
-  "booksPerYear", "format", "notifications",
+  "booksPerYear", "notifications",
   "reassure", "picks", "crafting", "paywall",
 ];
 
@@ -47,11 +47,10 @@ export default function OnboardingPage() {
   const store = useStore();
 
   const [goals, setGoals] = useState<string[]>([]);
-  const [prefFormat, setPrefFormat] = useState<"read" | "listen">("read");
   const [pickIds, setPickIds] = useState<string[] | null>(null);
 
   const finishOnboarding = () => {
-    store.completeOnboarding({ goals, prefFormat, email: null });
+    store.completeOnboarding({ goals, email: null });
     router.replace("/for-you");
   };
 
@@ -121,17 +120,6 @@ export default function OnboardingPage() {
             />
           )}
 
-          {step === "format" && (
-            <QuizPills
-              title="How do you prefer to learn?"
-              options={["Reading", "Listening", "Both"]}
-              onSelect={(o) => {
-                setPrefFormat(o === "Listening" ? "listen" : "read");
-                setTimeout(() => go(1), 250);
-              }}
-            />
-          )}
-
           {step === "notifications" && (
             <Centered dark>
               <div className="flex h-24 w-24 items-center justify-center rounded-full bg-brand-blue">
@@ -184,7 +172,6 @@ export default function OnboardingPage() {
           {step === "picks" && (
             <PicksCarousel
               ids={pickIds ?? picksFor(goals)}
-              prefFormat={prefFormat}
               onAdd={(id) => useStore.getState().saveToLibrary(id)}
               onNext={() => go(1)}
             />
@@ -476,12 +463,10 @@ function QuizPills({
 
 function PicksCarousel({
   ids,
-  prefFormat,
   onAdd,
   onNext,
 }: {
   ids: string[];
-  prefFormat: "read" | "listen";
   onAdd: (id: string) => void;
   onNext: () => void;
 }) {
@@ -498,9 +483,7 @@ function PicksCarousel({
             <p className="line-clamp-1 text-[12px] text-white/50">{b.author}</p>
             <button
               onClick={() => onAdd(b.id)}
-              className={`mt-2 h-9 w-full rounded-full text-[13px] font-semibold ${
-                prefFormat === "listen" ? "bg-brand-blue text-white" : "border border-white/40 text-white"
-              }`}
+              className="mt-2 h-9 w-full rounded-full border border-white/40 text-[13px] font-semibold text-white"
             >
               Add to Library
             </button>

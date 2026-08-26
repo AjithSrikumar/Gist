@@ -41,9 +41,9 @@ export function GrowthTree({ stage }: { stage: 1 | 2 | 3 }) {
 
 const FEATURES = [
   { title: "Read with no limits", body: "Every summary, every key point — unlocked." },
-  { title: "Listen on the go", body: "Turn commutes into learning time." },
   { title: "Grow your intelligence", body: "Daily microlearning built around your goals." },
   { title: "Improve relationships", body: "Ideas you can actually use with people." },
+  { title: "Build a streak", body: "Daily reading habits that compound." },
 ];
 
 const COPY: Record<PaywallVariant, { headline: string; sub?: string }> = {
@@ -57,7 +57,7 @@ const COPY: Record<PaywallVariant, { headline: string; sub?: string }> = {
   },
   profile: {
     headline: "Unlock Full Access",
-    sub: "Read and listen without limits, forever curious.",
+    sub: "Read without limits, forever curious.",
   },
   discount: {
     headline: "Unlock Full Access",

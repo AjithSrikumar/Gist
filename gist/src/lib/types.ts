@@ -1,5 +1,3 @@
-export type Speed = 1 | 1.5 | 2;
-
 export interface Category {
   id: string;
   name: string;
@@ -75,14 +73,6 @@ export interface HighlightEntry {
   bookId: string;
   pointIndex: number;
   snippet: string;
-}
-
-export interface Playback {
-  bookId: string;
-  pointIndex: number;
-  positionSec: number;
-  playing: boolean;
-  speed: Speed;
 }
 
 export interface ContinuingEntry {

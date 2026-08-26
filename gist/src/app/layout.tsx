@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Gist — Key ideas from the world's best nonfiction",
   description:
-    "Gist gives you the key ideas from bestselling nonfiction books in minutes. Read or listen, build a streak, grow every day.",
+    "Gist gives you the key ideas from bestselling nonfiction books in minutes. Read, build a streak, grow every day.",
   manifest: "/manifest.webmanifest",
   appleWebApp: { capable: true, title: "Gist", statusBarStyle: "default" },
 };

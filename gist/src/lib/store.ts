@@ -2,13 +2,11 @@
 
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import type { Playback, Speed } from "./types";
 import type { User } from "@supabase/supabase-js";
 
 export interface OverlayState {
   bookDetailId: string | null;
   readerBookId: string | null;
-  playerOpen: boolean;
   searchOpen: boolean;
   paywall: PaywallVariant | null;
   celebrationStreak: number | null;
@@ -24,7 +22,6 @@ export interface PersistedState {
   onboarded: boolean;
   email: string | null;
   selectedGoals: string[];
-  prefFormat: "read" | "listen";
   isSubscribed: boolean;
   trialStarted: boolean;
   streakCount: number;
@@ -40,12 +37,11 @@ export interface PersistedState {
   notifPrefs: { morning: boolean; keepUp: boolean; diveDeeper: boolean };
   readerTheme: "cream" | "white" | "dark";
   readerTextScale: number;
-  playback: Playback | null;
 }
 
 interface Actions {
   setHydrated: () => void;
-  completeOnboarding: (d: { goals: string[]; prefFormat: "read" | "listen"; email: string | null }) => void;
+  completeOnboarding: (d: { goals: string[]; email: string | null }) => void;
   startTrial: () => void;
   subscribe: () => void;
 
@@ -61,17 +57,8 @@ interface Actions {
 
   finishSummary: (bookId: string) => boolean;
 
-  playBook: (bookId: string, pointIndex?: number) => void;
-  togglePlay: () => void;
-  tickPlayback: (sec: number) => void;
-  seekTo: (sec: number) => void;
-  cycleSpeed: () => void;
-  gotoPoint: (idx: number) => void;
-  stopPlayback: () => void;
-
   openBookDetail: (id: string | null) => void;
   openReader: (id: string | null) => void;
-  setPlayerOpen: (v: boolean) => void;
   setSearchOpen: (v: boolean) => void;
   openPaywall: (v: PaywallVariant | null) => void;
   showCelebration: (days: number | null) => void;
@@ -89,7 +76,6 @@ const initialPersisted: PersistedState = {
   onboarded: false,
   email: null,
   selectedGoals: [],
-  prefFormat: "read",
   isSubscribed: false,
   trialStarted: false,
   streakCount: 0,
@@ -101,7 +87,6 @@ const initialPersisted: PersistedState = {
   notifPrefs: { morning: true, keepUp: true, diveDeeper: false },
   readerTheme: "cream",
   readerTextScale: 100,
-  playback: null,
 };
 
 const todayIndex = () => new Date().getDay(); // 0 = Sunday
@@ -131,7 +116,6 @@ export const useStore = create<AppStore>()(
       // overlays (ephemeral)
       bookDetailId: null,
       readerBookId: null,
-      playerOpen: false,
       searchOpen: false,
       paywall: null,
       celebrationStreak: null,
@@ -141,8 +125,8 @@ export const useStore = create<AppStore>()(
 
       setHydrated: () => set({ hydrated: true }),
 
-      completeOnboarding: ({ goals, prefFormat, email }) =>
-        set({ onboarded: true, selectedGoals: goals, prefFormat, email }),
+      completeOnboarding: ({ goals, email }) =>
+        set({ onboarded: true, selectedGoals: goals, email }),
 
       startTrial: () => set({ trialStarted: true, isSubscribed: true }),
       subscribe: () => set({ isSubscribed: true }),
@@ -227,43 +211,8 @@ export const useStore = create<AppStore>()(
         return !alreadyToday;
       },
 
-      playBook: (bookId, pointIndex = 0) =>
-        set({
-          playback: { bookId, pointIndex, positionSec: 0, playing: true, speed: 1 },
-        }),
-
-      togglePlay: () =>
-        set((s) =>
-          s.playback ? { playback: { ...s.playback, playing: !s.playback.playing } } : s
-        ),
-
-      tickPlayback: (sec) =>
-        set((s) => {
-          if (!s.playback || !s.playback.playing) return s;
-          return {
-            playback: { ...s.playback, positionSec: Math.max(0, s.playback.positionSec + sec * s.playback.speed) },
-          };
-        }),
-
-      seekTo: (sec) =>
-        set((s) => (s.playback ? { playback: { ...s.playback, positionSec: Math.max(0, sec) } } : s)),
-
-      cycleSpeed: () =>
-        set((s) => {
-          if (!s.playback) return s;
-          const order: Speed[] = [1, 1.5, 2];
-          const next = order[(order.indexOf(s.playback.speed) + 1) % order.length];
-          return { playback: { ...s.playback, speed: next } };
-        }),
-
-      gotoPoint: (idx) =>
-        set((s) => (s.playback ? { playback: { ...s.playback, pointIndex: idx, positionSec: 0 } } : s)),
-
-      stopPlayback: () => set({ playback: null }),
-
       openBookDetail: (bookDetailId) => set({ bookDetailId }),
       openReader: (readerBookId) => set({ readerBookId }),
-      setPlayerOpen: (playerOpen) => set({ playerOpen }),
       setSearchOpen: (searchOpen) => set({ searchOpen }),
       openPaywall: (paywall) => set({ paywall }),
       showCelebration: (celebrationStreak) => set({ celebrationStreak }),
@@ -328,7 +277,6 @@ export const useStore = create<AppStore>()(
           onboarded: s.onboarded,
           email: s.email,
           selectedGoals: s.selectedGoals,
-          prefFormat: s.prefFormat,
           isSubscribed: s.isSubscribed,
           trialStarted: s.trialStarted,
           streakCount: s.streakCount,
@@ -340,7 +288,6 @@ export const useStore = create<AppStore>()(
           notifPrefs: s.notifPrefs,
           readerTheme: s.readerTheme,
           readerTextScale: s.readerTextScale,
-          playback: s.playback,
         };
         return persisted;
       },

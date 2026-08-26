@@ -360,7 +360,7 @@ export function unitTakeaways(book: Book, i: number): string[] {
   return ch.takeaways?.length ? ch.takeaways : ch.takeaway ? [ch.takeaway] : [];
 }
 
-/** Derived duration from actual word count (~150 wpm listening pace). */
+/** Derived duration from actual word count (~200 wpm reading pace). */
 export function bookDurationMin(book: Book): number {
   const words =
     unitCount(book) > 0

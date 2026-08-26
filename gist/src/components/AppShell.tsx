@@ -56,6 +56,5 @@ export function TabBar() {
 }
 
 export function ScreenPadding({ children }: { children: ReactNode }) {
-  // leaves room for tab bar + optional mini player
-  return <div className="pb-[150px]">{children}</div>;
+  return <div className="pb-[100px]">{children}</div>;
 }

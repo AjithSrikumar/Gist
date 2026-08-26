@@ -31,7 +31,6 @@ export default function ProfilePage() {
     { name: "Account manager", unlocked: true, icon: <Trophy size={26} className="text-accent-orange" /> },
     { name: "Star shooter", unlocked: store.streakCount >= 1, icon: <Star size={26} className="text-brand-blue" fill="currentColor" /> },
     { name: "Bookworm", unlocked: store.library.finished.length >= 1, icon: <Trophy size={26} className="text-accent-green" /> },
-    { name: "Listener", unlocked: !!store.playback, icon: <Star size={26} className="text-accent-pink" /> },
     { name: "Collector", unlocked: store.highlights.length >= 1, icon: <Trophy size={26} className="text-accent-purple" /> },
     { name: "Streak x7", unlocked: store.streakCount >= 7, icon: <Star size={26} className="text-accent-teal" /> },
   ];

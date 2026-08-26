@@ -22,7 +22,6 @@ const ICONS: Record<string, LucideIcon> = {
 
 export default function ExplorePage() {
   const [filter, setFilter] = useState<string | null>(null);
-  const hasPlayback = !!useStore((s) => s.playback);
 
   const filtered = useMemo(
     () => (filter ? BOOK_METAS.filter((b) => b.categoryId === filter) : BOOK_METAS),
@@ -143,27 +142,25 @@ export default function ExplorePage() {
       </section>
 
       {/* floating action row */}
-      {!hasPlayback && (
-        <div className="fixed inset-x-0 bottom-[82px] z-30 flex justify-center">
-          <div className="mx-3 flex w-full max-w-[456px] gap-2">
-            <motion.button
-              whileTap={{ scale: 0.97 }}
-              onClick={rollDice}
-              className="flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-ink-900 text-[13px] font-bold text-white shadow-sheet"
-            >
-              <Dices size={18} /> Roll the dice — random summary
-            </motion.button>
-            <motion.button
-              whileTap={{ scale: 0.97 }}
-              onClick={() => useStore.getState().openPaywall("discount")}
-              aria-label="Gift for you"
-              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-pink text-white shadow-sheet"
-            >
-              <Gift size={20} />
-            </motion.button>
-          </div>
+      <div className="fixed inset-x-0 bottom-[82px] z-30 flex justify-center">
+        <div className="mx-3 flex w-full max-w-[456px] gap-2">
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={rollDice}
+            className="flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-ink-900 text-[13px] font-bold text-white shadow-sheet"
+          >
+            <Dices size={18} /> Roll the dice — random summary
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={() => useStore.getState().openPaywall("discount")}
+            aria-label="Gift for you"
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-pink text-white shadow-sheet"
+          >
+            <Gift size={20} />
+          </motion.button>
         </div>
-      )}
+      </div>
     </ScreenPadding>
   );
 }

@@ -54,17 +54,10 @@ function BookDetailContent({
 }) {
   const store = useStore();
   const cat = categoryById(book.categoryId);
-  const readFirst = store.prefFormat === "read";
 
-  const openInFormat = (format: "read" | "listen") => {
-    if (format === "read") {
-      store.openBookDetail(null);
-      store.openReader(book.id);
-    } else {
-      store.playBook(book.id);
-      store.openBookDetail(null);
-      store.setPlayerOpen(true);
-    }
+  const openBook = () => {
+    store.openBookDetail(null);
+    store.openReader(book.id);
   };
 
   return (
@@ -133,24 +126,12 @@ function BookDetailContent({
         </ul>
       </section>
 
-      <div className="mt-7 flex gap-3">
+      <div className="mt-7">
         <button
-          onClick={() => openInFormat(readFirst ? "read" : "listen")}
-          className={`h-12 flex-1 rounded-button border-2 text-[16px] font-semibold ${
-            readFirst
-              ? "border-brand-blue text-brand-blue"
-              : "border-transparent bg-brand-blue text-white active:bg-brand-blue-dk"
-          }`}
+          onClick={openBook}
+          className="h-12 w-full rounded-button bg-brand-blue text-[16px] font-semibold text-white active:bg-brand-blue-dk"
         >
-          {readFirst ? "Read" : "Listen"}
-        </button>
-        <button
-          onClick={() => openInFormat(readFirst ? "listen" : "read")}
-          className={`h-12 flex-1 rounded-button text-[16px] font-semibold ${
-            readFirst ? "bg-brand-blue text-white active:bg-brand-blue-dk" : "border-2 border-brand-blue text-brand-blue"
-          }`}
-        >
-          {readFirst ? "Listen" : "Read"}
+          Read summary
         </button>
       </div>
 
