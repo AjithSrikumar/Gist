@@ -96,7 +96,7 @@ export function PaywallContent({
         >
           {variant === "discount" ? (
             <>
-              <Timer size={15} /> Last minute discount — 67% off ends soon
+              <Timer size={15} /> Sign in to save your progress
             </>
           ) : (
             <>
