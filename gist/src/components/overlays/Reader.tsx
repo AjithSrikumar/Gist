@@ -3,8 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import {
   X,
-  Share,
-  Download,
+  Link2,
   Bookmark,
   AlignLeft,
   Lightbulb,
@@ -53,6 +52,9 @@ export function ReaderModal() {
       store.upsertProgress(book.id, pct, Math.max(0, page - 2));
     }
     store.openReader(null);
+    if (book) {
+      setTimeout(() => store.openBookDetail(book.id), 100);
+    }
   };
 
   return (
@@ -140,19 +142,12 @@ const nextPage = () => {
             {shared ? (
               <Check size={19} className="text-accent-green" />
             ) : (
-              <Share size={19} className="text-ink-600" />
+              <Link2 size={19} className="text-ink-600" />
             )}
           </button>
           <button
-            aria-label="Download"
-            onClick={() => alert("Coming soon")}
-            className="flex h-11 w-11 items-center justify-center rounded-full"
-          >
-            <Download size={19} className="text-ink-600" />
-          </button>
-          <button
             aria-label="Bookmark"
-            onClick={() => (saved ? undefined : store.saveToLibrary(book.id))}
+            onClick={() => (saved ? store.removeFromLibrary(book.id) : store.saveToLibrary(book.id))}
             className="flex h-11 w-11 items-center justify-center rounded-full"
           >
             <Bookmark size={19} className={saved ? "fill-brand-blue text-brand-blue" : "text-ink-600"} />
@@ -252,37 +247,24 @@ const nextPage = () => {
         )}
       </div>
 
-      {/* bottom toolbar */}
-      <div className="absolute inset-x-0 bottom-0 z-10 flex justify-center">
-        <div
-          className="mb-4 flex w-[calc(100%-48px)] max-w-[420px] items-center justify-between rounded-full border border-divider bg-white/85 px-6 py-2 shadow-card backdrop-blur"
+      {/* floating chapters button */}
+      {!isIntro && (
+        <button
+          aria-label="Open chapters"
+          onClick={() => store.setContentsSheet(true)}
+          className="absolute bottom-20 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-divider bg-white/85 shadow-card backdrop-blur"
           style={{ borderColor: store.readerTheme === "dark" ? "#33383f" : undefined }}
         >
-          <button
-            aria-label="Contents and insights"
-            onClick={() => store.setContentsSheet(true)}
-            className="flex h-11 w-11 items-center justify-center"
-          >
-            <AlignLeft size={20} style={{ color: theme.sub }} />
-          </button>
-          <button
-            aria-label="Text settings"
-            onClick={() => store.setThemeSheet(true)}
-            className="flex h-11 w-11 items-center justify-center"
-          >
-            <span className="text-[17px] font-bold" style={{ color: theme.sub }}>
-              aA
-            </span>
-          </button>
-        </div>
-      </div>
+          <AlignLeft size={20} style={{ color: theme.sub }} />
+        </button>
+      )}
 
       {/* thin progress bar pinned to very bottom */}
       <div className="h-[3px] w-full bg-divider/60">
         <motion.div className="h-full bg-brand-blue" animate={{ width: `${progress}%` }} transition={{ ease: "easeOut" }} />
       </div>
 
-      <ContentsInsightsSheet book={book} onJump={(i) => setPage(i + 1)} />
+      <ContentsInsightsSheet book={book} onJump={(i) => setPage(i + 1)} currentPage={page} />
       <ReaderThemeSheet />
       {isWrapUp && <EndFlow book={book} />}
     </div>
@@ -435,12 +417,15 @@ function NextPicks({ onFinish }: { onFinish: () => void }) {
   );
 }
 
-export function ContentsInsightsSheet({ book, onJump }: { book: Book; onJump: (i: number) => void }) {
+export function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Book; onJump: (i: number) => void; currentPage: number }) {
   const open = useStore((s) => s.contentsSheetOpen);
   const close = () => useStore.getState().setContentsSheet(false);
   const finishedCount = useStore((s) =>
     s.library.continuing.find((c) => c.bookId === book.id)?.lastIndex
   );
+  const total = unitCount(book);
+  const readChapters = finishedCount !== undefined ? finishedCount + 1 : 0;
+  const pct = Math.round((readChapters / total) * 100);
 
   return (
     <Sheet open={open} onClose={close}>
@@ -450,17 +435,30 @@ export function ContentsInsightsSheet({ book, onJump }: { book: Book; onJump: (i
           <TabsTrigger value="insights">Insights</TabsTrigger>
         </TabsList>
         <TabsContent value="contents">
+          <div className="px-5 pb-2">
+            <div className="flex items-center justify-between text-[12px] text-ink-600">
+              <span>{readChapters} of {total} chapters read</span>
+              <span>{pct}%</span>
+            </div>
+            <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-divider">
+              <div className="h-full rounded-full bg-accent-green" style={{ width: `${pct}%` }} />
+            </div>
+          </div>
           <ul className="px-5 pb-6">
-            {[...Array(unitCount(book)).keys()].map((_, i) => {
+            {[...Array(total).keys()].map((_, i) => {
               const done = finishedCount !== undefined && i <= finishedCount;
+              const active = currentPage === i + 1;
               return (
                 <li key={i}>
-                  <button onClick={() => { onJump(i); close(); }} className="flex w-full items-start gap-3 py-3 text-left">
-                    <span className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold ${done ? "bg-accent-green text-white" : "bg-bg-cream text-ink-600"}`}>
-                      {i + 1}
+                  <button
+                    onClick={() => { onJump(i); close(); }}
+                    className={`flex w-full items-start gap-3 py-3 text-left ${active ? "rounded-xl bg-brand-blue/5 -mx-1 px-1" : ""}`}
+                  >
+                    <span className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold ${done ? "bg-accent-green text-white" : active ? "bg-brand-blue text-white" : "bg-bg-cream text-ink-600"}`}>
+                      {done ? "✓" : i + 1}
                     </span>
                     <span className="min-w-0">
-                      <span className="block text-[14px] font-semibold text-ink-900">{unitTitle(book, i)}</span>
+                      <span className={`block text-[14px] font-semibold ${active ? "text-brand-blue" : "text-ink-900"}`}>{unitTitle(book, i)}</span>
                       <span className="line-clamp-1 text-[12px] text-ink-600">{unitTakeaway(book, i) ?? unitBody(book, i)}</span>
                     </span>
                   </button>
