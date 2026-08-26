@@ -7,7 +7,7 @@
  */
 
 // Supabase connection details from environment variables
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://db.xmetbuknlbddeczwakdb.supabase.co";
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://xmetbuknlbddeczwakdb.supabase.co";
 const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "public";
 
 // Supabase REST API headers

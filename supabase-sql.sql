@@ -43,6 +43,10 @@ alter table public.insights enable row level security;
 create index if not exists idx_chapters_book_id on public.chapters(book_id);
 create index if not exists idx_insights_book_id on public.insights(book_id);
 
+create policy "Public read access on books" on public.books for select using (true);
+create policy "Public read access on chapters" on public.chapters for select using (true);
+create policy "Public read access on insights" on public.insights for select using (true);
+
 insert into public.books (slug, title, author, category, cover_url, cover_gradient, key_points_count, duration_min, insights_count, description, "order") values
 ('zero-to-one', 'Zero to One', 'Peter Thiel with Blake Masters', 'business', '/covers/zero-to-one.jpg', ARRAY['#1B3A6B', '#2F5FF6'], 6, 18, 3, 'Notes on startups, or how to build the future -- Thiel''s contrarian case that real progress comes from creating something new, not copying what works.', 1);
 
