@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { ArrowRight, Flame, Gift, BookOpen } from "lucide-react";
+import { ArrowRight, Flame, BookOpen, Clock } from "lucide-react";
 import { ScreenPadding } from "@/components/AppShell";
 import { StreakFlame } from "@/components/StreakFlame";
 import { HorizontalRail } from "@/components/HorizontalRail";
@@ -19,6 +19,8 @@ export default function ForYouPage() {
     (b) => !store.library.finished.includes(b.id)
   ).slice(0, 8);
   const daily = BOOK_METAS.find((b) => b.gift) ?? BOOK_METAS[0];
+  const lastReadId = store.lastReadBook;
+  const lastReadBook = lastReadId ? BOOK_METAS.find((b) => b.id === lastReadId) : null;
   const pointsLeft = Math.max(1, 3 - (store.streakCount % 3));
 
   return (
@@ -55,21 +57,38 @@ export default function ForYouPage() {
         <ArrowRight size={18} className="shrink-0 text-accent-orange" />
       </motion.button>
 
-      {/* free daily summary promo */}
-      <button
-        onClick={() => useStore.getState().openBookDetail(daily.id)}
-        className="mx-4 mt-3 flex w-[calc(100%-32px)] items-center gap-3 rounded-card bg-brand-blue p-4 text-left"
-      >
-        <BookCover book={daily} className="h-16 w-11 shrink-0 rounded-md" />
-        <span className="min-w-0 flex-1">
-          <span className="block text-[11px] font-bold tracking-widest text-white/70">FREE DAILY SUMMARY</span>
-          <span className="mt-0.5 block truncate text-[15px] font-bold text-white">{daily.title}</span>
-          <span className="mt-1 flex items-center gap-1 text-[13px] font-semibold text-white/90">
-            Get it now <ArrowRight size={14} />
+      {/* daily summary / last read promo */}
+      {lastReadBook ? (
+        <button
+          onClick={() => useStore.getState().openBookDetail(lastReadBook.id)}
+          className="mx-4 mt-3 flex w-[calc(100%-32px)] items-center gap-3 rounded-card bg-brand-blue p-4 text-left"
+        >
+          <BookCover book={lastReadBook} className="h-16 w-11 shrink-0 rounded-md" />
+          <span className="min-w-0 flex-1">
+            <span className="block text-[11px] font-bold tracking-widest text-white/70">LAST READ</span>
+            <span className="mt-0.5 block truncate text-[15px] font-bold text-white">{lastReadBook.title}</span>
+            <span className="mt-1 flex items-center gap-1 text-[13px] font-semibold text-white/90">
+              Continue reading <ArrowRight size={14} />
+            </span>
           </span>
-        </span>
-        <Gift size={22} className="shrink-0 text-white/80" />
-      </button>
+          <Clock size={22} className="shrink-0 text-white/80" />
+        </button>
+      ) : (
+        <button
+          onClick={() => useStore.getState().openBookDetail(daily.id)}
+          className="mx-4 mt-3 flex w-[calc(100%-32px)] items-center gap-3 rounded-card bg-brand-blue p-4 text-left"
+        >
+          <BookCover book={daily} className="h-16 w-11 shrink-0 rounded-md" />
+          <span className="min-w-0 flex-1">
+            <span className="block text-[11px] font-bold tracking-widest text-white/70">TODAY&apos;S PICK</span>
+            <span className="mt-0.5 block truncate text-[15px] font-bold text-white">{daily.title}</span>
+            <span className="mt-1 flex items-center gap-1 text-[13px] font-semibold text-white/90">
+              Start reading <ArrowRight size={14} />
+            </span>
+          </span>
+          <BookOpen size={22} className="shrink-0 text-white/80" />
+        </button>
+      )}
 
       {/* categories you're interested in */}
       <section className="mt-6 px-4">
@@ -97,7 +116,7 @@ export default function ForYouPage() {
       {/* up next rail */}
       <HorizontalRail title="Up next" subtitle="Queued for your daily growth">
         {upNext.map((b) => (
-          <BookCard key={b.id} book={b} onOpen={(id) => useStore.getState().openBookDetail(id)} showGift />
+          <BookCard key={b.id} book={b} onOpen={(id) => useStore.getState().openBookDetail(id)} showGift lastRead={b.id === lastReadId} />
         ))}
       </HorizontalRail>
 
@@ -134,7 +153,7 @@ export default function ForYouPage() {
             subtitle="Top-rated summaries for this goal"
           >
             {booksForGoal(gid).map((b) => (
-              <BookCard key={b.id} book={b} onOpen={(id) => useStore.getState().openBookDetail(id)} showGift />
+              <BookCard key={b.id} book={b} onOpen={(id) => useStore.getState().openBookDetail(id)} showGift lastRead={b.id === lastReadId} />
             ))}
           </HorizontalRail>
         );

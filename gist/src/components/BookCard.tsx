@@ -33,11 +33,13 @@ export function BookCard({
   width = 120,
   onOpen,
   showGift = false,
+  lastRead = false,
 }: {
   book: BookMeta;
   width?: number;
   onOpen: (id: string) => void;
   showGift?: boolean;
+  lastRead?: boolean;
 }) {
   const cat = categoryById(book.categoryId);
   const gift = showGift && book.gift;
@@ -50,6 +52,11 @@ export function BookCard({
     >
       <div className="relative">
         <BookCover book={book} className="aspect-[2/3] w-full" />
+        {lastRead && (
+          <div className="absolute -top-1 right-1.5 rounded-full bg-brand-blue px-2 py-0.5 text-[8px] font-bold tracking-wide text-white shadow">
+            LAST READ
+          </div>
+        )}
         {gift && (
           <div className="absolute -top-1 right-1.5 rounded-full bg-accent-pink px-2 py-0.5 text-[8px] font-bold tracking-wide text-white shadow">
             GIFT

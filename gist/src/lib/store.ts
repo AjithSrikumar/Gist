@@ -27,6 +27,7 @@ export interface PersistedState {
   streakCount: number;
   streakWeek: boolean[];
   lastFinishDate: string | null;
+  lastReadBook: string | null;
   library: {
     continuing: { bookId: string; progressPct: number; lastIndex: number }[];
     savedForLater: string[];
@@ -80,8 +81,9 @@ const initialPersisted: PersistedState = {
   trialStarted: false,
   streakCount: 0,
   streakWeek: [false, false, false, false, false, false, false],
-  lastFinishDate: null,
-  library: { continuing: [], savedForLater: [], finished: [] },
+      lastFinishDate: null,
+      lastReadBook: null,
+      library: { continuing: [], savedForLater: [], finished: [] },
   highlights: [],
   ratings: {},
   notifPrefs: { morning: true, keepUp: true, diveDeeper: false },
@@ -212,7 +214,7 @@ export const useStore = create<AppStore>()(
       },
 
       openBookDetail: (bookDetailId) => set({ bookDetailId }),
-      openReader: (readerBookId) => set({ readerBookId }),
+      openReader: (readerBookId) => set({ readerBookId, lastReadBook: readerBookId }),
       setSearchOpen: (searchOpen) => set({ searchOpen }),
       openPaywall: (paywall) => set({ paywall }),
       showCelebration: (celebrationStreak) => set({ celebrationStreak }),
@@ -282,6 +284,7 @@ export const useStore = create<AppStore>()(
           streakCount: s.streakCount,
           streakWeek: s.streakWeek,
           lastFinishDate: s.lastFinishDate,
+          lastReadBook: s.lastReadBook,
           library: s.library,
           highlights: s.highlights,
           ratings: s.ratings,
