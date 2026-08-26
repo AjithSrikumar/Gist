@@ -40,6 +40,7 @@ export interface ChapterSummary {
   title: string;
   summary: string; // paragraphs separated by \n\n
   takeaway: string;
+  takeaways?: string[];
 }
 
 export interface BookContent {
