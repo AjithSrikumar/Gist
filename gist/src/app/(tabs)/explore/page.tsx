@@ -62,10 +62,10 @@ export default function ExplorePage() {
               style={filter === c.id ? { backgroundColor: `${c.color}14`, boxShadow: `inset 0 0 0 2px ${c.color}` } : undefined}
             >
               <span
-                className="flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-black text-white"
+                className="flex h-12 w-12 items-center justify-center rounded-2xl text-white"
                 style={{ backgroundColor: c.color }}
               >
-                {c.name.slice(0, 1)}
+                {(() => { const Icon = ICONS[c.icon]; return Icon ? <Icon size={22} /> : c.name.slice(0, 1); })()}
               </span>
               <span className="text-center text-[11px] leading-tight font-semibold text-ink-900">{c.name}</span>
             </motion.button>
