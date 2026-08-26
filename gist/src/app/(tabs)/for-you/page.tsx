@@ -163,6 +163,15 @@ export default function ForYouPage() {
 
 const PASTELS = ["#FFD9E8", "#CDE4FF", "#D6F5E3", "#FFE8CC", "#EBDFFF", "#FFF3B0"];
 
+const MICRO_TIPS = [
+  { emoji: "🎯", title: "Start absurdly small", bookId: "tiny-habits" },
+  { emoji: "💰", title: "Margin of safety", bookId: "intelligent-investor" },
+  { emoji: "🔑", title: "Start with Why", bookId: "start-with-why" },
+  { emoji: "📈", title: "Monopoly over competition", bookId: "zero-to-one" },
+  { emoji: "✍️", title: "Emotion first, proof second", bookId: "adweek-copywriting-handbook" },
+  { emoji: "🧠", title: "MECE structuring", bookId: "mckinsey-mind" },
+];
+
 import { Zap, Briefcase, TrendingUp, Brain, Flower2, Megaphone, Users, type LucideIcon } from "lucide-react";
 const ICONS: Record<string, LucideIcon> = {
   zap: Zap,
