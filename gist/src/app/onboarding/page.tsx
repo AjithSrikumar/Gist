@@ -36,11 +36,11 @@ const STEP_ORDER: Step[] = [
 ];
 
 const SLIDES = [
-  { title: "Get the key ideas from bestselling books", body: "15-minute summaries you'll actually finish." },
-  { title: "#1 most downloaded book-summary app", body: "Join millions growing a little every day." },
-  { title: "Key ideas from the world's best nonfiction", body: "Hand-picked titles across money, career, and life." },
-  { title: "Read on the go", body: "Bite-sized key points, perfect for a coffee break." },
-  { title: "Or listen & grow", body: "Narrated summaries that fit your commute." },
+  { title: "Get the key ideas from bestselling books", body: "15-minute summaries you'll actually finish.", accent: "#2F5FF6" },
+  { title: "#1 most downloaded book-summary app", body: "Join millions growing a little every day.", accent: "#FF4FA0" },
+  { title: "Key ideas from the world's best nonfiction", body: "Hand-picked titles across money, career, and life.", accent: "#FF8A3D" },
+  { title: "Read on the go", body: "Bite-sized key points, perfect for a coffee break.", accent: "#35C48B" },
+  { title: "Or listen & grow", body: "Narrated summaries that fit your commute.", accent: "#8B5CF6" },
 ];
 
 export default function OnboardingPage() {
@@ -321,18 +321,170 @@ function IntroSlides({ onDone }: { onDone: () => void }) {
 }
 
 function Illustration({ kind }: { kind: number }) {
-  const shapes = [
-    <rect key="a" x="30" y="20" width="100" height="140" rx="10" fill="#2F5FF6" />,
-    <circle key="b" cx="80" cy="90" r="62" fill="#FF4FA0" />,
-    <polygon key="c" points="80,22 138,120 22,120" fill="#FF8A3D" />,
-    <path key="d" d="M20 130 Q80 30 140 130 Z" fill="#35C48B" />,
-    <rect key="e" x="24" y="46" width="112" height="88" rx="44" fill="#8B5CF6" />,
+  const illustrations = [
+    // Slide 0: Open book with light rays
+    <svg key="book" viewBox="0 0 200 200" className="h-52 w-auto">
+      <defs>
+        <linearGradient id="pageGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#E8F0FE" />
+          <stop offset="100%" stopColor="#C2D9FF" />
+        </linearGradient>
+        <linearGradient id="coverGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#2F5FF6" />
+          <stop offset="100%" stopColor="#1B3A6B" />
+        </linearGradient>
+      </defs>
+      {/* glow */}
+      <circle cx="100" cy="90" r="70" fill="#2F5FF6" opacity="0.08" />
+      <circle cx="100" cy="90" r="50" fill="#2F5FF6" opacity="0.06" />
+      {/* book spine */}
+      <rect x="95" y="60" width="10" height="100" rx="2" fill="#1B3A6B" />
+      {/* left page */}
+      <path d="M95 60 Q50 55 30 70 L30 155 Q50 145 95 150 Z" fill="url(#pageGrad)" />
+      <line x1="45" y1="85" x2="85" y2="82" stroke="#B0C4DE" strokeWidth="1.5" />
+      <line x1="45" y1="98" x2="85" y2="95" stroke="#B0C4DE" strokeWidth="1.5" />
+      <line x1="45" y1="111" x2="85" y2="108" stroke="#B0C4DE" strokeWidth="1.5" />
+      <line x1="45" y1="124" x2="75" y2="121" stroke="#B0C4DE" strokeWidth="1.5" />
+      {/* right page */}
+      <path d="M105 60 Q150 55 170 70 L170 155 Q150 145 105 150 Z" fill="url(#pageGrad)" />
+      <line x1="115" y1="82" x2="155" y2="85" stroke="#B0C4DE" strokeWidth="1.5" />
+      <line x1="115" y1="95" x2="155" y2="98" stroke="#B0C4DE" strokeWidth="1.5" />
+      <line x1="115" y1="108" x2="155" y2="111" stroke="#B0C4DE" strokeWidth="1.5" />
+      <line x1="115" y1="121" x2="145" y2="124" stroke="#B0C4DE" strokeWidth="1.5" />
+      {/* light rays */}
+      <motion.g animate={{ opacity: [0.4, 0.8, 0.4] }} transition={{ repeat: Infinity, duration: 2.5 }}>
+        <line x1="100" y1="30" x2="100" y2="10" stroke="#FFC94D" strokeWidth="2.5" strokeLinecap="round" />
+        <line x1="70" y1="40" x2="55" y2="25" stroke="#FFC94D" strokeWidth="2" strokeLinecap="round" />
+        <line x1="130" y1="40" x2="145" y2="25" stroke="#FFC94D" strokeWidth="2" strokeLinecap="round" />
+        <line x1="55" y1="60" x2="38" y2="50" stroke="#FFC94D" strokeWidth="1.5" strokeLinecap="round" />
+        <line x1="145" y1="60" x2="162" y2="50" stroke="#FFC94D" strokeWidth="1.5" strokeLinecap="round" />
+      </motion.g>
+      {/* sparkles */}
+      <motion.circle cx="60" cy="35" r="3" fill="#FFC94D" animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0.3 }} />
+      <motion.circle cx="145" cy="30" r="2.5" fill="#FF4FA0" animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0.8 }} />
+      <motion.circle cx="100" cy="15" r="2" fill="#35C48B" animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 1.3 }} />
+    </svg>,
+
+    // Slide 1: Trophy / #1 badge
+    <svg key="trophy" viewBox="0 0 200 200" className="h-52 w-auto">
+      <defs>
+        <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#FFD700" />
+          <stop offset="100%" stopColor="#F59E0B" />
+        </linearGradient>
+      </defs>
+      <circle cx="100" cy="95" r="65" fill="#FFC94D" opacity="0.1" />
+      <circle cx="100" cy="95" r="50" fill="#FFC94D" opacity="0.08" />
+      {/* trophy cup */}
+      <path d="M70 50 L70 95 Q70 130 100 140 Q130 130 130 95 L130 50 Z" fill="url(#goldGrad)" />
+      <rect x="70" y="45" width="60" height="10" rx="3" fill="#E6A800" />
+      {/* handles */}
+      <path d="M70 60 Q45 60 45 80 Q45 100 70 100" fill="none" stroke="#E6A800" strokeWidth="6" strokeLinecap="round" />
+      <path d="M130 60 Q155 60 155 80 Q155 100 130 100" fill="none" stroke="#E6A800" strokeWidth="6" strokeLinecap="round" />
+      {/* base */}
+      <rect x="88" y="140" width="24" height="12" rx="2" fill="#E6A800" />
+      <rect x="78" y="152" width="44" height="8" rx="3" fill="#D97706" />
+      {/* #1 */}
+      <text x="100" y="108" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#78350F">1</text>
+      {/* confetti */}
+      <motion.rect x="30" y="40" width="6" height="6" rx="1" fill="#FF4FA0" animate={{ y: [40, 160], rotate: [0, 360], opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0 }} />
+      <motion.rect x="160" y="30" width="5" height="5" rx="1" fill="#2F5FF6" animate={{ y: [30, 170], rotate: [0, -360], opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 2.8, delay: 0.4 }} />
+      <motion.circle cx="45" cy="25" r="3" fill="#35C48B" animate={{ y: [0, 140], opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 2.2, delay: 0.8 }} />
+      <motion.circle cx="155" cy="20" r="2.5" fill="#FFC94D" animate={{ y: [0, 150], opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 3, delay: 1.2 }} />
+      <motion.rect x="110" y="35" width="4" height="8" rx="1" fill="#8B5CF6" animate={{ y: [35, 175], rotate: [0, 180], opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 2.6, delay: 0.6 }} />
+    </svg>,
+
+    // Slide 2: Bookshelf with colorful books
+    <svg key="shelf" viewBox="0 0 200 200" className="h-52 w-auto">
+      {/* shelf */}
+      <rect x="15" y="140" width="170" height="8" rx="3" fill="#8B5A2B" />
+      <rect x="15" y="145" width="170" height="4" rx="1" fill="#6B4226" />
+      {/* books */}
+      <rect x="25" y="55" width="22" height="85" rx="3" fill="#2F5FF6" />
+      <rect x="25" y="55" width="22" height="10" rx="3" fill="#1B3A6B" />
+      <rect x="52" y="45" width="18" height="95" rx="3" fill="#FF4FA0" />
+      <rect x="52" y="45" width="18" height="8" rx="3" fill="#D9377E" />
+      <rect x="75" y="60" width="24" height="80" rx="3" fill="#35C48B" />
+      <rect x="75" y="60" width="24" height="10" rx="3" fill="#16A34A" />
+      <rect x="104" y="50" width="20" height="90" rx="3" fill="#FF8A3D" />
+      <rect x="104" y="50" width="20" height="8" rx="3" fill="#D97706" />
+      <rect x="129" y="40" width="25" height="100" rx="3" fill="#8B5CF6" />
+      <rect x="129" y="40" width="25" height="10" rx="3" fill="#6D28D9" />
+      <rect x="159" y="55" width="18" height="85" rx="3" fill="#F59E0B" />
+      <rect x="159" y="55" width="18" height="8" rx="3" fill="#D97706" />
+      {/* sparkles on books */}
+      <motion.circle cx="36" cy="80" r="2" fill="#FFC94D" animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.8, delay: 0 }} />
+      <motion.circle cx="87" cy="90" r="2" fill="#FFC94D" animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.8, delay: 0.6 }} />
+      <motion.circle cx="142" cy="75" r="2.5" fill="#FFC94D" animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.8, delay: 1.2 }} />
+    </svg>,
+
+    // Slide 3: Phone with book content
+    <svg key="phone" viewBox="0 0 200 200" className="h-52 w-auto">
+      <defs>
+        <linearGradient id="phoneGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#374151" />
+          <stop offset="100%" stopColor="#1F2937" />
+        </linearGradient>
+      </defs>
+      {/* phone body */}
+      <rect x="55" y="25" width="90" height="150" rx="16" fill="url(#phoneGrad)" />
+      <rect x="60" y="35" width="80" height="125" rx="4" fill="#F8F6F0" />
+      {/* notch */}
+      <rect x="85" y="25" width="30" height="6" rx="3" fill="#111827" />
+      {/* screen content - book lines */}
+      <rect x="70" y="48" width="60" height="6" rx="2" fill="#2F5FF6" opacity="0.8" />
+      <rect x="70" y="62" width="50" height="3" rx="1" fill="#D1D5DB" />
+      <rect x="70" y="70" width="55" height="3" rx="1" fill="#D1D5DB" />
+      <rect x="70" y="78" width="45" height="3" rx="1" fill="#D1D5DB" />
+      <rect x="70" y="86" width="60" height="3" rx="1" fill="#D1D5DB" />
+      <rect x="70" y="94" width="40" height="3" rx="1" fill="#D1D5DB" />
+      <rect x="70" y="108" width="60" height="6" rx="2" fill="#35C48B" opacity="0.8" />
+      <rect x="70" y="122" width="50" height="3" rx="1" fill="#D1D5DB" />
+      <rect x="70" y="130" width="55" height="3" rx="1" fill="#D1D5DB" />
+      <rect x="70" y="138" width="42" height="3" rx="1" fill="#D1D5DB" />
+      {/* bottom bar */}
+      <rect x="85" y="158" width="30" height="4" rx="2" fill="#D1D5DB" />
+      {/* floating elements */}
+      <motion.g animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
+        <circle cx="35" cy="70" r="12" fill="#FF4FA0" opacity="0.2" />
+        <text x="35" y="75" textAnchor="middle" fontSize="14">📖</text>
+      </motion.g>
+      <motion.g animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.5 }}>
+        <circle cx="168" cy="100" r="10" fill="#2F5FF6" opacity="0.2" />
+        <text x="168" y="105" textAnchor="middle" fontSize="12">☕</text>
+      </motion.g>
+    </svg>,
+
+    // Slide 4: Headphones with sound waves
+    <svg key="audio" viewBox="0 0 200 200" className="h-52 w-auto">
+      <defs>
+        <linearGradient id="hpGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#2F5FF6" />
+          <stop offset="100%" stopColor="#1B3A6B" />
+        </linearGradient>
+      </defs>
+      <circle cx="100" cy="100" r="60" fill="#2F5FF6" opacity="0.06" />
+      <circle cx="100" cy="100" r="45" fill="#2F5FF6" opacity="0.05" />
+      {/* headphones band */}
+      <path d="M50 105 Q50 45 100 40 Q150 45 150 105" fill="none" stroke="url(#hpGrad)" strokeWidth="10" strokeLinecap="round" />
+      {/* left ear cup */}
+      <rect x="38" y="95" width="28" height="38" rx="10" fill="#1B3A6B" />
+      <rect x="42" y="100" width="20" height="28" rx="7" fill="#2F5FF6" />
+      {/* right ear cup */}
+      <rect x="134" y="95" width="28" height="38" rx="10" fill="#1B3A6B" />
+      <rect x="138" y="100" width="20" height="28" rx="7" fill="#2F5FF6" />
+      {/* sound waves */}
+      <motion.path d="M100 70 Q110 80 100 90" fill="none" stroke="#35C48B" strokeWidth="2.5" strokeLinecap="round" animate={{ opacity: [0.3, 0.8, 0.3] }} transition={{ repeat: Infinity, duration: 1.5 }} />
+      <motion.path d="M100 60 Q118 78 100 96" fill="none" stroke="#35C48B" strokeWidth="2" strokeLinecap="round" animate={{ opacity: [0.3, 0.8, 0.3] }} transition={{ repeat: Infinity, duration: 1.5, delay: 0.3 }} />
+      <motion.path d="M100 50 Q125 75 100 100" fill="none" stroke="#35C48B" strokeWidth="1.5" strokeLinecap="round" animate={{ opacity: [0.2, 0.6, 0.2] }} transition={{ repeat: Infinity, duration: 1.5, delay: 0.6 }} />
+      {/* note icons */}
+      <motion.text x="30" y="60" fontSize="16" animate={{ y: [60, 50, 60], opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2, delay: 0.2 }}>♪</motion.text>
+      <motion.text x="160" y="55" fontSize="14" animate={{ y: [55, 45, 55], opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2.2, delay: 0.7 }}>♫</motion.text>
+      <motion.text x="25" y="130" fontSize="12" animate={{ y: [130, 120, 130], opacity: [0.4, 0.8, 0.4] }} transition={{ repeat: Infinity, duration: 1.8, delay: 1 }}>♪</motion.text>
+    </svg>,
   ];
-  return (
-    <svg viewBox="0 0 160 180" className="h-44 w-auto opacity-90">
-      {shapes[kind]}
-    </svg>
-  );
+
+  return illustrations[kind] || illustrations[0];
 }
 
 export function Mascot() {
