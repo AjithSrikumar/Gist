@@ -86,6 +86,13 @@ function ReaderBody({
   const isIntro = page === 0;
   const isWrapUp = page === total + 1;
   const saved = store.library.savedForLater.includes(book.id);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [shared, setShared] = useState(false);
+
+  // Scroll to top on chapter change
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ top: 0, behavior: "instant" });
+  }, [page]);
 
   useEffect(() => {
     if (page >= 1 && !isWrapUp) {
