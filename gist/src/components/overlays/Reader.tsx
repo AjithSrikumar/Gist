@@ -47,13 +47,14 @@ export function ReaderModal() {
   const store = useStore();
 
   const closeReader = () => {
-    if (book && page > 1 && !store.library.finished.includes(book.id)) {
+    const s = useStore.getState();
+    if (book && page > 1 && !s.library.finished.includes(book.id)) {
       const pct = Math.round((Math.min(page - 1, unitCount(book)) / unitCount(book)) * 100);
-      store.upsertProgress(book.id, pct, Math.max(0, page - 2));
+      s.upsertProgress(book.id, pct, Math.max(0, page - 2));
     }
-    store.openReader(null);
+    s.openReader(null);
     if (book) {
-      setTimeout(() => store.openBookDetail(book.id), 100);
+      setTimeout(() => s.openBookDetail(book.id), 100);
     }
   };
 
@@ -85,7 +86,7 @@ function ReaderBody({
   const total = Math.max(1, unitCount(book));
   const isIntro = page === 0;
   const isWrapUp = page === total + 1;
-  const saved = store.library.savedForLater.includes(book.id);
+  const saved = useStore((s) => s.library.savedForLater.includes(book.id));
   const scrollRef = useRef<HTMLDivElement>(null);
   const [shared, setShared] = useState(false);
 
@@ -96,7 +97,7 @@ function ReaderBody({
 
   useEffect(() => {
     if (page >= 1 && !isWrapUp) {
-      store.upsertProgress(book.id, Math.round((page / total) * 100), page - 1);
+      useStore.getState().upsertProgress(book.id, Math.round((page / total) * 100), page - 1);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
@@ -147,7 +148,14 @@ const nextPage = () => {
           </button>
           <button
             aria-label="Bookmark"
-            onClick={() => (saved ? store.removeFromLibrary(book.id) : store.saveToLibrary(book.id))}
+            onClick={() => {
+              const s = useStore.getState();
+              if (s.library.savedForLater.includes(book.id)) {
+                s.removeFromLibrary(book.id);
+              } else {
+                s.saveToLibrary(book.id);
+              }
+            }}
             className="flex h-11 w-11 items-center justify-center rounded-full"
           >
             <Bookmark size={19} className={saved ? "fill-brand-blue text-brand-blue" : "text-ink-600"} />
@@ -251,7 +259,7 @@ const nextPage = () => {
       {!isIntro && (
         <button
           aria-label="Open chapters"
-          onClick={() => store.setContentsSheet(true)}
+          onClick={() => useStore.getState().setContentsSheet(true)}
           className="absolute bottom-20 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-divider bg-white/85 shadow-card backdrop-blur"
           style={{ borderColor: store.readerTheme === "dark" ? "#33383f" : undefined }}
         >
