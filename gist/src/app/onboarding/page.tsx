@@ -17,21 +17,19 @@ import {
 import { GOALS } from "@/data/catalog";
 import { BOOK_METAS, booksForGoal } from "@/data/books";
 import { BookCover } from "@/components/BookCard";
-import { PaywallContent } from "@/components/overlays/Paywall";
-import { LogoMark } from "@/components/LogoMark";
 import { useStore } from "@/lib/store";
 
 type Step =
   | "intro"
-  | "gender" | "age" | "goals" | "celebrate"
+  | "goals" | "celebrate"
   | "booksPerYear" | "notifications"
-  | "reassure" | "picks" | "crafting" | "paywall";
+  | "reassure" | "picks" | "crafting";
 
 const STEP_ORDER: Step[] = [
   "intro",
-  "gender", "age", "goals", "celebrate",
+  "goals", "celebrate",
   "booksPerYear", "notifications",
-  "reassure", "picks", "crafting", "paywall",
+  "reassure", "picks", "crafting",
 ];
 
 const SLIDES = [
@@ -77,18 +75,6 @@ export default function OnboardingPage() {
         >
           {step === "intro" && (
             <IntroSlides onDone={() => go(1)} />
-          )}
-
-          {(step === "gender" || step === "age") && (
-            <QuizPills
-              title={step === "gender" ? "Choose your gender" : "How old are you?"}
-              options={
-                step === "gender"
-                  ? ["Female", "Male", "Non-binary", "Prefer not to say"]
-                  : ["Under 18", "18–24", "25–34", "35–44", "45–54", "55+"]
-              }
-              onSelect={() => setTimeout(() => go(1), 250)}
-            />
           )}
 
           {step === "goals" && (
@@ -177,16 +163,7 @@ export default function OnboardingPage() {
             />
           )}
 
-          {step === "crafting" && <Crafting onDone={() => go(1)} />}
-
-          {step === "paywall" && (
-            <div className="flex min-h-full flex-col bg-white">
-              <PaywallContent variant="onboarding" onStarted={finishOnboarding} />
-              <button onClick={finishOnboarding} className="py-3 text-center text-[13px] font-semibold text-ink-600">
-                Skip — explore free first
-              </button>
-            </div>
-          )}
+          {step === "crafting" && <Crafting onDone={finishOnboarding} />}
         </motion.div>
       </AnimatePresence>
     </div>
@@ -205,9 +182,7 @@ function IntroSlides({ onDone }: { onDone: () => void }) {
   const [slide, setSlide] = useState(0);
   return (
     <div className="flex h-full flex-col bg-ink-900">
-      <div className="pt-16 pb-4 text-center">
-        <LogoMark size={44} className="" />
-      </div>
+      <div className="flex-1" />
       <div
         className="no-scrollbar snap-x-mandatory min-h-0 flex-1 overflow-y-auto"
         onScroll={(e) => {
