@@ -214,7 +214,7 @@ export const useStore = create<AppStore>()(
       },
 
       openBookDetail: (bookDetailId) => set({ bookDetailId }),
-      openReader: (readerBookId) => set({ readerBookId, lastReadBook: readerBookId }),
+      openReader: (readerBookId) => set((s) => ({ readerBookId, lastReadBook: readerBookId ?? s.lastReadBook })),
       setSearchOpen: (searchOpen) => set({ searchOpen }),
       openPaywall: (paywall) => set({ paywall }),
       showCelebration: (celebrationStreak) => set({ celebrationStreak }),
