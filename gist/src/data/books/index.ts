@@ -354,6 +354,12 @@ export function unitTakeaway(book: Book, i: number): string | null {
   return book.content.chapters?.[i]?.takeaway ?? null;
 }
 
+export function unitTakeaways(book: Book, i: number): string[] {
+  const ch = book.content.chapters?.[i];
+  if (!ch) return [];
+  return ch.takeaways?.length ? ch.takeaways : ch.takeaway ? [ch.takeaway] : [];
+}
+
 /** Derived duration from actual word count (~150 wpm listening pace). */
 export function bookDurationMin(book: Book): number {
   const words =
