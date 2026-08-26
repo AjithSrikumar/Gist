@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "@/lib/supabase-browser";
+import { getSupabase } from "@/lib/supabase-browser";
 import { useStore } from "@/lib/store";
 
 export default function AuthCallbackPage() {
@@ -10,6 +10,7 @@ export default function AuthCallbackPage() {
   const setUser = useStore((s) => s.setUser);
 
   useEffect(() => {
+    const supabase = getSupabase();
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
       router.replace("/profile");

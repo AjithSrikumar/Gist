@@ -2,13 +2,13 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Settings, Lock, Gift, Copy, Check, Trophy, Star, LogOut, LogIn } from "lucide-react";
+import { Settings, Lock, Gift, Copy, Check, Trophy, Star, LogOut } from "lucide-react";
 import { motion } from "framer-motion";
 import { ScreenPadding } from "@/components/AppShell";
 import { StreakWeek } from "@/components/StreakFlame";
 import { AchievementBadge } from "@/components/ui/Controls";
 import { useStore } from "@/lib/store";
-import { supabase } from "@/lib/supabase-browser";
+import { getSupabase } from "@/lib/supabase-browser";
 
 export default function ProfilePage() {
   const store = useStore();
@@ -17,6 +17,7 @@ export default function ProfilePage() {
   const user = store.user;
 
   useEffect(() => {
+    const supabase = getSupabase();
     supabase.auth.getSession().then(({ data: { session } }) => {
       useStore.getState().setUser(session?.user ?? null);
     });

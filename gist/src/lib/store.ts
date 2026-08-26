@@ -256,8 +256,8 @@ export const useStore = create<AppStore>()(
       setUser: (user) => set({ user }),
 
       signInWithGoogle: async () => {
-        const { supabase } = await import("./supabase-browser");
-        const { error } = await supabase.auth.signInWithOAuth({
+        const { getSupabase } = await import("./supabase-browser");
+        const { error } = await getSupabase().auth.signInWithOAuth({
           provider: "google",
           options: {
             redirectTo: `${window.location.origin}/auth/callback`,
@@ -267,8 +267,8 @@ export const useStore = create<AppStore>()(
       },
 
       signOut: async () => {
-        const { supabase } = await import("./supabase-browser");
-        const { error } = await supabase.auth.signOut();
+        const { getSupabase } = await import("./supabase-browser");
+        const { error } = await getSupabase().auth.signOut();
         if (error) console.error("Sign out error:", error);
         set({ user: null });
       },
