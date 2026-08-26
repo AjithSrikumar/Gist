@@ -266,7 +266,7 @@ export const useStore = create<AppStore>()(
         const { getSupabase } = await import("./supabase-browser");
         const { error } = await getSupabase().auth.signOut();
         if (error) console.error("Sign out error:", error);
-        set({ user: null });
+        set({ user: null, isSubscribed: false });
       },
     }),
     {
