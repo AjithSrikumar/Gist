@@ -147,7 +147,7 @@ const nextPage = () => {
           </button>
           <button
             aria-label="Download"
-            onClick={() => store.showToast("Coming soon")}
+            onClick={() => alert("Coming soon")}
             className="flex h-11 w-11 items-center justify-center rounded-full"
           >
             <Download size={19} className="text-ink-600" />
