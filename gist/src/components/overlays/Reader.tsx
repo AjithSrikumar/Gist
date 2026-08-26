@@ -212,20 +212,29 @@ const nextPage = () => {
                       {para}
                     </p>
                   ))}
-                {(unitTakeaway(book, page - 1) || point.heading) && (
-                  <div
-                    className="mt-6 rounded-card border-l-4 border-accent-green bg-white/70 p-4"
-                    style={store.readerTheme === "dark" ? { backgroundColor: "#22262c" } : undefined}
-                  >
-                    <p className="text-[11px] font-bold tracking-widest text-accent-green">KEY TAKEAWAY</p>
-                    <p
-                      className="mt-1 text-[14px] leading-snug font-medium"
-                      style={{ color: theme.text }}
+                {(() => {
+                  const takeaways = unitTakeaways(book, page - 1);
+                  const fallback = unitTakeaway(book, page - 1) ?? point.heading;
+                  const items = takeaways.length ? takeaways : fallback ? [fallback] : [];
+                  return items.length > 0 ? (
+                    <div
+                      className="mt-6 rounded-card border-l-4 border-accent-green bg-white/70 p-4"
+                      style={store.readerTheme === "dark" ? { backgroundColor: "#22262c" } : undefined}
                     >
-                      {unitTakeaway(book, page - 1) ?? point.heading}
-                    </p>
-                  </div>
-                )}
+                      <p className="text-[11px] font-bold tracking-widest text-accent-green">
+                        {items.length === 1 ? "KEY TAKEAWAY" : "KEY TAKEAWAYS"}
+                      </p>
+                      <ul className="mt-2 space-y-2">
+                        {items.map((t, i) => (
+                          <li key={i} className="flex gap-2 text-[14px] leading-snug font-medium" style={{ color: theme.text }}>
+                            <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-green" />
+                            {t}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null;
+                })()}
                 {page === 2 && <RememberPrompt bookId={book.id} pointIndex={1} snippet={unitTakeaway(book, 1) ?? unitTitle(book, 1)} />}
               </div>
             )}
