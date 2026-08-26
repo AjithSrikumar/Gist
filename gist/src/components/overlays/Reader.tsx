@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   X,
   Share,
@@ -12,6 +12,7 @@ import {
   Lightbulb,
   ThumbsUp,
   ThumbsDown,
+  Check,
 } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FullModal, Sheet } from "@/components/ui/Sheet";
