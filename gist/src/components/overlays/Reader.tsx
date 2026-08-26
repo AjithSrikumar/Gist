@@ -126,10 +126,30 @@ const nextPage = () => {
           <X size={22} style={{ color: theme.text }} />
         </button>
         <div className="flex items-center">
-          <button aria-label="Share" className="flex h-11 w-11 items-center justify-center rounded-full">
-            <Share size={19} className="text-ink-600" />
+          <button
+            aria-label="Share"
+            onClick={async () => {
+              try {
+                await navigator.share({ title: book.title, text: `Check out "${book.title}" on Gist`, url: window.location.href });
+              } catch {
+                await navigator.clipboard.writeText(`Check out "${book.title}" on Gist — ${window.location.href}`);
+                setShared(true);
+                setTimeout(() => setShared(false), 1500);
+              }
+            }}
+            className="flex h-11 w-11 items-center justify-center rounded-full"
+          >
+            {shared ? (
+              <Check size={19} className="text-accent-green" />
+            ) : (
+              <Share size={19} className="text-ink-600" />
+            )}
           </button>
-          <button aria-label="Download" className="flex h-11 w-11 items-center justify-center rounded-full">
+          <button
+            aria-label="Download"
+            onClick={() => store.showToast("Coming soon")}
+            className="flex h-11 w-11 items-center justify-center rounded-full"
+          >
             <Download size={19} className="text-ink-600" />
           </button>
           <button
