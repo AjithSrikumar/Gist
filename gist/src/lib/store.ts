@@ -3,6 +3,7 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import type { Playback, Speed } from "./types";
+import type { User } from "@supabase/supabase-js";
 
 export interface OverlayState {
   bookDetailId: string | null;
@@ -13,6 +14,7 @@ export interface OverlayState {
   celebrationStreak: number | null;
   contentsSheetOpen: boolean;
   themeSheetOpen: boolean;
+  user: User | null;
 }
 
 export type PaywallVariant = "onboarding" | "streak" | "profile" | "discount";
@@ -75,6 +77,9 @@ interface Actions {
   showCelebration: (days: number | null) => void;
   setContentsSheet: (v: boolean) => void;
   setThemeSheet: (v: boolean) => void;
+  setUser: (user: User | null) => void;
+  signInWithGoogle: () => Promise<void>;
+  signOut: () => Promise<void>;
 }
 
 export type AppStore = PersistedState & Actions & OverlayState;
@@ -115,6 +120,7 @@ export const useStore = create<AppStore>()(
       celebrationStreak: null,
       contentsSheetOpen: false,
       themeSheetOpen: false,
+      user: null,
 
       setHydrated: () => set({ hydrated: true }),
 
@@ -246,6 +252,26 @@ export const useStore = create<AppStore>()(
       showCelebration: (celebrationStreak) => set({ celebrationStreak }),
       setContentsSheet: (contentsSheetOpen) => set({ contentsSheetOpen }),
       setThemeSheet: (themeSheetOpen) => set({ themeSheetOpen }),
+
+      setUser: (user) => set({ user }),
+
+      signInWithGoogle: async () => {
+        const { supabase } = await import("./supabase-browser");
+        const { error } = await supabase.auth.signInWithOAuth({
+          provider: "google",
+          options: {
+            redirectTo: `${window.location.origin}/auth/callback`,
+          },
+        });
+        if (error) console.error("Google sign-in error:", error);
+      },
+
+      signOut: async () => {
+        const { supabase } = await import("./supabase-browser");
+        const { error } = await supabase.auth.signOut();
+        if (error) console.error("Sign out error:", error);
+        set({ user: null });
+      },
     }),
     {
       name: "gist-app-v1",
