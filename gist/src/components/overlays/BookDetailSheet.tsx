@@ -164,7 +164,7 @@ function BookDetailContent({
           {book.content.chapters ? `Chapters (${unitCount(book)})` : "Key points"}
         </h2>
         <ol className="mt-3 space-y-3">
-          {[...Array(Math.min(4, unitCount(book))).keys()].map((_, i) => (
+          {[...Array(unitCount(book)).keys()].map((_, i) => (
             <li key={i} className="rounded-2xl bg-bg-cream p-4">
               <div className="text-[11px] font-bold tracking-widest text-ink-600">
                 {book.content.chapters ? "CHAPTER" : "KEY POINT"} {i + 1}
