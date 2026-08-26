@@ -141,19 +141,19 @@ export default function ForYouPage() {
       })}
 
       {/* daily microlearning session */}
-      <HorizontalRail title="Daily microlearning session" subtitle="Tap through 10 bits of knowledge in 3 min">
-        {[...Array(6)].map((_, i) => (
+      <HorizontalRail title="Daily microlearning session" subtitle="Quick takeaways from the books you love">
+        {MICRO_TIPS.map((tip, i) => (
           <motion.button
             whileTap={{ scale: 0.94 }}
             key={i}
-            onClick={() => useStore.getState().openPaywall(store.isSubscribed ? "streak" : "profile")}
-            className="relative h-24 w-24 shrink-0 snap-start-always overflow-hidden rounded-full border-4 border-bg-cream shadow-card"
+            onClick={() => useStore.getState().openBookDetail(tip.bookId)}
+            className="relative h-28 w-28 shrink-0 snap-start-always overflow-hidden rounded-2xl border-2 border-white/60 shadow-card"
             style={{ background: `linear-gradient(150deg, ${PASTELS[i % PASTELS.length]}, ${PASTELS[(i + 2) % PASTELS.length]})` }}
-            aria-label={`Micro bit ${i + 1}`}
           >
-            <span className="absolute inset-x-0 bottom-3 text-center text-[10px] font-bold text-ink-900/70">
-              BIT {i + 1}
-            </span>
+            <div className="flex h-full flex-col items-center justify-center px-2.5 text-center">
+              <span className="text-[22px]">{tip.emoji}</span>
+              <span className="mt-1 line-clamp-2 text-[9px] leading-tight font-semibold text-ink-900/80">{tip.title}</span>
+            </div>
           </motion.button>
         ))}
       </HorizontalRail>
