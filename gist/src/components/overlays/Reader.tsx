@@ -37,16 +37,19 @@ export function ReaderModal() {
   const [page, setPage] = useState(0); // 0 intro, 1..n points, n+1 wrap-up
 
   useEffect(() => {
+    console.log("[Reader] useEffect fired, id:", id);
     setData({ loadedFor: id, book: null, error: false });
     setPage(0);
     if (id) {
       loadBook(id).then((b) => {
+        console.log("[Reader] loadBook resolved:", b?.title ?? "null");
         if (b) {
           setData({ loadedFor: id, book: b, error: false });
         } else {
           setData({ loadedFor: id, book: null, error: true });
         }
-      }).catch(() => {
+      }).catch((err) => {
+        console.error("[Reader] loadBook failed:", err);
         setData({ loadedFor: id, book: null, error: true });
       });
     }
