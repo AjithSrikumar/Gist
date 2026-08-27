@@ -380,7 +380,7 @@ function WrapUp({ book }: { book: Book }) {
 }
 
 /** End-of-summary flow rendered over the wrap-up page: rating → celebration → next picks */
-function EndFlow({ book }: { book: Book }) {
+const EndFlow = React.memo(function EndFlow({ book }: { book: Book }) {
   const [stage, setStage] = useState<"rate" | "feedback" | "next">("rate");
   const rating = useStore((s) => s.ratings[book.id] ?? 0);
   const finishSummary = useStore((s) => s.finishSummary);
@@ -427,8 +427,8 @@ function EndFlow({ book }: { book: Book }) {
 }
 
 function NextPicks({ onFinish }: { onFinish: () => void }) {
-  const finishedIds = useStore((s) => new Set(s.library.finished.map((b) => b.id)));
-  const picks = BOOK_METAS.filter((b) => !finishedIds.has(b.id)).slice(0, 6);
+  const finished = useStore((s) => s.library.finished);
+  const picks = BOOK_METAS.filter((b) => !finished.some((f) => f.id === b.id)).slice(0, 6);
   return (
     <>
       <h2 className="text-[20px] font-bold text-ink-900">Choose your next summary</h2>
@@ -448,7 +448,7 @@ function NextPicks({ onFinish }: { onFinish: () => void }) {
   );
 }
 
-export function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Book; onJump: (i: number) => void; currentPage: number }) {
+const ContentsInsightsSheet = React.memo(function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Book; onJump: (i: number) => void; currentPage: number }) {
   const open = useStore((s) => s.contentsSheetOpen);
   const close = () => useStore.getState().setContentsSheet(false);
   const readChapters = useStore((s) => {
@@ -514,7 +514,7 @@ export function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Boo
   );
 }
 
-export function ReaderThemeSheet() {
+const ReaderThemeSheet = React.memo(function ReaderThemeSheet() {
   const open = useStore((s) => s.themeSheetOpen);
   const close = () => useStore.getState().setThemeSheet(false);
   const theme = useStore((s) => s.readerTheme);
