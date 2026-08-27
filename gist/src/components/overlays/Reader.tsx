@@ -108,7 +108,7 @@ function ReaderBody({
   const saved = useStore((s) => s.library.savedForLater.includes(book.id));
   const readChapters = useStore((s) => {
     const entry = s.library.continuing.find((c) => c.bookId === book.id);
-    return entry?.readChapters ?? EMPTY_CHAPTERS;
+    return Array.isArray(entry?.readChapters) ? entry.readChapters : EMPTY_CHAPTERS;
   });
   const scrollRef = useRef<HTMLDivElement>(null);
   const [shared, setShared] = useState(false);

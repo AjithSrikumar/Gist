@@ -317,7 +317,7 @@ export const useStore = create<AppStore>()(
           // Migrate old lastIndex format to readChapters
           const s = useStore.getState();
           const migrated = s.library.continuing.map((c: any) => {
-            if (c.readChapters) return c;
+            if (Array.isArray(c.readChapters)) return c;
             if (typeof c.lastIndex === "number") {
               const readChapters: number[] = [];
               for (let i = 0; i <= c.lastIndex; i++) readChapters.push(i);
