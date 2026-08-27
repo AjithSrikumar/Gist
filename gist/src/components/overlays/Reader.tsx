@@ -107,6 +107,10 @@ function ReaderBody({
   const isIntro = page === 0;
   const isWrapUp = page === total + 1;
   const saved = useStore((s) => s.library.savedForLater.includes(book.id));
+  const readChapters = useStore((s) => {
+    const entry = s.library.continuing.find((c) => c.bookId === book.id);
+    return entry?.readChapters ?? EMPTY_CHAPTERS;
+  });
   const scrollRef = useRef<HTMLDivElement>(null);
   const [shared, setShared] = useState(false);
 
@@ -292,7 +296,7 @@ const nextPage = () => {
         <motion.div className="h-full bg-brand-blue" animate={{ width: `${progress}%` }} transition={{ ease: "easeOut" }} />
       </div>
 
-      <ContentsInsightsSheet book={book} onJump={(i) => setPage(i + 1)} currentPage={page} />
+      <ContentsInsightsSheet book={book} readChapters={readChapters} onJump={setPage} currentPage={page} />
       <ReaderThemeSheet />
       {isWrapUp && <EndFlow book={book} />}
     </div>
@@ -448,13 +452,9 @@ function NextPicks({ onFinish }: { onFinish: () => void }) {
   );
 }
 
-const ContentsInsightsSheet = React.memo(function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Book; onJump: (i: number) => void; currentPage: number }) {
+const ContentsInsightsSheet = React.memo(function ContentsInsightsSheet({ book, readChapters, onJump, currentPage }: { book: Book; readChapters: number[]; onJump: (n: number) => void; currentPage: number }) {
   const open = useStore((s) => s.contentsSheetOpen);
   const close = () => useStore.getState().setContentsSheet(false);
-  const readChapters = useStore((s) => {
-    const entry = s.library.continuing.find((c) => c.bookId === book.id);
-    return entry?.readChapters ?? EMPTY_CHAPTERS;
-  });
   const total = unitCount(book);
   const readCount = readChapters.length;
   const pct = Math.round((readCount / total) * 100);
@@ -482,10 +482,10 @@ const ContentsInsightsSheet = React.memo(function ContentsInsightsSheet({ book, 
               const active = currentPage === i + 1;
               return (
                 <li key={i}>
-                  <button
-                    onClick={() => { onJump(i); close(); }}
-                    className={`flex w-full items-start gap-3 py-3 text-left ${active ? "rounded-xl bg-brand-blue/5 -mx-1 px-1" : ""}`}
-                  >
+<button
+                      onClick={() => { onJump(i + 1); close(); }}
+                      className={`flex w-full items-start gap-3 py-3 text-left ${active ? "rounded-xl bg-brand-blue/5 -mx-1 px-1" : ""}`}
+                    >
                     <span className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold ${done ? "bg-accent-green text-white" : active ? "bg-brand-blue text-white" : "bg-bg-cream text-ink-600"}`}>
                       {done ? "✓" : i + 1}
                     </span>
