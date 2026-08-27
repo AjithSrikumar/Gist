@@ -1,9 +1,6 @@
 /**
  * Supabase client using fetch directly
- * Connects to: db.xmetbuknlbddeczwakdb.supabase.co
- * Database: postgres
- * User: postgres
- * Password: Cred1tSu1sse!
+ * Configuration via environment variables
  */
 
 // Supabase connection details from environment variables

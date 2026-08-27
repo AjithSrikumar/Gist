@@ -33,7 +33,7 @@ export function Sheet({
         <>
           <motion.div
             key="backdrop"
-            className="fixed inset-0 z-[80] bg-black/60 backdrop-blur-[2px]"
+            className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-[2px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -41,7 +41,7 @@ export function Sheet({
           />
           <motion.div
             key="sheet"
-            className="fixed inset-x-0 bottom-0 z-[90] mx-auto flex w-full max-w-[480px] flex-col overflow-hidden rounded-t-[24px] bg-bg-white shadow-sheet"
+            className="fixed inset-x-0 bottom-0 z-[110] mx-auto flex w-full max-w-[480px] flex-col overflow-hidden rounded-t-[24px] bg-bg-white shadow-sheet"
             style={{ maxHeight }}
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
@@ -84,7 +84,7 @@ export function FullModal({
       {open && (
         <motion.div
           key="modal"
-          className="fixed inset-0 z-[95] mx-auto flex max-w-[480px] flex-col bg-bg-cream"
+          className="fixed inset-0 z-[70] mx-auto flex max-w-[480px] flex-col bg-bg-cream"
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
           exit={{ y: "100%" }}

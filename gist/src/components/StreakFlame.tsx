@@ -29,7 +29,7 @@ export function StreakWeek({ week, count }: { week: boolean[]; count: number }) 
         <Flame size={28} fill="currentColor" strokeWidth={0} />
         <span className="text-4xl font-bold text-ink-900">{count}</span>
       </div>
-      <div className="text-caption text-ink-600">day streak</div>
+      <div className="text-[12px] text-ink-600">day streak</div>
       <div className="mt-1 flex gap-2.5">
         {DAYS.map((d, i) => (
           <div key={i} className="flex flex-col items-center gap-1.5">

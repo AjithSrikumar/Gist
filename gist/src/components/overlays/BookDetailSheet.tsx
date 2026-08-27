@@ -155,7 +155,7 @@ function BookDetailContent({
             </li>
           ))}
         </ol>
-        {done && <div className="mt-3 text-caption text-accent-green">✓ Finished — in your Library</div>}
+        {done && <div className="mt-3 text-[12px] text-accent-green">✓ Finished — in your Library</div>}
       </section>
     </div>
   );

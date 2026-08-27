@@ -14,7 +14,7 @@ const ROWS = [
   { label: "Terms of Use", chevron: false },
   { label: "Subscription Terms", chevron: false },
   { label: "Delete account", danger: true },
-  { label: "Log out", danger: true },
+  { label: "Log out", danger: true, action: "logout" as const },
 ];
 
 export default function SettingsPage() {
@@ -35,7 +35,14 @@ export default function SettingsPage() {
           {ROWS.map((row) => (
             <button
               key={row.label}
-              onClick={() => row.route && router.push(row.route)}
+              onClick={() => {
+                if (row.action === "logout") {
+                  useStore.getState().signOut();
+                  router.replace("/");
+                } else if (row.route) {
+                  router.push(row.route);
+                }
+              }}
               className="flex h-[58px] w-full items-center justify-between border-b border-divider text-left last:border-b-0"
             >
               <span className={`text-[15px] ${row.danger ? "font-medium text-red-500" : "text-ink-900"}`}>{row.label}</span>
