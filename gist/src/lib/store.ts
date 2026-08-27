@@ -38,6 +38,7 @@ export interface PersistedState {
   notifPrefs: { morning: boolean; keepUp: boolean; diveDeeper: boolean };
   readerTheme: "cream" | "white" | "dark";
   readerTextScale: number;
+  darkMode: boolean;
 }
 
 interface Actions {
@@ -55,6 +56,7 @@ interface Actions {
   setNotifPref: (k: keyof PersistedState["notifPrefs"], v: boolean) => void;
   setReaderTheme: (t: PersistedState["readerTheme"]) => void;
   setReaderTextScale: (n: number) => void;
+  setDarkMode: (v: boolean) => void;
 
   finishSummary: (bookId: string) => boolean;
 
@@ -89,6 +91,7 @@ const initialPersisted: PersistedState = {
   notifPrefs: { morning: true, keepUp: true, diveDeeper: false },
   readerTheme: "cream",
   readerTextScale: 100,
+  darkMode: false,
 };
 
 const todayIndex = () => new Date().getDay(); // 0 = Sunday
@@ -191,6 +194,14 @@ export const useStore = create<AppStore>()(
 
       setReaderTheme: (readerTheme) => set({ readerTheme }),
       setReaderTextScale: (readerTextScale) => set({ readerTextScale }),
+      setDarkMode: (darkMode) => {
+        set({ darkMode });
+        if (darkMode) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      },
 
       finishSummary: (bookId) => {
         const s = get();
@@ -293,11 +304,15 @@ export const useStore = create<AppStore>()(
           notifPrefs: s.notifPrefs,
           readerTheme: s.readerTheme,
           readerTextScale: s.readerTextScale,
+          darkMode: s.darkMode,
         };
         return persisted;
       },
       onRehydrateStorage: () => (state) => {
         state?.setHydrated();
+        if (state?.darkMode) {
+          document.documentElement.classList.add("dark");
+        }
       },
     }
   )

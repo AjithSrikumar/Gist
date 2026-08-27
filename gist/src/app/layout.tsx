@@ -26,7 +26,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{if(JSON.parse(localStorage.getItem('gist-app-v1')||'{}').state?.darkMode)document.documentElement.classList.add('dark')}catch(e){}` }} />
+      </head>
       <body className="min-h-dvh">
         {children}
         <OverlayHost />

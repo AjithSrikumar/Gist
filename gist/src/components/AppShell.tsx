@@ -15,7 +15,7 @@ const TABS = [
 
 export function AppShell({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-dvh bg-[#E9E3D6] flex justify-center">
+    <div className="min-h-dvh bg-bg-cream flex justify-center">
       <main className="relative w-full max-w-[480px] min-h-dvh bg-bg-cream shadow-[0_0_60px_rgba(0,0,0,0.15)]">
         {children}
       </main>

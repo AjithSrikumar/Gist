@@ -22,6 +22,38 @@
   --shadow-sheet: 0 -8px 40px rgba(22, 24, 29, 0.25);
 }
 
+html.dark {
+  --color-bg-cream: #111318;
+  --color-bg-white: #1a1d24;
+  --color-ink-900: #f0f0f2;
+  --color-ink-600: #9ca0a8;
+  --color-brand-blue: #5b8aff;
+  --color-brand-blue-dk: #3d6aff;
+  --color-accent-pink: #ff6fb5;
+  --color-accent-orange: #ffaa66;
+  --color-accent-green: #4de0a0;
+  --color-accent-purple: #a78bfa;
+  --color-accent-teal: #3dd4c0;
+  --color-surface-peach: #2a1f18;
+  --color-divider: #2a2d35;
+
+  --color-white: #1a1d24;
+  --color-black: #f0f0f2;
+
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-sheet: 0 -8px 40px rgba(0, 0, 0, 0.5);
+
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #111318;
+}
+
+html.dark img {
+  filter: brightness(0.92);
+}
+
 html,
 body {
   overscroll-behavior-y: none;

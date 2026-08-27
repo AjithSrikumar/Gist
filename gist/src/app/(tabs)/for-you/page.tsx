@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { ArrowRight, Flame, BookOpen, Clock } from "lucide-react";
+import { ArrowRight, Flame, BookOpen, Clock, Sun, Moon } from "lucide-react";
 import { ScreenPadding } from "@/components/AppShell";
 import { StreakFlame } from "@/components/StreakFlame";
 import { HorizontalRail } from "@/components/HorizontalRail";
@@ -32,7 +32,13 @@ export default function ForYouPage() {
           </div>
           <span className="text-[22px] font-extrabold tracking-tight text-ink-900">Gist</span>
         </div>
-        <StreakFlame count={store.streakCount} />
+        <button
+          onClick={() => store.setDarkMode(!store.darkMode)}
+          className="flex h-9 w-9 items-center justify-center rounded-xl bg-bg-white shadow-card"
+          aria-label="Toggle dark mode"
+        >
+          {store.darkMode ? <Sun size={18} className="text-accent-orange" /> : <Moon size={18} className="text-ink-600" />}
+        </button>
       </header>
 
       {/* streak banner */}
