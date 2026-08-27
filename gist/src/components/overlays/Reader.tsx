@@ -29,18 +29,29 @@ const THEMES = {
 
 export function ReaderModal() {
   const id = useStore((s) => s.readerBookId);
-  const [data, setData] = useState<{ loadedFor: string | null; book: Book | null }>({
+  const [data, setData] = useState<{ loadedFor: string | null; book: Book | null; error: boolean }>({
     loadedFor: null,
     book: null,
+    error: false,
   });
   const [page, setPage] = useState(0); // 0 intro, 1..n points, n+1 wrap-up
 
   if (data.loadedFor !== id) {
-    setData({ loadedFor: id, book: null });
+    setData({ loadedFor: id, book: null, error: false });
     setPage(0);
   }
   useEffect(() => {
-    if (id) loadBook(id).then((b) => setData({ loadedFor: id, book: b }));
+    if (id) {
+      loadBook(id).then((b) => {
+        if (b) {
+          setData({ loadedFor: id, book: b, error: false });
+        } else {
+          setData({ loadedFor: id, book: null, error: true });
+        }
+      }).catch(() => {
+        setData({ loadedFor: id, book: null, error: true });
+      });
+    }
   }, [id]);
 
   const book = data.book;
@@ -61,7 +72,18 @@ export function ReaderModal() {
   return (
     <FullModal open={!!id} onClose={closeReader}>
       {!book ? (
-        <div className="flex h-full items-center justify-center text-ink-600">Loading…</div>
+        <div className="flex h-full flex-col items-center justify-center gap-4 text-ink-600">
+          {data.error ? (
+            <>
+              <p>Failed to load summary.</p>
+              <button onClick={closeReader} className="h-10 rounded-button bg-brand-blue px-6 text-[14px] font-semibold text-white">
+                Go back
+              </button>
+            </>
+          ) : (
+            <p>Loading…</p>
+          )}
+        </div>
       ) : (
         <ReaderBody book={book} page={page} setPage={setPage} onClose={closeReader} />
       )}

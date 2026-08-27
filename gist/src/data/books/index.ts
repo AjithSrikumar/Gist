@@ -386,18 +386,22 @@ export async function loadBook(id: string): Promise<Book | null> {
   const meta = bookMetaById(id);
   const loader = contentRegistry[id];
   if (!meta || !loader) return null;
-  const mod = await loader();
-  const content: BookContent = { ...mod.default };
-  if (chaptersRegistry[id]) {
-    try {
-      content.chapters = (await chaptersRegistry[id]()).default.chapters;
-    } catch {
-      // fall back to key points if chapter data is unavailable
+  try {
+    const mod = await loader();
+    const content: BookContent = { ...mod.default };
+    if (chaptersRegistry[id]) {
+      try {
+        content.chapters = (await chaptersRegistry[id]()).default.chapters;
+      } catch {
+        // fall back to key points if chapter data is unavailable
+      }
     }
+    const book: Book = { ...meta, content };
+    cache.set(id, book);
+    return book;
+  } catch {
+    return null;
   }
-  const book: Book = { ...meta, content };
-  cache.set(id, book);
-  return book;
 }
 
 export function booksByCategory(categoryId: string) {

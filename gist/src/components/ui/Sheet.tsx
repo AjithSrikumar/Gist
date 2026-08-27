@@ -84,7 +84,7 @@ export function FullModal({
       {open && (
         <motion.div
           key="modal"
-          className="fixed inset-0 z-[70] mx-auto flex max-w-[480px] flex-col bg-bg-cream"
+          className="fixed inset-0 z-[95] mx-auto flex max-w-[480px] flex-col bg-bg-cream"
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
