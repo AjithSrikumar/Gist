@@ -24,7 +24,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error(`[ErrorBoundary${this.props.label ? ` — ${this.props.label}` : ""}]`, error, errorInfo);
+    console.error(`[ErrorBoundary${this.props.label ? ` — ${this.props.label}` : ""}]`, error.message, error.stack, errorInfo.componentStack);
   }
 
   render() {

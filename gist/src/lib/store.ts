@@ -170,7 +170,8 @@ export const useStore = create<AppStore>()(
           if (s.library.finished.includes(bookId)) return s;
           const existing = s.library.continuing.find((c) => c.bookId === bookId);
           const rest = s.library.continuing.filter((c) => c.bookId !== bookId);
-          const readChapters = existing ? [...new Set([...existing.readChapters, chapterIndex])] : [chapterIndex];
+          const prev = Array.isArray(existing?.readChapters) ? existing.readChapters : [];
+          const readChapters = [...new Set([...prev, chapterIndex])];
           return {
             library: {
               ...s.library,
@@ -240,9 +241,14 @@ export const useStore = create<AppStore>()(
           const { loadUserData, saveUserData } = await import("./supabase-browser");
           const data = await loadUserData(user.id);
           if (data) {
-            // Existing user — load from Supabase
+            const lib = data.library ?? get().library;
+            const continuing = (lib.continuing ?? []).map((c: any) => ({
+              bookId: c.bookId,
+              progressPct: c.progressPct,
+              readChapters: Array.isArray(c.readChapters) ? c.readChapters : [],
+            }));
             set({
-              library: data.library ?? get().library,
+              library: { ...lib, continuing },
               highlights: data.highlights ?? get().highlights,
               ratings: data.ratings ?? get().ratings,
               streakCount: data.streak_count ?? get().streakCount,
