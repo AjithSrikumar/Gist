@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, memo, type ReactNode } from "react";
 import {
   X,
   Link2,
@@ -23,12 +23,11 @@ import { Slider, SliderTrack, SliderRange, SliderThumb } from "@radix-ui/react-s
 
 const THEMES = {
   cream: { bg: "#F7F3EA", text: "#16181D", sub: "#5B6068" },
-};
-
-const EMPTY_CHAPTERS: number[] = [];
   white: { bg: "#FFFFFF", text: "#16181D", sub: "#5B6068" },
   dark: { bg: "#16181D", text: "#F7F3EA", sub: "#9AA0A8" },
 };
+
+const EMPTY_CHAPTERS: number[] = [];
 
 export function ReaderModal() {
   const id = useStore((s) => s.readerBookId);
@@ -384,7 +383,7 @@ function WrapUp({ book }: { book: Book }) {
 }
 
 /** End-of-summary flow rendered over the wrap-up page: rating → celebration → next picks */
-const EndFlow = React.memo(function EndFlow({ book }: { book: Book }) {
+const EndFlow = memo(function EndFlow({ book }: { book: Book }) {
   const [stage, setStage] = useState<"rate" | "feedback" | "next">("rate");
   const rating = useStore((s) => s.ratings[book.id] ?? 0);
   const finishSummary = useStore((s) => s.finishSummary);
@@ -428,11 +427,11 @@ const EndFlow = React.memo(function EndFlow({ book }: { book: Book }) {
       </div>
     </Sheet>
   );
-}
+});
 
 function NextPicks({ onFinish }: { onFinish: () => void }) {
   const finished = useStore((s) => s.library.finished);
-  const picks = BOOK_METAS.filter((b) => !finished.some((f) => f.id === b.id)).slice(0, 6);
+  const picks = BOOK_METAS.filter((b) => !finished.includes(b.id)).slice(0, 6);
   return (
     <>
       <h2 className="text-[20px] font-bold text-ink-900">Choose your next summary</h2>
@@ -452,7 +451,7 @@ function NextPicks({ onFinish }: { onFinish: () => void }) {
   );
 }
 
-const ContentsInsightsSheet = React.memo(function ContentsInsightsSheet({ book, readChapters, onJump, currentPage }: { book: Book; readChapters: number[]; onJump: (n: number) => void; currentPage: number }) {
+const ContentsInsightsSheet = memo(function ContentsInsightsSheet({ book, readChapters, onJump, currentPage }: { book: Book; readChapters: number[]; onJump: (n: number) => void; currentPage: number }) {
   const open = useStore((s) => s.contentsSheetOpen);
   const close = () => useStore.getState().setContentsSheet(false);
   const total = unitCount(book);
@@ -512,9 +511,9 @@ const ContentsInsightsSheet = React.memo(function ContentsInsightsSheet({ book, 
       </TabsRoot>
     </Sheet>
   );
-}
+});
 
-const ReaderThemeSheet = React.memo(function ReaderThemeSheet() {
+const ReaderThemeSheet = memo(function ReaderThemeSheet() {
   const open = useStore((s) => s.themeSheetOpen);
   const close = () => useStore.getState().setThemeSheet(false);
   const theme = useStore((s) => s.readerTheme);
@@ -558,17 +557,17 @@ const ReaderThemeSheet = React.memo(function ReaderThemeSheet() {
       </div>
     </Sheet>
   );
-}
+});
 
 /* Radix Tabs re-exports with styling */
 import * as RadixTabs from "@radix-ui/react-tabs";
-const TabsRoot = ({ children, defaultValue }: { children: React.ReactNode; defaultValue: string }) => (
+const TabsRoot = ({ children, defaultValue }: { children: ReactNode; defaultValue: string }) => (
   <RadixTabs.Root defaultValue={defaultValue}>{children}</RadixTabs.Root>
 );
-const TabsList = ({ children }: { children: React.ReactNode }) => (
+const TabsList = ({ children }: { children: ReactNode }) => (
   <RadixTabs.List className="sticky top-0 z-10 flex bg-bg-white">{children}</RadixTabs.List>
 );
-const TabsTrigger = ({ children, value }: { children: React.ReactNode; value: string }) => (
+const TabsTrigger = ({ children, value }: { children: ReactNode; value: string }) => (
   <RadixTabs.Trigger
     value={value}
     className="flex-1 border-b-2 border-divider py-3 text-[15px] font-semibold text-ink-600 data-[state=active]:border-brand-blue data-[state=active]:text-ink-900"
@@ -576,7 +575,7 @@ const TabsTrigger = ({ children, value }: { children: React.ReactNode; value: st
     {children}
   </RadixTabs.Trigger>
 );
-const TabsContent = ({ children, value }: { children: React.ReactNode; value: string }) => (
+const TabsContent = ({ children, value }: { children: ReactNode; value: string }) => (
   <RadixTabs.Content value={value} className="pt-3 focus:outline-none">
     {children}
   </RadixTabs.Content>
