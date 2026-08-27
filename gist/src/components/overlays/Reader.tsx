@@ -379,7 +379,7 @@ function WrapUp({ book }: { book: Book }) {
 /** End-of-summary flow rendered over the wrap-up page: rating → celebration → next picks */
 function EndFlow({ book }: { book: Book }) {
   const [stage, setStage] = useState<"rate" | "feedback" | "next">("rate");
-  const ratings = useStore((s) => s.ratings);
+  const rating = useStore((s) => s.ratings[book.id] ?? 0);
   const finishSummary = useStore((s) => s.finishSummary);
   const showCelebration = useStore((s) => s.showCelebration);
   const streakCount = useStore((s) => s.streakCount);
@@ -390,7 +390,7 @@ function EndFlow({ book }: { book: Book }) {
           <>
             <h2 className="mt-2 text-center text-[20px] font-bold text-ink-900">Rate this summary</h2>
             <p className="mt-1 mb-5 text-center text-[13px] text-ink-600">Rate it to get better recommendations</p>
-            <RatingStars value={ratings[book.id] ?? 0} onChange={() => setStage("feedback")} />
+            <RatingStars value={rating} onChange={() => setStage("feedback")} />
             <button onClick={() => setStage("next")} className="mt-8 h-12 w-full rounded-button border-2 border-divider text-[15px] font-semibold text-ink-600">
               Skip for now
             </button>
@@ -448,11 +448,12 @@ function NextPicks({ onFinish }: { onFinish: () => void }) {
 export function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Book; onJump: (i: number) => void; currentPage: number }) {
   const open = useStore((s) => s.contentsSheetOpen);
   const close = () => useStore.getState().setContentsSheet(false);
-  const readChapters = useStore((s) =>
-    s.library.continuing.find((c) => c.bookId === book.id)?.readChapters ?? []
-  );
+  const readChapters = useStore((s) => {
+    const entry = s.library.continuing.find((c) => c.bookId === book.id);
+    return entry?.readChapters ?? null;
+  });
   const total = unitCount(book);
-  const readCount = readChapters.length;
+  const readCount = readChapters?.length ?? 0;
   const pct = Math.round((readCount / total) * 100);
 
   return (
@@ -474,7 +475,7 @@ export function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Boo
           </div>
           <ul className="px-5 pb-6">
             {[...Array(total).keys()].map((_, i) => {
-              const done = readChapters.includes(i);
+              const done = readChapters?.includes(i) ?? false;
               const active = currentPage === i + 1;
               return (
                 <li key={i}>
