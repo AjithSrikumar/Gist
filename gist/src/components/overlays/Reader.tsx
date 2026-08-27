@@ -450,10 +450,10 @@ export function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Boo
   const close = () => useStore.getState().setContentsSheet(false);
   const readChapters = useStore((s) => {
     const entry = s.library.continuing.find((c) => c.bookId === book.id);
-    return entry?.readChapters ?? null;
+    return entry?.readChapters ?? [];
   });
   const total = unitCount(book);
-  const readCount = readChapters?.length ?? 0;
+  const readCount = readChapters.length;
   const pct = Math.round((readCount / total) * 100);
 
   return (
