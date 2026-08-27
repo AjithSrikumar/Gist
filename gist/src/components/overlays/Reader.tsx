@@ -36,11 +36,9 @@ export function ReaderModal() {
   });
   const [page, setPage] = useState(0); // 0 intro, 1..n points, n+1 wrap-up
 
-  if (data.loadedFor !== id) {
+  useEffect(() => {
     setData({ loadedFor: id, book: null, error: false });
     setPage(0);
-  }
-  useEffect(() => {
     if (id) {
       loadBook(id).then((b) => {
         if (b) {
@@ -55,7 +53,6 @@ export function ReaderModal() {
   }, [id]);
 
   const book = data.book;
-  const store = useStore();
 
   const closeReader = () => {
     const s = useStore.getState();
