@@ -87,7 +87,7 @@ export function PaywallContent({
   };
 
   return (
-    <div className="flex h-full flex-col bg-white">
+    <div className="flex h-full flex-col bg-bg-white">
       {(variant === "discount" || variant === "streak") && (
         <div
           className={`flex items-center justify-center gap-2 py-2 text-[13px] font-bold text-white ${
@@ -204,7 +204,7 @@ function AnimatePresenceContent({ open, children }: { open: boolean; children: R
       animate={{ opacity: open ? 1 : 0 }}
     >
       <motion.div
-        className="absolute inset-x-0 bottom-0 mx-auto h-full max-w-[480px] overflow-hidden bg-white"
+        className="absolute inset-x-0 bottom-0 mx-auto h-full max-w-[480px] overflow-hidden bg-bg-white"
         initial={{ y: "100%" }}
         animate={{ y: open ? 0 : "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 32 }}

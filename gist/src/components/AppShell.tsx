@@ -27,7 +27,7 @@ export function TabBar() {
   const pathname = usePathname();
   return (
     <nav className="fixed inset-x-0 bottom-0 z-40 flex justify-center">
-      <div className="safe-bottom w-full max-w-[480px] border-t border-divider bg-white/95 backdrop-blur">
+      <div className="safe-bottom w-full max-w-[480px] border-t border-divider bg-bg-white/95 backdrop-blur">
         <div className="flex h-[62px] items-stretch">
           {TABS.map(({ href, label, icon: Icon }) => {
             const active = pathname.startsWith(href);

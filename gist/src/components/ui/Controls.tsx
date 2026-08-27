@@ -21,7 +21,7 @@ export function CategoryChip({
     <button
       onClick={onClick}
       className={`h-9 shrink-0 rounded-full px-4 text-[13px] font-semibold transition-colors ${
-        selected ? "text-white" : "bg-white text-ink-900 border border-divider"
+        selected ? "text-white" : "bg-bg-white text-ink-900 border border-divider"
       }`}
       style={selected ? { backgroundColor: color ?? "#2F5FF6" } : undefined}
     >
@@ -83,7 +83,7 @@ export function ToggleSwitchRow({
         onCheckedChange={onCheckedChange}
         className="relative mt-0.5 h-[26px] w-[46px] shrink-0 rounded-full bg-divider transition-colors data-[state=checked]:bg-brand-blue"
       >
-        <SwitchThumb className="block h-[22px] w-[22px] translate-x-0.5 rounded-full bg-white shadow transition-transform data-[state=checked]:translate-x-[22px]" />
+        <SwitchThumb className="block h-[22px] w-[22px] translate-x-0.5 rounded-full bg-bg-white shadow transition-transform data-[state=checked]:translate-x-[22px]" />
       </SwitchRoot>
     </label>
   );

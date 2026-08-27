@@ -48,7 +48,7 @@ function SearchContent({
   return (
     <div className="flex h-full flex-col">
       <div className="flex items-center gap-2 px-4 pt-4 pb-2">
-        <div className="flex h-12 flex-1 items-center gap-2 rounded-button bg-white border border-divider px-4">
+        <div className="flex h-12 flex-1 items-center gap-2 rounded-button bg-bg-white border border-divider px-4">
           <Search size={18} className="shrink-0 text-ink-600" />
           <input
             autoFocus

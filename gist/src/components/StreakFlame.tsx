@@ -35,7 +35,7 @@ export function StreakWeek({ week, count }: { week: boolean[]; count: number }) 
           <div key={i} className="flex flex-col items-center gap-1.5">
             <div
               className={`flex h-9 w-9 items-center justify-center rounded-full ${
-                week[i] ? "bg-surface-peach text-accent-orange" : "border border-divider bg-white"
+                week[i] ? "bg-surface-peach text-accent-orange" : "border border-divider bg-bg-white"
               }`}
             >
               {week[i] ? (

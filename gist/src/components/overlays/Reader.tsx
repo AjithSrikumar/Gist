@@ -219,7 +219,7 @@ const nextPage = () => {
                   const items = takeaways.length ? takeaways : fallback ? [fallback] : [];
                   return items.length > 0 ? (
                     <div
-                      className="mt-6 rounded-card border-l-4 border-accent-green bg-white/70 p-4"
+                      className="mt-6 rounded-card border-l-4 border-accent-green bg-bg-white/70 p-4"
                       style={store.readerTheme === "dark" ? { backgroundColor: "#22262c" } : undefined}
                     >
                       <p className="text-[11px] font-bold tracking-widest text-accent-green">
@@ -260,7 +260,7 @@ const nextPage = () => {
         <button
           aria-label="Open chapters"
           onClick={() => useStore.getState().setContentsSheet(true)}
-          className="absolute bottom-20 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-divider bg-white/85 shadow-card backdrop-blur"
+          className="absolute bottom-20 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-divider bg-bg-white/85 shadow-card backdrop-blur"
           style={{ borderColor: store.readerTheme === "dark" ? "#33383f" : undefined }}
         >
           <AlignLeft size={20} style={{ color: theme.sub }} />
@@ -289,7 +289,7 @@ function RememberPrompt({ bookId, pointIndex, snippet }: { bookId: string; point
           initial={{ opacity: 0, y: 16, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
-          className="mt-8 rounded-card bg-white p-4 shadow-card"
+          className="mt-8 rounded-card bg-bg-white p-4 shadow-card"
         >
           <p className="text-[13px] leading-snug text-ink-900">
             Remember this? <span className="font-semibold">“{snippet}”</span>
@@ -529,7 +529,7 @@ export function ReaderThemeSheet() {
           <SliderTrack className="relative h-[5px] w-full grow overflow-hidden rounded-full bg-divider">
             <SliderRange className="absolute h-full bg-brand-blue" />
           </SliderTrack>
-          <SliderThumb className="block h-5 w-5 rounded-full bg-white shadow ring-2 ring-brand-blue" aria-label="Text size" />
+          <SliderThumb className="block h-5 w-5 rounded-full bg-bg-white shadow ring-2 ring-brand-blue" aria-label="Text size" />
         </Slider>
       </div>
     </Sheet>
@@ -542,7 +542,7 @@ const TabsRoot = ({ children, defaultValue }: { children: React.ReactNode; defau
   <RadixTabs.Root defaultValue={defaultValue}>{children}</RadixTabs.Root>
 );
 const TabsList = ({ children }: { children: React.ReactNode }) => (
-  <RadixTabs.List className="sticky top-0 z-10 flex bg-white">{children}</RadixTabs.List>
+  <RadixTabs.List className="sticky top-0 z-10 flex bg-bg-white">{children}</RadixTabs.List>
 );
 const TabsTrigger = ({ children, value }: { children: React.ReactNode; value: string }) => (
   <RadixTabs.Trigger

@@ -374,10 +374,10 @@ function GoalPicker({
               onClick={() => toggle(g.id)}
               aria-pressed={sel}
               className={`flex w-full items-center gap-3 rounded-card border-2 p-4 text-left ${
-                sel ? "border-accent-green bg-accent-green/10" : "border-transparent bg-white/5"
+                sel ? "border-accent-green bg-accent-green/10" : "border-transparent bg-bg-white/5"
               }`}
             >
-              <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${sel ? "bg-accent-green text-white" : "bg-white/10 text-white/70"}`}>
+              <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${sel ? "bg-accent-green text-white" : "bg-bg-white/10 text-white/70"}`}>
                 {GOAL_ICONS[g.icon]}
               </span>
               <span className="flex-1 text-[15px] font-medium text-white">{g.label}</span>
@@ -392,7 +392,7 @@ function GoalPicker({
         disabled={goals.length === 0}
         onClick={onNext}
         className={`mt-6 h-[52px] w-full rounded-button text-[16px] font-semibold ${
-          goals.length ? "bg-brand-blue text-white active:bg-brand-blue-dk" : "bg-white/15 text-white/40"
+          goals.length ? "bg-brand-blue text-white active:bg-brand-blue-dk" : "bg-bg-white/15 text-white/40"
         }`}
       >
         Continue
@@ -425,7 +425,7 @@ function QuizPills({
             }}
             aria-pressed={picked === o}
             className={`block h-[56px] w-full rounded-button border-2 text-left px-4 text-[15px] font-medium ${
-              picked === o ? "border-brand-blue bg-brand-blue/20 text-white" : "border-transparent bg-white/5 text-white/85"
+              picked === o ? "border-brand-blue bg-brand-blue/20 text-white" : "border-transparent bg-bg-white/5 text-white/85"
             }`}
           >
             {o}
@@ -501,7 +501,7 @@ function Crafting({ onDone }: { onDone: () => void }) {
     <div className="flex min-h-full flex-col items-center justify-center bg-ink-900 px-8">
       <Mascot />
       <h1 className="mt-6 text-[26px] font-bold text-white">Crafting your experience</h1>
-      <div className="mt-8 h-2 w-full max-w-[280px] overflow-hidden rounded-full bg-white/15">
+      <div className="mt-8 h-2 w-full max-w-[280px] overflow-hidden rounded-full bg-bg-white/15">
         <motion.div className="h-full rounded-full bg-brand-blue" animate={{ width: `${progress}%` }} />
       </div>
       <p className="mt-3 text-[13px] text-white/60">{label}</p>

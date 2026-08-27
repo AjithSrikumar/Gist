@@ -87,7 +87,7 @@ export default function ExplorePage() {
             <button
               key={ch.id}
               onClick={() => useStore.getState().openPaywall("profile")}
-              className="flex w-full items-center gap-4 rounded-card bg-white p-4 text-left shadow-card"
+              className="flex w-full items-center gap-4 rounded-card bg-bg-white p-4 text-left shadow-card"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-peach text-accent-orange">
                 <Clock3 size={22} />

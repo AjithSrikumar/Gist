@@ -41,7 +41,7 @@ export function Sheet({
           />
           <motion.div
             key="sheet"
-            className="fixed inset-x-0 bottom-0 z-[90] mx-auto flex w-full max-w-[480px] flex-col overflow-hidden rounded-t-[24px] bg-bg-white shadow-sheet"
+            className="fixed inset-x-0 bottom-0 z-[90] mx-auto flex w-full max-w-[480px] flex-col overflow-hidden rounded-t-[24px] bg-bg-bg-white shadow-sheet"
             style={{ maxHeight }}
             initial={{ y: "100%" }}
             animate={{ y: 0 }}

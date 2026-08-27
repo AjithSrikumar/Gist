@@ -44,7 +44,7 @@ export default function LibraryPage() {
             <RadixTabs.Trigger
               key={v}
               value={v}
-              className="flex-1 rounded-full py-2 text-[12px] font-semibold text-ink-600 data-[state=active]:bg-white data-[state=active]:text-ink-900 data-[state=active]:shadow-card"
+              className="flex-1 rounded-full py-2 text-[12px] font-semibold text-ink-600 data-[state=active]:bg-bg-white data-[state=active]:text-ink-900 data-[state=active]:shadow-card"
             >
               {label}
             </RadixTabs.Trigger>
@@ -97,7 +97,7 @@ export default function LibraryPage() {
               {store.highlights.map((h) => {
                 const meta = bookMetaById(h.bookId);
                 return (
-                  <div key={`${h.bookId}-${h.pointIndex}`} className="rounded-card bg-white p-4 shadow-card">
+                  <div key={`${h.bookId}-${h.pointIndex}`} className="rounded-card bg-bg-white p-4 shadow-card">
                     <div className="flex items-center gap-3">
                       {meta && <BookCover book={meta} className="h-10 w-7 shrink-0" />}
                       <p className="text-[14px] font-semibold text-ink-900">{meta?.title}</p>
@@ -134,7 +134,7 @@ export default function LibraryPage() {
               {store.highlights.map((h) => {
                 const meta = bookMetaById(h.bookId);
                 return (
-                  <div key={`${h.bookId}-${h.pointIndex}`} className="rounded-card bg-white p-4 shadow-card">
+                  <div key={`${h.bookId}-${h.pointIndex}`} className="rounded-card bg-bg-white p-4 shadow-card">
                     <div className="flex items-center gap-3">
                       {meta && <BookCover book={meta} className="h-10 w-7 shrink-0" />}
                       <p className="text-[13px] font-semibold text-ink-600">{meta?.title}</p>
@@ -210,7 +210,7 @@ function Row({
   const meta = BOOK_METAS.find((b) => b.id === bookId);
   if (!meta) return null;
   return (
-    <div className="mb-3 flex items-center gap-3 rounded-card bg-white p-3 shadow-card">
+    <div className="mb-3 flex items-center gap-3 rounded-card bg-bg-white p-3 shadow-card">
       <button onClick={() => onOpen(bookId)} className="flex min-w-0 flex-1 items-center gap-3 text-left">
         <BookCover book={meta} className="h-16 w-11 shrink-0" />
         <span className="min-w-0 flex-1">
@@ -232,6 +232,6 @@ function Row({
 }
 
 function Empty({ message }: { message: string }) {
-  return <p className="rounded-card bg-white p-5 text-center text-[13px] text-ink-600 shadow-card">{message}</p>;
+  return <p className="rounded-card bg-bg-white p-5 text-center text-[13px] text-ink-600 shadow-card">{message}</p>;
 }
 

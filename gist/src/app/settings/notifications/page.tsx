@@ -20,7 +20,7 @@ export default function NotificationsPage() {
           <h1 className="text-[22px] font-extrabold tracking-tight text-ink-900">Notifications</h1>
         </header>
 
-        <div className="mt-2 mx-4 overflow-hidden rounded-card bg-white shadow-card">
+        <div className="mt-2 mx-4 overflow-hidden rounded-card bg-bg-white shadow-card">
           <ToggleSwitchRow
             label="Morning learning"
             description="A gentle nudge to keep your daily habit alive"

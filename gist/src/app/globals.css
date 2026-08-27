@@ -37,9 +37,6 @@ html.dark {
   --color-surface-peach: #2a1f18;
   --color-divider: #2a2d35;
 
-  --color-white: #1a1d24;
-  --color-black: #f0f0f2;
-
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-sheet: 0 -8px 40px rgba(0, 0, 0, 0.5);
 

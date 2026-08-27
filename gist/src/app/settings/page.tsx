@@ -52,7 +52,7 @@ export default function SettingsPage() {
             <Mail size={13} /> {email ?? "you@example.com"}
           </div>
           <p className="mt-1 text-[11px] text-ink-600/70">Gist · Version 1.0.0 (web)</p>
-          <button className="mt-6 inline-flex h-12 items-center gap-2 rounded-button border border-divider bg-white px-6 text-[15px] font-semibold text-brand-blue shadow-card">
+          <button className="mt-6 inline-flex h-12 items-center gap-2 rounded-button border border-divider bg-bg-white px-6 text-[15px] font-semibold text-brand-blue shadow-card">
             <LifeBuoy size={18} /> Contact support
           </button>
         </div>

@@ -50,7 +50,7 @@ export default function ProfilePage() {
 
       {/* user card */}
       {user && (
-        <section className="mx-4 mt-2 rounded-card bg-white p-5 shadow-card">
+        <section className="mx-4 mt-2 rounded-card bg-bg-white p-5 shadow-card">
           <div className="flex items-center gap-4">
             {user.user_metadata?.avatar_url ? (
               <img
@@ -81,7 +81,7 @@ export default function ProfilePage() {
       )}
 
       {/* growth streak card */}
-      <section className="mx-4 mt-2 rounded-card bg-white p-5 shadow-card">
+      <section className="mx-4 mt-2 rounded-card bg-bg-white p-5 shadow-card">
         <h2 className="mb-4 text-center text-[17px] font-semibold text-ink-900">Growth streak</h2>
         <StreakWeek week={store.streakWeek} count={store.streakCount} />
       </section>
@@ -89,7 +89,7 @@ export default function ProfilePage() {
       {/* learning progress */}
       <button
         onClick={() => (store.isSubscribed ? undefined : useStore.getState().openPaywall("profile"))}
-        className="mx-4 mt-3 flex w-[calc(100%-32px)] items-center gap-3 rounded-card bg-white p-4 text-left shadow-card"
+        className="mx-4 mt-3 flex w-[calc(100%-32px)] items-center gap-3 rounded-card bg-bg-white p-4 text-left shadow-card"
       >
         <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${store.isSubscribed ? "bg-accent-green/15 text-accent-green" : "bg-divider/60 text-ink-600"}`}>
           <Lock size={20} />
