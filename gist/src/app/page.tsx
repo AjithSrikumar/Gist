@@ -11,6 +11,16 @@ export default function SplashRedirect() {
   const hydrated = useStore((s) => s.hydrated);
   const onboarded = useStore((s) => s.onboarded);
 
+  // Fallback: if onRehydrateStorage never fires, force hydrated after a short delay
+  useEffect(() => {
+    const t = setTimeout(() => {
+      if (!useStore.getState().hydrated) {
+        useStore.getState().setHydrated();
+      }
+    }, 500);
+    return () => clearTimeout(t);
+  }, []);
+
   useEffect(() => {
     if (!hydrated) return;
     const t = setTimeout(() => {
