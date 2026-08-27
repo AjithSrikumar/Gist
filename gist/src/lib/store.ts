@@ -29,7 +29,7 @@ export interface PersistedState {
   lastFinishDate: string | null;
   lastReadBook: string | null;
   library: {
-    continuing: { bookId: string; progressPct: number; lastIndex: number }[];
+    continuing: { bookId: string; progressPct: number; readChapters: number[] }[];
     savedForLater: string[];
     finished: string[];
   };
@@ -49,7 +49,7 @@ interface Actions {
   saveToLibrary: (bookId: string) => void;
   removeFromLibrary: (bookId: string) => void;
   markFinished: (bookId: string) => void;
-  upsertProgress: (bookId: string, progressPct: number, lastIndex: number) => void;
+  upsertProgress: (bookId: string, progressPct: number, chapterIndex: number) => void;
   addHighlight: (bookId: string, pointIndex: number, snippet: string) => void;
   rateBook: (bookId: string, rating: number) => void;
   setNotifPref: (k: keyof PersistedState["notifPrefs"], v: boolean) => void;
@@ -162,14 +162,16 @@ export const useStore = create<AppStore>()(
           },
         })),
 
-      upsertProgress: (bookId, progressPct, lastIndex) =>
+      upsertProgress: (bookId, progressPct, chapterIndex) =>
         set((s) => {
           if (s.library.finished.includes(bookId)) return s;
+          const existing = s.library.continuing.find((c) => c.bookId === bookId);
           const rest = s.library.continuing.filter((c) => c.bookId !== bookId);
+          const readChapters = existing ? [...new Set([...existing.readChapters, chapterIndex])] : [chapterIndex];
           return {
             library: {
               ...s.library,
-              continuing: [{ bookId, progressPct, lastIndex }, ...rest],
+              continuing: [{ bookId, progressPct, readChapters }, ...rest],
             },
           };
         }),

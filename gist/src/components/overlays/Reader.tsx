@@ -428,12 +428,12 @@ function NextPicks({ onFinish }: { onFinish: () => void }) {
 export function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Book; onJump: (i: number) => void; currentPage: number }) {
   const open = useStore((s) => s.contentsSheetOpen);
   const close = () => useStore.getState().setContentsSheet(false);
-  const finishedCount = useStore((s) =>
-    s.library.continuing.find((c) => c.bookId === book.id)?.lastIndex
+  const readChapters = useStore((s) =>
+    s.library.continuing.find((c) => c.bookId === book.id)?.readChapters ?? []
   );
   const total = unitCount(book);
-  const readChapters = finishedCount !== undefined ? finishedCount + 1 : 0;
-  const pct = Math.round((readChapters / total) * 100);
+  const readCount = readChapters.length;
+  const pct = Math.round((readCount / total) * 100);
 
   return (
     <Sheet open={open} onClose={close}>
@@ -445,7 +445,7 @@ export function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Boo
         <TabsContent value="contents">
           <div className="px-5 pb-2">
             <div className="flex items-center justify-between text-[12px] text-ink-600">
-              <span>{readChapters} of {total} chapters read</span>
+              <span>{readCount} of {total} chapters read</span>
               <span>{pct}%</span>
             </div>
             <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-divider">
@@ -454,7 +454,7 @@ export function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Boo
           </div>
           <ul className="px-5 pb-6">
             {[...Array(total).keys()].map((_, i) => {
-              const done = finishedCount !== undefined && i <= finishedCount;
+              const done = readChapters.includes(i);
               const active = currentPage === i + 1;
               return (
                 <li key={i}>

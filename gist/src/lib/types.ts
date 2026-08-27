@@ -78,5 +78,5 @@ export interface HighlightEntry {
 export interface ContinuingEntry {
   bookId: string;
   progressPct: number;
-  lastIndex: number;
+  readChapters: number[];
 }
