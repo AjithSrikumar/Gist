@@ -12,18 +12,17 @@ import type { Book } from "@/lib/types";
 export function BookDetailSheet() {
   const id = useStore((s) => s.bookDetailId);
   const close = () => useStore.getState().openBookDetail(null);
-  const [data, setData] = useState<{ loadedFor: string | null; book: Book | null }>({
-    loadedFor: null,
-    book: null,
-  });
+  const [book, setBook] = useState<Book | null>(null);
 
-  if (data.loadedFor !== id) {
-    setData({ loadedFor: id, book: null });
-  }
   useEffect(() => {
-    if (id) loadBook(id).then((b) => setData({ loadedFor: id, book: b }));
+    setBook(null);
+    if (!id) return;
+    let cancelled = false;
+    loadBook(id).then((b) => {
+      if (!cancelled) setBook(b);
+    });
+    return () => { cancelled = true; };
   }, [id]);
-  const book = data.book;
 
   return (
     <Sheet open={!!id} onClose={close}>
