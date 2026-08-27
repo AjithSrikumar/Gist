@@ -97,9 +97,9 @@ function ReaderBody({
   setPage: (n: number) => void;
   onClose: () => void;
 }) {
-  const store = useStore();
-  const theme = THEMES[store.readerTheme];
-  const scale = store.readerTextScale / 100;
+  const theme = useStore((s) => THEMES[s.readerTheme]);
+  const scale = useStore((s) => s.readerTextScale / 100);
+  const isDark = useStore((s) => s.readerTheme === "dark");
   const total = Math.max(1, unitCount(book));
   const isIntro = page === 0;
   const isWrapUp = page === total + 1;
@@ -237,7 +237,7 @@ const nextPage = () => {
                   return items.length > 0 ? (
                     <div
                       className="mt-6 rounded-card border-l-4 border-accent-green bg-bg-white/70 p-4"
-                      style={store.readerTheme === "dark" ? { backgroundColor: "#22262c" } : undefined}
+                      style={isDark ? { backgroundColor: "#22262c" } : undefined}
                     >
                       <p className="text-[11px] font-bold tracking-widest text-accent-green">
                         {items.length === 1 ? "KEY TAKEAWAY" : "KEY TAKEAWAYS"}
@@ -278,7 +278,7 @@ const nextPage = () => {
           aria-label="Open chapters"
           onClick={() => useStore.getState().setContentsSheet(true)}
           className="absolute bottom-20 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-divider bg-bg-white/85 shadow-card backdrop-blur"
-          style={{ borderColor: store.readerTheme === "dark" ? "#33383f" : undefined }}
+          style={{ borderColor: isDark ? "#33383f" : undefined }}
         >
           <AlignLeft size={20} style={{ color: theme.sub }} />
         </button>
@@ -298,7 +298,7 @@ const nextPage = () => {
 
 function RememberPrompt({ bookId, pointIndex, snippet }: { bookId: string; pointIndex: number; snippet: string }) {
   const [vote, setVote] = useState<"up" | "down" | null>(null);
-  const store = useStore();
+  const addHighlight = useStore((s) => s.addHighlight);
   return (
     <AnimatePresence>
       {!vote && (
@@ -312,10 +312,10 @@ function RememberPrompt({ bookId, pointIndex, snippet }: { bookId: string; point
             Remember this? <span className="font-semibold">“{snippet}”</span>
           </p>
           <div className="mt-3 flex gap-2">
-            <button
+<button
               aria-label="Save highlight"
               onClick={() => {
-                store.addHighlight(bookId, pointIndex, snippet);
+                addHighlight(bookId, pointIndex, snippet);
                 setVote("up");
               }}
               className="flex h-10 items-center gap-2 rounded-full border border-divider px-4 text-[13px] font-semibold text-ink-900"
@@ -379,7 +379,10 @@ function WrapUp({ book }: { book: Book }) {
 /** End-of-summary flow rendered over the wrap-up page: rating → celebration → next picks */
 function EndFlow({ book }: { book: Book }) {
   const [stage, setStage] = useState<"rate" | "feedback" | "next">("rate");
-  const store = useStore();
+  const ratings = useStore((s) => s.ratings);
+  const finishSummary = useStore((s) => s.finishSummary);
+  const showCelebration = useStore((s) => s.showCelebration);
+  const streakCount = useStore((s) => s.streakCount);
   return (
     <Sheet open maxHeight="92dvh" onClose={() => {}}>
       <div className="px-5 pb-10">
@@ -387,7 +390,7 @@ function EndFlow({ book }: { book: Book }) {
           <>
             <h2 className="mt-2 text-center text-[20px] font-bold text-ink-900">Rate this summary</h2>
             <p className="mt-1 mb-5 text-center text-[13px] text-ink-600">Rate it to get better recommendations</p>
-            <RatingStars value={store.ratings[book.id] ?? 0} onChange={() => setStage("feedback")} />
+            <RatingStars value={ratings[book.id] ?? 0} onChange={() => setStage("feedback")} />
             <button onClick={() => setStage("next")} className="mt-8 h-12 w-full rounded-button border-2 border-divider text-[15px] font-semibold text-ink-600">
               Skip for now
             </button>
@@ -409,8 +412,8 @@ function EndFlow({ book }: { book: Book }) {
         {stage === "next" && (
           <NextPicks
             onFinish={() => {
-              const gained = store.finishSummary(book.id);
-              store.showCelebration(store.streakCount);
+              const gained = finishSummary(book.id);
+              showCelebration(streakCount);
               void gained;
             }}
           />

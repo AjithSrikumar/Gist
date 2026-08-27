@@ -51,12 +51,15 @@ function BookDetailContent({
   done: boolean;
   onClose: () => void;
 }) {
-  const store = useStore();
+  const openBookDetail = useStore((s) => s.openBookDetail);
+  const openReader = useStore((s) => s.openReader);
+  const removeFromLibrary = useStore((s) => s.removeFromLibrary);
+  const saveToLibrary = useStore((s) => s.saveToLibrary);
   const cat = categoryById(book.categoryId);
 
   const openBook = () => {
-    store.openBookDetail(null);
-    store.openReader(book.id);
+    openBookDetail(null);
+    openReader(book.id);
   };
 
   return (
@@ -73,7 +76,7 @@ function BookDetailContent({
           ))}
           <button
             aria-label="Bookmark"
-            onClick={() => (saved ? store.removeFromLibrary(book.id) : store.saveToLibrary(book.id))}
+            onClick={() => (saved ? removeFromLibrary(book.id) : saveToLibrary(book.id))}
             className="flex h-11 w-11 items-center justify-center rounded-full"
           >
             <Bookmark size={20} className={saved ? "fill-brand-blue text-brand-blue" : "text-ink-600"} />

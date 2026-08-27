@@ -73,16 +73,17 @@ export function PaywallContent({
   onStarted?: () => void;
 }) {
   const [featurePage, setFeaturePage] = useState(0);
-  const store = useStore();
-  const user = store.user;
+  const user = useStore((s) => s.user);
+  const subscribe = useStore((s) => s.subscribe);
+  const signInWithGoogle = useStore((s) => s.signInWithGoogle);
   const copy = COPY[variant];
 
   const handleStart = () => {
     if (user) {
-      store.subscribe();
+      subscribe();
       onStarted?.();
     } else {
-      store.signInWithGoogle();
+      signInWithGoogle();
     }
   };
 
