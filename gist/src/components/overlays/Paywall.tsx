@@ -144,7 +144,7 @@ export function PaywallContent({
           onClick={handleStart}
           className="mt-6 flex h-[54px] w-full items-center justify-center gap-3 rounded-button bg-brand-blue text-[17px] font-bold text-white shadow-lg active:bg-brand-blue-dk"
         >
-          {user ? (
+          {isSignedIn ? (
             "Start for Free"
           ) : (
             <>
@@ -159,7 +159,7 @@ export function PaywallContent({
           )}
         </motion.button>
 
-        {!user && (
+        {!isSignedIn && (
           <p className="mt-3 text-center text-[12px] text-ink-600">
             Free forever — no credit card required
           </p>
