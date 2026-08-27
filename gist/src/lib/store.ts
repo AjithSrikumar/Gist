@@ -313,6 +313,20 @@ export const useStore = create<AppStore>()(
         if (state?.darkMode) {
           document.documentElement.classList.add("dark");
         }
+        // Migrate old lastIndex format to readChapters
+        const s = useStore.getState();
+        const migrated = s.library.continuing.map((c: any) => {
+          if (c.readChapters) return c;
+          if (typeof c.lastIndex === "number") {
+            const readChapters: number[] = [];
+            for (let i = 0; i <= c.lastIndex; i++) readChapters.push(i);
+            return { bookId: c.bookId, progressPct: c.progressPct, readChapters };
+          }
+          return { ...c, readChapters: [] };
+        });
+        if (migrated.some((c: any, i: number) => c !== s.library.continuing[i])) {
+          useStore.setState({ library: { ...s.library, continuing: migrated } });
+        }
       },
     }
   )
