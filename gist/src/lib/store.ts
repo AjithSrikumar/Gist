@@ -196,7 +196,7 @@ export const useStore = create<AppStore>()(
       setReaderTheme: (readerTheme) => set({ readerTheme }),
       setReaderTextScale: (readerTextScale) => set({ readerTextScale }),
       setDarkMode: (darkMode) => {
-        set({ darkMode });
+        set({ darkMode, readerTheme: darkMode ? "dark" : "cream" });
         if (darkMode) {
           document.documentElement.classList.add("dark");
         } else {
