@@ -23,6 +23,9 @@ import { Slider, SliderTrack, SliderRange, SliderThumb } from "@radix-ui/react-s
 
 const THEMES = {
   cream: { bg: "#F7F3EA", text: "#16181D", sub: "#5B6068" },
+};
+
+const EMPTY_CHAPTERS: number[] = [];
   white: { bg: "#FFFFFF", text: "#16181D", sub: "#5B6068" },
   dark: { bg: "#16181D", text: "#F7F3EA", sub: "#9AA0A8" },
 };
@@ -424,8 +427,8 @@ function EndFlow({ book }: { book: Book }) {
 }
 
 function NextPicks({ onFinish }: { onFinish: () => void }) {
-  const finished = useStore((s) => s.library.finished);
-  const picks = BOOK_METAS.filter((b) => !finished.includes(b.id)).slice(0, 6);
+  const finishedIds = useStore((s) => new Set(s.library.finished.map((b) => b.id)));
+  const picks = BOOK_METAS.filter((b) => !finishedIds.has(b.id)).slice(0, 6);
   return (
     <>
       <h2 className="text-[20px] font-bold text-ink-900">Choose your next summary</h2>
@@ -450,7 +453,7 @@ export function ContentsInsightsSheet({ book, onJump, currentPage }: { book: Boo
   const close = () => useStore.getState().setContentsSheet(false);
   const readChapters = useStore((s) => {
     const entry = s.library.continuing.find((c) => c.bookId === book.id);
-    return entry?.readChapters ?? [];
+    return entry?.readChapters ?? EMPTY_CHAPTERS;
   });
   const total = unitCount(book);
   const readCount = readChapters.length;
