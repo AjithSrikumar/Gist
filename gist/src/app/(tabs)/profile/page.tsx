@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Settings, Lock, Gift, Copy, Check, Trophy, Star, LogOut, LogIn } from "lucide-react";
+import { Settings, Gift, Copy, Check, Trophy, Star, LogOut, LogIn, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
 import { ScreenPadding } from "@/components/AppShell";
 import { StreakWeek } from "@/components/StreakFlame";
@@ -92,7 +92,7 @@ export default function ProfilePage() {
         className="mx-4 mt-3 flex w-[calc(100%-32px)] items-center gap-3 rounded-card bg-bg-white p-4 text-left shadow-card"
       >
         <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${store.isSubscribed ? "bg-accent-green/15 text-accent-green" : "bg-divider/60 text-ink-600"}`}>
-          <Lock size={20} />
+          <BarChart3 size={20} />
         </span>
         <span className="flex-1">
           <span className="block text-[15px] font-semibold text-ink-900">My learning progress</span>

@@ -59,6 +59,7 @@ interface Actions {
   setDarkMode: (v: boolean) => void;
 
   finishSummary: (bookId: string) => boolean;
+  recordVisit: () => void;
 
   openBookDetail: (id: string | null) => void;
   openReader: (id: string | null) => void;
@@ -233,6 +234,29 @@ export const useStore = create<AppStore>()(
           },
         });
         return !alreadyToday;
+      },
+
+      recordVisit: () => {
+        const s = get();
+        const today = todayKey();
+        const dayIdx = todayIndex();
+        if (s.lastFinishDate === today) return;
+        let week = [...s.streakWeek];
+        if (dayIdx === 0) week = [false, false, false, false, false, false, false];
+        if (s.streakCount === 0) {
+          week[dayIdx] = true;
+          set({ streakCount: 1, streakWeek: week, lastFinishDate: today });
+          return;
+        }
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        if (s.lastFinishDate === yesterday.toDateString()) {
+          week[dayIdx] = true;
+          set({ streakCount: s.streakCount + 1, streakWeek: week, lastFinishDate: today });
+        } else {
+          week[dayIdx] = true;
+          set({ streakCount: 1, streakWeek: week, lastFinishDate: today });
+        }
       },
 
       openBookDetail: (bookDetailId) => set({ bookDetailId }),
