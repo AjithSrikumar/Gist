@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Gist gives you the key ideas from bestselling nonfiction books in minutes. Read, build a streak, grow every day.",
   manifest: "/manifest.webmanifest",
-  appleWebApp: { capable: true, title: "Gist", statusBarStyle: "default" },
+  appleWebApp: { capable: true, title: "Gist", statusBarStyle: "black-translucent" },
 };
 
 export const viewport: Viewport = {
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `try{if(JSON.parse(localStorage.getItem('gist-app-v1')||'{}').state?.darkMode)document.documentElement.classList.add('dark')}catch(e){}` }} />
+        <script dangerouslySetInnerHTML={{ __html: `try{if(JSON.parse(localStorage.getItem('gist-app-v1')||'{}').state?.darkMode){document.documentElement.classList.add('dark');var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content','#16181D')}}catch(e){}` }} />
       </head>
       <body className="min-h-dvh">
         {children}

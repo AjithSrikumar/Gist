@@ -202,6 +202,8 @@ export const useStore = create<AppStore>()(
         } else {
           document.documentElement.classList.remove("dark");
         }
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute("content", darkMode ? "#16181D" : "#F7F3EA");
       },
 
       finishSummary: (bookId) => {
