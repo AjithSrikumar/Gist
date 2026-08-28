@@ -11,7 +11,7 @@ export function GrowthTree({ stage }: { stage: 1 | 2 | 3 }) {
     <div className="relative flex h-40 w-full items-end justify-center">
       <svg viewBox="0 0 200 150" className="h-full">
         {/* ground */}
-        <ellipse cx="100" cy="138" rx="70" ry="8" fill="#ECE7DD" />
+        <ellipse cx="100" cy="138" rx="70" ry="8" fill="var(--color-divider, #ECE7DD)" />
         <path d="M96 138 L104 138 L102 110 L98 110 Z" fill="#8B5A2B" />
         {stage >= 1 && (
           <motion.g initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring", stiffness: 200, damping: 14 }}>

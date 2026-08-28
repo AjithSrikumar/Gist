@@ -101,16 +101,20 @@ let syncTimeout: ReturnType<typeof setTimeout> | null = null;
 function debouncedSync(userId: string, state: PersistedState) {
   if (syncTimeout) clearTimeout(syncTimeout);
   syncTimeout = setTimeout(async () => {
-    const { saveUserData } = await import("./supabase-browser");
-    await saveUserData(userId, {
-      library: state.library,
-      highlights: state.highlights,
-      ratings: state.ratings,
-      streak_count: state.streakCount,
-      streak_week: state.streakWeek,
-      last_finish_date: state.lastFinishDate,
-      is_subscribed: state.isSubscribed,
-    });
+    try {
+      const { saveUserData } = await import("./supabase-browser");
+      await saveUserData(userId, {
+        library: state.library,
+        highlights: state.highlights,
+        ratings: state.ratings,
+        streak_count: state.streakCount,
+        streak_week: state.streakWeek,
+        last_finish_date: state.lastFinishDate,
+        is_subscribed: state.isSubscribed,
+      });
+    } catch (e) {
+      console.error("Sync to Supabase failed:", e);
+    }
   }, 1000);
 }
 
@@ -197,13 +201,15 @@ export const useStore = create<AppStore>()(
       setReaderTextScale: (readerTextScale) => set({ readerTextScale }),
       setDarkMode: (darkMode) => {
         set({ darkMode, readerTheme: darkMode ? "dark" : "cream" });
-        if (darkMode) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
+        if (typeof document !== "undefined") {
+          if (darkMode) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+          const meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", darkMode ? "#16181D" : "#F7F3EA");
         }
-        const meta = document.querySelector('meta[name="theme-color"]');
-        if (meta) meta.setAttribute("content", darkMode ? "#16181D" : "#F7F3EA");
       },
 
       finishSummary: (bookId) => {

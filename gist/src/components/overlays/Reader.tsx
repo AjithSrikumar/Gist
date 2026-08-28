@@ -190,15 +190,6 @@ const nextPage = () => {
       <div
         ref={scrollRef}
         className="min-h-0 flex-1 overflow-y-auto px-6"
-        onClick={(e) => {
-          const x = e.clientX - window.innerWidth / 2;
-          if (!isIntro && Math.abs(e.clientY - window.innerHeight) < Infinity) {
-            // tap zones only when not selecting text
-            const sel = window.getSelection();
-            if (sel && sel.toString().length > 0) return;
-          }
-          void x;
-        }}
       >
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
@@ -212,7 +203,7 @@ const nextPage = () => {
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.15}
             onDragEnd={(_, info) => {
-              if (info.offset.x < -70 && !(isIntro && false)) nextPage();
+              if (info.offset.x < -70) nextPage();
               else if (info.offset.x > 70) prevPage();
             }}
           >
