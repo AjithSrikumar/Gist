@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Settings, Gift, Copy, Check, Trophy, Star, LogOut, LogIn, BarChart3 } from "lucide-react";
+import { Settings, Gift, Copy, Check, Trophy, Star, LogOut, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
 import { ScreenPadding } from "@/components/AppShell";
 import { StreakWeek } from "@/components/StreakFlame";
