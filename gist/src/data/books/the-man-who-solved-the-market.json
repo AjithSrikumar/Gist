@@ -1,36 +1,36 @@
 {
   "id": "the-man-who-solved-the-market",
-  "aboutAuthor": "Gregory Zuckerman is a Special Writer at The Wall Street Journal and author of The Greatest Trade Ever. He spent years interviewing Jim Simons and Renaissance insiders to tell the untold story of the world's most successful quant fund.",
+  "aboutAuthor": "Gregory Zuckerman is a Wall Street Journal investigative reporter. He reconstructs Simons's journey from Chern-Simons geometry to Medallion's factory via interviews with mercurial mathematicians, speech researchers, and traders who prefer silence.",
   "points": [
     {
-      "heading": "Copyright",
-      "body": "Portfolio / Penguin An imprint of Penguin Random House LLC penguinrandomhouse.com Copyright © 2019 by Gregory Zuckerman Penguin supports copyright. Copyright fuels creativity, encourages diverse voices, promotes free speech, and creates a vibrant culture. Thank you for buying an authorized edition o..."
+      "heading": "From geometry to ticks",
+      "body": "Simons's Chern-Simons invariants and IDA code-breaking gave him pattern intuition. Baum-Welch hidden Markov models from speech research became the lens for hidden market regimes emitting price ticks."
     },
     {
-      "heading": "A Timeline of Key Events",
-      "body": "A TIMELINE OF KEY EVENTS 1938 Jim Simons born 1958 Simons graduates MIT 1964 Simons becomes code breaker at the IDA 1968 Simons leads math department at Stony Brook University 1974 Simons and Chern publish groundbreaking paper 1978 Simons leaves academia to start Monemetrics, a currency trading firm..."
+      "heading": "Tiny edges times millions",
+      "body": "Medallion's 39 percent net for three decades came not from a grand thesis but from faint intraday biases repeated millions of times, with holding periods compressing to minutes after transaction costs."
     },
     {
-      "heading": "Introduction",
-      "body": "INTRODUCTION You do know—no one will speak with you, right?” I was picking at a salad at a fish restaurant in Cambridge, Massachusetts, in early September 2017, trying my best to get a British mathematician named Nick Patterson to open up about his former company, Renaissance Technologies. I wasn’t ..."
+      "heading": "Factory over formula",
+      "body": "Durability rests on an ensemble factory with brutal peer review and market neutrality, not a single equation. Thousand weak signals voted together survive regime snaps that kill single-factor bets."
     },
     {
-      "heading": "Prologue",
-      "body": "PROLOGUE Jim Simons wouldn’t stop calling. It was the fall of 1990 and Simons was in his office on the thirty-third floor of a midtown Manhattan high-rise, his eyes glued to a computer screen flashing the latest moves in global financial markets. Friends didn’t understand why Simons was still at it...."
+      "heading": "Capacity is the enemy of alpha",
+      "body": "The compounding chart that dwarfs Buffett only works because assets are capped. Two-track performance where Medallion soars and RIEF is merely excellent proves alpha decays with size."
     },
     {
-      "heading": "Chapter One",
-      "body": "CHAPTER ONE Jimmy Simons grabbed a broom and headed upstairs. It was the winter of 1952 and the fourteen-year-old was trying to earn some spending money at Breck’s garden supply near his home in Newton, Massachusetts, the leafy Boston suburb. It wasn’t going well. Working in a stockroom downstairs, ..."
+      "heading": "Risk is horizon and crowding",
+      "body": "August 2007 and 2008 divergence show that horizon choice and volatility targeting determine who survives factor earthquakes when correlations spike to one."
     },
     {
-      "heading": "Chapter Two",
-      "body": "CHAPTER TWO Q: What’s the difference between a PhD in mathematics and a large pizza? A: A large pizza can feed a family of four. In 1964, Simons quit Harvard University to join an intelligence group helping to fight the ongoing Cold War with the Soviet Union. The group told Simons he could continue ..."
+      "heading": "Secrecy protects and imprisons",
+      "body": "The handbook that forbids publishing preserves edge but amplifies political fallout, as Mercer's lookalike modeling迁移 from ticks to voters via Cambridge Analytica shows how the same technique diverges ethically."
     }
   ],
   "insights": [
-    "Key insight from The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution",
-    "Notable anecdote or framework from the book",
-    "Practical application for readers"
+    "Medallion's 66 percent gross, 39 percent net, with 5 and 44 fees: a dollar compounding into more than a billion that dwarfs Buffett and Soros.",
+    "The ashtray, the Baum-Welch diagram, and the bad-tick filter: anecdotes where culture and engineering, not brilliance alone, determined profitability.",
+    "We don't have a model, we have a factory that builds models: the line that reframes moat as metabolism, not mystery."
   ],
-  "conclusion": "The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution synthesizes the main themes and leaves the reader with a lasting insight about Gregory Zuckerman's approach to the subject."
+  "conclusion": "The Man Who Solved the Market is less a biography of a genius than of an institution that systematized skepticism: ingest every tick, model hidden states, enforce brutal review, stay neutral, cap size, and let compounding do what genius alone cannot. Its open-science philanthropy afterward suggests the founder knew the rent on noise demanded a balancing gift to knowledge."
 }

@@ -1,16 +1,36 @@
 {
   "id": "the-business-of-venture-capital",
-  "aboutAuthor": "Mahendra Ramsinghani is a venture capitalist and author who has managed funds and advised LPs. This comprehensive guide covers the full VC lifecycle from fundraising to exits, used in MBA programs worldwide.",
+  "aboutAuthor": "Mahendra Ramsinghani is a Michigan-based investor and author of University of Michigan's Venture Capital course. He synthesizes fifty-plus GPs and LPs into the lifecycle of raising, investing, governing, and exiting a venture fund.",
   "points": [
     {
-      "heading": "Full Text",
-      "body": " -- 1 of 546 -- -- 2 of 546 -- SECOND EDITION 80+ Customer Ratings on Amazon with over 50 Five-Star reviews “The Business of Venture Capital is a comprehensive book with data, industry trends, and insights from leading VCs and LPs – a must have for practitioners.” —David York, Managing Director..."
+      "heading": "Cash and carry is fund economics",
+      "body": "2 and 20 waterfall with hurdle and fees means median TVPI yields little carry; entry price and vintage determine GP wealth more than picking stories."
+    },
+    {
+      "heading": "Career is references not pedigree",
+      "body": "LPs diligence character via back-channel and decline etiquette because enemies accumulate quickly; 24-hour responsiveness and gracious passes preserve optionality over decades."
+    },
+    {
+      "heading": "Raise by warehousing and sequencing",
+      "body": "Three to five personal warehouse deals plus FOF first creates credibility cascade of 100 meetings to two closes over nine months."
+    },
+    {
+      "heading": "Sourcing is system, diligence is canvas",
+      "body": "Forty percent outbound via research triggers and four-week cheat sheet with customer calls ensures pipeline quality before diligence perfection."
+    },
+    {
+      "heading": "Terms set governance, board creates value",
+      "body": "1x non-participating, caps, and anti-dilution protect; boards that let founders talk seventy percent add value via customers and hires not directives."
+    },
+    {
+      "heading": "Exits serve the power law",
+      "body": "One 50x winner returns the fund; acquisitions with earnouts, IPO with greenshoe, and secondaries must let that winner run rather than sell too early."
     }
   ],
   "insights": [
-    "Key insight from The Business of Venture Capital: The Art of Raising a Fund, Structuring Investments, Portfolio Management, and Exits",
-    "Notable anecdote or framework from the book",
-    "Practical application for readers"
+    "2 and 20 waterfall illustration where fees consume eighteen percent before a single exit, making top-quartile TVPI of 2.8 the real carry threshold.",
+    "Fund-of-funds trust cascade where a three million anchor from a Minneapolis FOF unlocked two pensions and twenty-five million close.",
+    "Continuation fund diagram where LPs choose to roll or redeem, creating liquidity without forced M&A when IPO window shut."
   ],
-  "conclusion": "The Business of Venture Capital: The Art of Raising a Fund, Structuring Investments, Portfolio Management, and Exits synthesizes the main themes and leaves the reader with a lasting insight about Mahendra Ramsinghani's approach to the subject."
+  "conclusion": "The Business of Venture Capital maps the full lifecycle from carry math to continuation funds, showing that structure, sourcing system, and governance discipline let a ten-year illiquid carry business compound relationships into outlier returns."
 }

@@ -3,34 +3,34 @@
   "aboutAuthor": "Gabriel Weinberg is CEO of DuckDuckGo; Lauren McCann is a statistician. Together they catalog 300+ mental models from physics, psychology, economics, and biology to upgrade decision-making.",
   "points": [
     {
-      "heading": "Copyright",
-      "body": "PORTFOLIO / PENGUIN An imprint of Penguin Random House LLC penguinrandomhouse.com Copyright © 2019 by Gabriel Weinberg and Lauren McCann Penguin supports copyright. Copyright fuels creativity, encourages diverse voices, promotes free speech, and creates a vibrant culture. Thank you for buying an aut..."
+      "heading": "Being wrong less is winning",
+      "body": "Invert problems and argue from first principles to shave assumptions with Ockham's razor. Test ideas with minimum viable probes and de-risk before investing deeply, so you reduce unforced errors rather than chase perfection."
     },
     {
-      "heading": "Introduction: The Super Thinking Journey",
-      "body": "Introduction The Super Thinking Journey EACH MORNING, AFTER OUR KIDS head off to school or camp, we take a walk and talk about our lives, our careers, and current events. (We’re married.) Though we discuss a wide array of topics, we often find common threads—recurring concepts that help us explain, ..."
+      "heading": "Incentives explain unintended consequences",
+      "body": "Measures that become targets — Goodhart's Law — distort behavior like cobra bounties breeding cobras. Map perverse incentives and feedback loops before you launch, or your metric will corrupt the goal."
     },
     {
-      "heading": "CHAPTER ONE: Being Wrong Less",
-      "body": "1 Being Wrong Less YOU MAY NOT REALIZE IT, but you make dozens of decisions every day. And when you make those decisions, whether they are personal or professional, you want to be right much more often than you are wrong. However, consistently being right more often is hard to do because the world i..."
+      "heading": "Time is leverage",
+      "body": "Align work to a North Star, prioritize by opportunity cost and Pareto, and protect deep-work flow with timeboxing. Small daily anchors beat heroic bursts, and constraints can liberate focus."
     },
     {
-      "heading": "CHAPTER TWO: Anything That Can Go Wrong, Will",
-      "body": "2 Anything That Can Go Wrong, Will ALL YOUR ACTIONS HAVE CONSEQUENCES, but sometimes those consequences are unexpected. On the surface, these unintended consequences seem unpredictable. However, if you dig deeper, you will find that unintended consequences often follow predictable patterns and can t..."
+      "heading": "Borrow nature's playbook",
+      "body": "Selection, emergence, keystones, and carrying capacity explain both forests and markets. Spot thresholds like critical mass and build modularity and redundancy to avoid overshoot and cascade failures."
     },
     {
-      "heading": "CHAPTER THREE: Spend Your Time Wisely",
-      "body": "3 Spend Your Time Wisely POLARIS IS THE BRIGHTEST STAR in the Little Dipper, a constellation also known as Ursa Minor, or Little Bear. You can easily find Polaris in the night sky because it is the last star in the handle of the Little Dipper, and the two outermost stars on the ladle of the Big Dipp..."
+      "heading": "Numbers lie without context",
+      "body": "Demand base rates, denominators, and missing data to defeat survivorship bias and prosecutor fallacies. Update with Bayes and watch for Simpson's paradoxes hidden in aggregated charts."
     },
     {
-      "heading": "CHAPTER FOUR: Becoming One with Nature",
-      "body": "4 Becoming One with Nature BEFORE THE INDUSTRIAL REVOLUTION, most peppered moths in Manchester, England, were light-colored, using trees covered with pale bark and lichens as camouflage to avoid becoming prey for birds. The first reporting of a live dark moth was in 1811, but definitive proof of thi..."
+      "heading": "Decide like a bettor",
+      "body": "Separate decision quality from outcome luck, weigh expected value with variance and loss aversion, and buy cheap real options. Calibrate confidence with outside-view reference classes, not inside optimism."
     }
   ],
   "insights": [
-    "Key insight from Super Thinking: The Big Book of Mental Models",
-    "Notable anecdote or framework from the book",
-    "Practical application for readers"
+    "Munger's latticework epiphany: 80-90 models carry 90% of worldly wisdom if you learn to hang facts on them.",
+    "Wald's bomber armor insight — reinforce where the survivors show no bullet holes, not where they do.",
+    "Musk's first-principles battery teardown from $600 to $80 per kWh reveals hidden cost headroom everyone missed."
   ],
-  "conclusion": "Super Thinking: The Big Book of Mental Models synthesizes the main themes and leaves the reader with a lasting insight about Gabriel Weinberg's approach to the subject."
+  "conclusion": "Super Thinking turns a toolbox of interdisciplinary mental models into a habit of seeing patterns that rhyme across life and work. Master the core models, triangulate with several at once, and practice until super thinking shifts from something you do to someone you are."
 }

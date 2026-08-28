@@ -1,36 +1,36 @@
 {
   "id": "expectations-investing",
-  "aboutAuthor": "Michael Mauboussin is Head of Consilient Research at Counterpoint Global and a leading thinker on valuation, decision-making, and mental models. Alfred Rappaport pioneered shareholder value theory. Together they reframe investing around market expectations.",
+  "aboutAuthor": "Michael Mauboussin is Head of Consilient Research at Counterpoint Global and a leading thinker on valuation and decision-making. Alfred Rappaport pioneered shareholder value analysis. Together they translate DCF theory into a practical lens for testing what the market already believes.",
   "points": [
     {
-      "heading": "Copyright",
-      "body": "Columbia University Press Publishers Since 1893 New York Chichester, West Sussex cup.columbia.edu Revised and updated edition © 2021 Michael J. Mauboussin and Alfred Rappaport First edition © 2001 Harvard Business School Publishing Paperback edition © 2003 Harvard Business Review Press All rights re..."
+      "heading": "Price is a mirror of expectations",
+      "body": "Every quote embeds assumptions about growth, margin, and duration. Reverse-engineer those price-implied expectations first, then test the story against fundamentals rather than forecasting earnings in a vacuum."
     },
     {
-      "heading": "Untitled",
-      "body": "Foreword Aswath Damodaran Some ideas are so powerful, and yet so obvious, that when you hear them or read about them for the first time, your inclination is to whack your head and ask yourself why you did not think of them first. That was my reaction when I first read Expectations Investing , almost..."
+      "heading": "Value lives in duration of advantage",
+      "body": "How long ROIC stays above WACC explains more of value than next quarter's EPS. Fade curves by industry, from airlines to software, translate strategic moats into numerical horizons price must imply."
     },
     {
-      "heading": "Untitled",
-      "body": "Preface Stock prices are a treasure of information about the market’s expectations of a company’s future performance. Investors who properly read market expectations and anticipate revisions increase their odds of achieving superior investment results. Many investors think that they are incorporatin..."
+      "heading": "Extrapolation is the most expensive bias",
+      "body": "Trends feel permanent, so prices embed trend extension. From homebuilders in 2005 to growth darlings, the gap between implied share or margin and base rates flags fantasy before it reprices."
     },
     {
-      "heading": "Untitled",
-      "body": "Acknowledgments We are indebted to the team at Counterpoint Global, Morgan Stanley Investment Management, for providing resources and encouragement throughout the project. In particular we want to thank Dennis Lynch and Kristian Heugh. Thomas Kamei provided valuable input to one of our case studies,..."
+      "heading": "Triangulate with options and multiples",
+      "body": "A vanilla DCF misses optionality in biotech and network inflections in platforms. Cross-check with real options and EV-to-capital versus ROIC scatters so no hidden expectation goes unexamined."
     },
     {
-      "heading": "Untitled",
-      "body": "1 The Case for Expectations Investing Stock prices are the clearest and most reliable signal of the market’s expectations about a company’s future financial performance. The key to successful investing is to estimate the level of expected performance embedded in the current stock price and then asse..."
+      "heading": "Corporate actions arbitrage expectations",
+      "body": "M&A premia, buybacks, and guidance are not just signals; they trade one set of expectations for another. Buying stock creates value only when the expectations you retire are conservative."
     },
     {
-      "heading": "Untitled",
-      "body": "2 How the Market Values Stocks Traditional discounted cash flow analysis requires you to forecast cash flows to estimate a stock’s value. Expectations investing reverses the process. It starts with the stock price, a rich and underutilized source of information, and determines the cash flow expectat..."
+      "heading": "Opportunity needs a revision catalyst",
+      "body": "A gap without a reason to close is just a cheap story. Map informational, behavioral, strategic, and organizational sources of gaps to catalysts like earnings, investor days, or refund cycles and size accordingly."
     }
   ],
   "insights": [
-    "Key insight from Expectations Investing: Reading Stock Prices for Better Returns",
-    "Notable anecdote or framework from the book",
-    "Practical application for readers"
+    "Coca-Cola's late-1990s price demanded impossible double-digit growth for decades, proving great companies can be terrible investments at the wrong price.",
+    "Dell's negative cash conversion cycle shows investment efficiency can create more value than faster revenue growth.",
+    "The horse-race of low-PIE versus high-PIE stocks demonstrates that humility about mean reversion systematically wins."
   ],
-  "conclusion": "Expectations Investing: Reading Stock Prices for Better Returns synthesizes the main themes and leaves the reader with a lasting insight about Michael J. Mauboussin's approach to the subject."
+  "conclusion": "Expectations Investing teaches a diagnostic habit: read the story price tells, compare it to the economics strategy can actually deliver, and act only where a plausible revision awaits. The market rewards those who listen to price before trying to outguess it."
 }

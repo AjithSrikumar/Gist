@@ -1,36 +1,36 @@
 {
   "id": "einstein",
-  "aboutAuthor": "Walter Isaacson is a biographer who has written definitive lives of Steve Jobs, Leonardo da Vinci, Benjamin Franklin, and Henry Kissinger. His Einstein biography draws on newly released personal letters to reveal the human behind the genius.",
+  "aboutAuthor": "Walter Isaacson is a historian and biographer who has profiled Leonardo da Vinci, Steve Jobs, and Jennifer Doudna. His Einstein biography draws on newly released personal letters to humanize the visual imagination behind field theory.",
   "points": [
     {
-      "heading": "Untitled",
-      "body": "CONTENTS Acknowledgments Main Characters CHAPTER ONE The Light-Beam Rider CHAPTER TWO Childhood, 1879–1896 CHAPTER THREE The Zurich Polytechnic, 1896–1900 CHAPTER FOUR The Lovers, 1900–1904 CHAPTER FIVE The Miracle Year: Quanta and Molecules, 1905 CHAPTER SIX Special Relativity, 1905 CHAPTER SEVEN T..."
+      "heading": "Thought experiments precede equations",
+      "body": "The compass needle and riding beside a light beam show Einstein's visual method: imagine a world, follow its logic, then find the mathematics. Sketches of elevators and trains make the abstruse tangible before formalism arrives."
     },
     {
-      "heading": "Acknowledgments",
-      "body": "ACKNOWLEDGMENTS D iana Kormos Buchwald, the general editor of Einstein’s papers, read this book meticulously and made copious comments and corrections through many drafts. In addition, she helped me get early and complete access to the wealth of new Einstein papers that became available in 2006, and..."
+      "heading": "Networks rescue the nonconformist",
+      "body": "Grossmann's notes, the Bern patent desk secured via a father's friend, and the Olympia Academy of Habicht and Solovine show that friendship plus institutional slack compensated for mediocre grades and early rejections."
     },
     {
-      "heading": "Main Characters",
-      "body": "MAIN CHARACTERS M ICHELE A NGELO B ESSO (1873–1955). Einstein’s closest friend. An engaging but unfocused engineer, he met Einstein in Zurich, then followed him to work at the Bern patent office. Served as a sounding board for the 1905 special relativity paper. Married Anna Winteler, sister of Einst..."
+      "heading": "Take limits literally",
+      "body": "Quanta from faint light and atoms from jittering pollen both came from asking what happens in the extreme case. Perrin's later photographs vindicate reasoning that treats the invisibly small as real and measurable."
     },
     {
-      "heading": "Chapter One: The Light-Beam Rider",
-      "body": "CHAPTER ONE THE LIGHT-BEAM RIDER “ I promise you four papers,” the young patent examiner wrote his friend. The letter would turn out to bear some of the most significant tidings in the history of science, but its momentous nature was masked by an impish tone that was typical of its author. He had, a..."
+      "heading": "Remove hidden assumptions",
+      "body": "Special relativity's power was deleting absolute simultaneity, and general relativity's was equating inertial and gravitational mass. Deleting the unstated, not adding epicycles, creates revolutions."
     },
     {
-      "heading": "Chapter Two: Childhood, 1879&#8211;1896",
-      "body": "CHAPTER TWO CHILDHOOD 1879–1896 Maja, age 3, and Albert Einstein, 5 The Swabian He was slow in learning how to talk. “My parents were so worried,” he later recalled, “that they consulted a doctor.” Even after he had begun using words, sometime after the age of 2, he developed a quirk that prompted t..."
+      "heading": "Geometry is gravity",
+      "body": "The bowling ball on a rubber sheet gives intuition, but the field equations state it precisely: energy tells spacetime how to curve, Mercury's precession proving the quantitative match."
     },
     {
-      "heading": "Chapter Three: The Zurich Polytechnic, 1896&#8211;1900",
-      "body": "CHAPTER THREE THE ZURICH POLYTECHNIC 1896–1900 The Impudent Scholar The Zurich Polytechnic, with 841 students, was mainly a teachers’ and technical college when 17-year-old Albert Einstein enrolled in October 1896. It was less prestigious than the neighboring University of Zurich and the universitie..."
+      "heading": "Fame magnifies both platform and isolation",
+      "body": "Eddington's plates made headlines, and Einstein used the platform for Zionism and pacifism, yet unified field chasing shows fame can also insulate, as citation divergence left him outside the quantum mainstream."
     }
   ],
   "insights": [
-    "Key insight from Einstein: His Life and Universe",
-    "Notable anecdote or framework from the book",
-    "Practical application for readers"
+    "Eddington's 1919 eclipse plates that confirmed 1.7 arcseconds and made relativity a household word.",
+    "The divorce agreement promising future Nobel money, a bet on relativity that funded fairness before fame.",
+    "God does not play dice: the line that frames his later challenge to quantum randomness rooted in a deterministic field dream."
   ],
-  "conclusion": "Einstein: His Life and Universe synthesizes the main themes and leaves the reader with a lasting insight about Walter Isaacson's approach to the subject."
+  "conclusion": "Einstein emerges as imagination disciplined by principle: visual wonder about unseen fields, relentless inversion of assumptions, and a willingness to stand alone, first for geometry over force, then for realism over probability, paying personal and professional costs for the consistency he prized."
 }
