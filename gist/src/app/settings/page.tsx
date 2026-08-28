@@ -6,15 +6,13 @@ import { ChevronLeft, ChevronRight, Mail, LifeBuoy } from "lucide-react";
 import { ScreenPadding } from "@/components/AppShell";
 import { useStore } from "@/lib/store";
 
-const BASE = "https://gist.app";
+const BASE = "https://project-gist.vercel.app";
 const ROWS = [
   { label: "App language", value: "English" },
   { label: "Notifications", chevron: true, route: "/settings/notifications" },
   { label: "Gift Gist to a friend", action: "share" as const },
-  { label: "Explore Gist for Business", href: `${BASE}/business` },
   { label: "Privacy Policy", href: `${BASE}/privacy` },
   { label: "Terms of Use", href: `${BASE}/terms` },
-  { label: "Subscription Terms", href: `${BASE}/subscription-terms` },
   { label: "Delete account", danger: true, action: "delete" as const },
   { label: "Log out", danger: true, action: "logout" as const },
 ];

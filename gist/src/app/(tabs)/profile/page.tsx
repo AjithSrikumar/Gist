@@ -88,7 +88,7 @@ export default function ProfilePage() {
 
       {/* learning progress */}
       <button
-        onClick={() => (store.isSubscribed ? undefined : useStore.getState().openPaywall("profile"))}
+        onClick={() => store.isSubscribed ? router.push("/library") : useStore.getState().openPaywall("profile")}
         className="mx-4 mt-3 flex w-[calc(100%-32px)] items-center gap-3 rounded-card bg-bg-white p-4 text-left shadow-card"
       >
         <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${store.isSubscribed ? "bg-accent-green/15 text-accent-green" : "bg-divider/60 text-ink-600"}`}>
@@ -127,7 +127,7 @@ export default function ProfilePage() {
               setTimeout(() => setCopied(false), 1500);
             } catch {}
           }}
-          className="mt-4 inline-flex h-11 items-center gap-2 rounded-button bg-ink-900 px-6 text-[15px] font-semibold text-white active:bg-black"
+          className="mt-4 inline-flex h-11 items-center gap-2 rounded-button border border-divider bg-bg-white px-6 text-[15px] font-semibold text-ink-900 shadow-card"
         >
           {copied ? <Check size={16} /> : <Copy size={16} />}
           {copied ? "Link copied!" : "Invite friends"}
