@@ -28,6 +28,7 @@ export interface PersistedState {
   streakWeek: boolean[];
   lastFinishDate: string | null;
   lastReadBook: string | null;
+  pendingBookId: string | null;
   library: {
     continuing: { bookId: string; progressPct: number; readChapters: number[] }[];
     savedForLater: string[];
@@ -86,6 +87,7 @@ const initialPersisted: PersistedState = {
   streakWeek: [false, false, false, false, false, false, false],
       lastFinishDate: null,
       lastReadBook: null,
+      pendingBookId: null,
       library: { continuing: [], savedForLater: [], finished: [] },
   highlights: [],
   ratings: {},
@@ -260,9 +262,22 @@ export const useStore = create<AppStore>()(
       },
 
       openBookDetail: (bookDetailId) => set({ bookDetailId }),
-      openReader: (readerBookId) => set((s) => ({ readerBookId, lastReadBook: readerBookId ?? s.lastReadBook })),
+      openReader: (readerBookId) => {
+        const s = get();
+        if (readerBookId && !s.user) {
+          set({ pendingBookId: readerBookId, paywall: "profile" });
+          return;
+        }
+        set((prev) => ({ readerBookId, lastReadBook: readerBookId ?? prev.lastReadBook, pendingBookId: null, paywall: null }));
+      },
       setSearchOpen: (searchOpen) => set({ searchOpen }),
-      openPaywall: (paywall) => set({ paywall }),
+      openPaywall: (paywall) => {
+        if (paywall === null) {
+          set({ paywall: null, pendingBookId: null });
+          return;
+        }
+        set({ paywall });
+      },
       showCelebration: (celebrationStreak) => set({ celebrationStreak }),
       setContentsSheet: (contentsSheetOpen) => set({ contentsSheetOpen }),
       setThemeSheet: (themeSheetOpen) => set({ themeSheetOpen }),
@@ -301,6 +316,22 @@ export const useStore = create<AppStore>()(
               is_subscribed: s.isSubscribed,
             });
           }
+          // If user was gated trying to read a book, open it now
+          const pending = get().pendingBookId;
+          if (pending) {
+            setTimeout(() => {
+              const cur = get().pendingBookId;
+              if (cur) {
+                set({ readerBookId: cur, pendingBookId: null, paywall: null, bookDetailId: null, lastReadBook: cur });
+              }
+            }, 400);
+          } else {
+            // Just close paywall if it was the login gate
+            const pw = get().paywall;
+            if (pw === "profile" || pw === "discount") {
+              set({ paywall: null });
+            }
+          }
         }
       },
 
@@ -319,7 +350,7 @@ export const useStore = create<AppStore>()(
         const { getSupabase } = await import("./supabase-browser");
         const { error } = await getSupabase().auth.signOut();
         if (error) console.error("Sign out error:", error);
-        set({ user: null, isSubscribed: false });
+        set({ user: null, isSubscribed: false, pendingBookId: null });
       },
     }),
     {
@@ -336,6 +367,7 @@ export const useStore = create<AppStore>()(
           streakWeek: s.streakWeek,
           lastFinishDate: s.lastFinishDate,
           lastReadBook: s.lastReadBook,
+          pendingBookId: s.pendingBookId,
           library: s.library,
           highlights: s.highlights,
           ratings: s.ratings,

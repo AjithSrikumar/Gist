@@ -57,7 +57,13 @@ function BookDetailContent({
   const saveToLibrary = useStore((s) => s.saveToLibrary);
   const cat = categoryById(book.categoryId);
 
+  const user = useStore((s) => s.user);
   const openBook = () => {
+    if (!user) {
+      useStore.setState({ pendingBookId: book.id });
+      useStore.getState().openPaywall("profile");
+      return;
+    }
     openBookDetail(null);
     openReader(book.id);
   };
@@ -133,7 +139,7 @@ function BookDetailContent({
           onClick={openBook}
           className="h-12 w-full rounded-button bg-brand-blue text-[16px] font-semibold text-white active:bg-brand-blue-dk"
         >
-          Read summary
+          Start reading
         </button>
       </div>
 

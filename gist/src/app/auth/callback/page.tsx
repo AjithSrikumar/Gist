@@ -13,7 +13,14 @@ export default function AuthCallbackPage() {
     const supabase = getSupabase();
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
-      router.replace("/profile");
+      // If user was gated trying to read a book, pendingBookId is persisted
+      // and setUser will auto-open the reader. Redirect to home where overlays host exists.
+      const pending = useStore.getState().pendingBookId;
+      if (pending) {
+        router.replace("/");
+      } else {
+        router.replace("/profile");
+      }
     });
   }, [router, setUser]);
 
