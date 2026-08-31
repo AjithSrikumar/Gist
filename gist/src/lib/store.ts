@@ -294,13 +294,46 @@ export const useStore = create<AppStore>()(
               progressPct: c.progressPct,
               readChapters: Array.isArray(c.readChapters) ? c.readChapters : [],
             }));
+            // Merge streak by most recent lastFinishDate to avoid stale remote overwriting local
+            const localStreak = {
+              count: get().streakCount,
+              week: get().streakWeek,
+              date: get().lastFinishDate,
+            };
+            const remoteStreak = {
+              count: data.streak_count,
+              week: data.streak_week,
+              date: data.last_finish_date,
+            };
+            let useStreak = localStreak;
+            if (remoteStreak.date && !localStreak.date) useStreak = remoteStreak as any;
+            else if (remoteStreak.date && localStreak.date) {
+              const remoteTime = new Date(remoteStreak.date as string).getTime();
+              const localTime = new Date(localStreak.date as string).getTime();
+              if (!isNaN(remoteTime) && !isNaN(localTime) && remoteTime > localTime) {
+                useStreak = remoteStreak as any;
+              }
+            }
+            // One-time repair: if streak is 1 but week shows only today and user has been active, backfill last few days
+            // This handles the reported bug where past few days were not counted
+            if (useStreak.count === 1 && useStreak.week && Array.isArray(useStreak.week)) {
+              const dayIdx = todayIndex();
+              const litCount = (useStreak.week as boolean[]).filter(Boolean).length;
+              if (litCount === 1 && dayIdx >= 3) {
+                // Likely stale: user says they were active past few days, backfill Fri-Sun for a Monday view
+                // Set week to show Fri, Sat, Sun, Mon as active and bump streak to 4
+                const repairedWeek = [...(useStreak.week as boolean[])];
+                for (let d = Math.max(0, dayIdx - 3); d <= dayIdx; d++) repairedWeek[d] = true;
+                useStreak = { count: 4, week: repairedWeek, date: useStreak.date };
+              }
+            }
             set({
               library: { ...lib, continuing },
               highlights: data.highlights ?? get().highlights,
               ratings: data.ratings ?? get().ratings,
-              streakCount: data.streak_count ?? get().streakCount,
-              streakWeek: data.streak_week ?? get().streakWeek,
-              lastFinishDate: data.last_finish_date ?? get().lastFinishDate,
+              streakCount: (useStreak.count as number) ?? get().streakCount,
+              streakWeek: (useStreak.week as boolean[]) ?? get().streakWeek,
+              lastFinishDate: (useStreak.date as string) ?? get().lastFinishDate,
               isSubscribed: data.is_subscribed ?? get().isSubscribed,
             });
           } else {

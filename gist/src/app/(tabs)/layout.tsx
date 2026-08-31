@@ -7,7 +7,17 @@ import { useStore } from "@/lib/store";
 
 export default function TabsLayout({ children }: { children: ReactNode }) {
   useEffect(() => {
-    useStore.getState().recordVisit();
+    const run = () => useStore.getState().recordVisit();
+    run();
+    const onVisible = () => {
+      if (document.visibilityState === "visible") run();
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    window.addEventListener("focus", run);
+    return () => {
+      document.removeEventListener("visibilitychange", onVisible);
+      window.removeEventListener("focus", run);
+    };
   }, []);
 
   return (
