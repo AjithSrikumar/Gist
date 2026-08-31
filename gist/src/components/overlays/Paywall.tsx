@@ -201,7 +201,7 @@ export function PaywallModal() {
 function AnimatePresenceContent({ open, children }: { open: boolean; children: React.ReactNode }) {
   return (
     <motion.div
-      className={`fixed inset-0 z-[80] bg-black/50 ${open ? "" : "pointer-events-none"}`}
+      className={`fixed inset-0 z-[120] bg-black/50 ${open ? "" : "pointer-events-none"}`}
       animate={{ opacity: open ? 1 : 0 }}
     >
       <motion.div
